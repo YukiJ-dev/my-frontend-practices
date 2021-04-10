@@ -1,7 +1,9 @@
 @import "font-faces.css";
 
+/* Default styles */
 :root {
     box-sizing: border-box;
+    font-size: 1em; /* for mobile 16px for desctop 18px*/
 }
 
 *,
@@ -17,7 +19,503 @@ body, html {
 }
 
 body {
+    position: relative;
+    z-index: 0;
     font-family: "Gilroy", Arial, Helvetica, sans-serif;
+    color: #898989;
 }
 
+/* Mobile styles for menu */
+.is-overflow {
+    overflow: hidden; 
+}
 
+h1, h2, h3, h4 {
+    margin: 0;
+}
+
+h1, h2, h3 {
+    color: #3a3a3a;
+}
+
+h1 {
+    font-size: 1.75rem; /* for mobile 28px for desktop 56px */
+}
+
+h2 {
+    font-size: 1.25rem; /* for mobile 20px for desktop 40px*/
+}
+
+h3 {
+    font-size: 1.125rem; /* for mobile 18px for desktop 24px*/
+}
+
+h4 {
+    font-size: 1.25rem; /* for mobile 20px for desktop 24px */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+button, input {
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    border: 0;
+    outline: 0;
+}
+
+button {
+    padding: 0;
+    cursor: pointer;
+}
+
+/* Same styles for containers */
+
+.o-container {
+    padding: 0 4%; /* For mobile 4% for dektop 8% */
+}
+
+.o-container > h2 {
+    text-align: center;
+}
+
+.o-section {
+    padding-bottom: 1.375em; /* For mobile 22px for desktop 44px */
+}
+
+.flex-wrap-cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.orange-btn {
+    color: #ffffff;
+    background-color: #E89F71;
+    font-weight: bold;
+}
+
+.cost, .info-h {
+    color: #3a3a3a;
+    font-weight: bold;
+}
+
+.cost {
+    font-size: 1.125rem;
+}
+
+.info-h {
+    font-size: 1.375rem; /* 22px */
+}
+
+/* Specific styles for containers */
+
+    /* Styles for header block*/
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.inner-img {
+    position: relative;
+    background: transparent;
+}
+
+.inner-img::before, .inner-img::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0; 
+}
+
+.inner-img::before, .inner-img::after, .background-cont {
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover;
+}
+
+.absolute-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+/* Mobile styles for menu */
+.mobile-header {
+    position: fixed;
+    overflow: auto;
+    height: 100%;
+    background-image: linear-gradient(#ffcc99, 80%,white);
+}
+
+.external-flex-h, .mobile-main-menu-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.external-flex-h {
+    flex-direction: column;
+    height: inherit;
+    padding: 1.25em 0;  /* For mobile 20px for desktop 40px */
+}
+
+.mobile-main-menu-flex a {
+    font-size: 1.375rem; /* for mobile 22px for desktop 24px*/
+    color: #000000;
+    font-weight: bold;
+}
+
+.mobile-main-menu-flex .inner-img {
+    padding-left: 30px;
+}
+
+.mobile-main-menu-flex .inner-img::before {
+    height: 23px;
+    width: 30px;
+    background-image: url("../images/menu-small.png");
+}
+
+.main-menu {
+    padding: 1em 0;
+    color: #3A3A3A;
+    font-size: 1.25rem;
+}
+
+.main-menu li {
+    padding-bottom: 0.5em;
+}
+
+.sub-menu-cont li {
+    padding: 0.5em;
+    font-size: 1.125rem;
+}
+
+.sub-menu-cont li:last-child {
+    padding-bottom: 0;
+}
+
+.sub-menu-cont .inner-img {
+    cursor: pointer; 
+}
+
+.sub-menu-cont .inner-img::after {
+    position: static;
+    vertical-align: middle;
+    background-image: url("../images/small-icons/down-arrow.png");
+    height: 0.75em;
+    width: 0.8em;
+    margin-left: 0.5em;
+}
+
+.search-inp {
+    padding: 0.75em;
+    color: #616161;
+    background: no-repeat url("../images/small-icons/search.png") left / 1.3em white;
+    background-position-x: 0.5em;
+    padding-left: 2em;
+    max-width: 100%;
+}
+
+.user-panel {
+    text-align: center;
+}
+
+.user-panel li {
+    padding: 0.5em;
+    display: inline-block;
+}
+    /* Styles for hero block */
+
+.hero-wrapper {
+    background-image: url("../images/mobile-images/hero-background.png");
+}
+
+.hero-cont { 
+    padding: 4.40625em 0 1em; /* 70.5px for mobile and 141px for desktop*/ 
+}
+
+.mobile-hero {
+    max-width: 15em;
+    margin: 0 auto;
+}
+
+.hero-header {
+    padding: 1em 10%;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.hero-header p {
+    line-height: 1.25; /* 30 for desctop 15 for mobile*/
+    font-size: 1.125rem;
+}
+
+.hero-header .orange-btn {
+    padding: 0.75em 0;
+    width: 100%;
+}
+
+.product-info-box {
+    margin-top: 1em;
+    padding: 0.5em 5%;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.product-info-box {
+    color: #616161;
+}
+
+.product-info-box .info-h {
+    font-size: 1.5rem; /* for mobile: 24px for desctop 28px */
+}
+
+.product-info-box .inner-img {
+    float: right;
+    width: 1.5em;
+}
+
+.product-info-box .inner-img::before {
+    width: 1.5em;
+    height: 1.5em;
+    background-image: url("../images/small-icons/right-arrow.png");
+}
+
+    /* Styles for features block */
+
+.features-cont {
+    justify-content: flex-start;
+    padding: 2.75em 0; /* For mobile padding 44px for desktop 88px */
+}
+
+.feature-content {
+    display: flex;
+}
+
+.feature-content p {
+    margin: 0;
+    padding: 0.3em 0;
+}
+
+.feature-content img {  
+    height: 25%;
+    padding-right: 1em;
+}
+    /* Styles for our products block */
+    
+.our-products-cont {
+    padding: 1em 0; /* For mobile padding 16px for desktop 32px */
+}
+
+.product-card {
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.7);
+}
+
+.product-content-wrap {
+    padding: 1.5em 1em;
+    background-color: #F4F5F7;
+}
+
+.o-our-products > button {
+    display: block;
+    margin: 0 auto;
+    background: transparent;
+    padding: 0.5em 2.5em;
+    color: #E89F71;
+    border: solid #E89F71 1px;
+}
+
+   /* Styles for inspirations block */
+
+.inspiration-wrapper {
+    background-color: #FCF8F3;
+}
+   
+.inspirations-cont {
+    padding: 1.375em 0; /* For mobile 22px for desktop 44px */
+}
+
+.inspirations-h {
+    text-align: center;
+    padding-bottom: 0.75em;
+}
+
+.inspirations-h button {
+    padding: 0.5em 1.5em;
+    font-weight: 100;
+}
+
+.addition-info-cont {
+    position: relative;
+    padding-bottom: 1em;
+}
+
+/* Uncomment this style when you will be desctop view */
+/* .addition-info-cont img {
+    height: 100%; Add this when a wrap happen
+    border: solid red 1px;
+} */
+
+.insp-content {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    display: inline-block;
+}
+
+.insp-content p {
+    padding: 0.5em 0;
+    margin: 0;
+}
+
+.insp-content .inner-img {
+    position: absolute;
+    right: -3em;
+    bottom: 0;
+
+    background-color: #E89F71;
+    height: 3em;
+    width: 3em;   
+}
+
+.insp-content .inner-img::before {
+    left: 25%;
+    top: 25%;
+    height: 1.5em;
+    width: 1.5em;
+    background-image: url("../images/small-icons/white-right-arrow.png");
+}
+    /* Styles for Tips & Tricks */
+
+.info-wrapper {
+    padding: 1em 4%;
+}
+
+.info-card {
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.7);
+}
+
+.info-content-wrapper {
+    padding: 1em 5%;
+}
+
+.info-content-wrapper .date {
+    display: inline-block;
+    padding-top: 0.5em;
+    font-size: 0.875rem;
+}
+    /* Styles for Share */
+
+.share-cont {
+    text-align: center;
+    
+    background-image: url("../images/pre-footer-block-last.png");
+    background-size: cover;
+    background-position-x: -5em; 
+    min-height: 25em;
+}
+
+.share-cont h2 {
+    color: #616161;
+    font-size: 1.125rem; /* mobile 18px, desctop: 20px */
+}
+
+.share-cont span {
+    color: #3A3A3A;
+    font-size: 1.875rem; /* mobile 30px, desctop 40px */
+    font-weight: bold;
+}
+
+    /* Styles for hr */
+
+hr {
+    margin-top: 4.5625em; /* Margin for mobile: 73px and desktop: 146px*/
+    max-width: 90%;
+}
+
+    /* Styles for footer */
+    
+.footer-cont {
+    color: #616161;
+    justify-content: flex-start;
+    padding: 1.5625em 0; /* Padding for mobile: 25px and desktop: 50px */
+}
+
+.footer-cont p {
+    line-height: 1.5;
+}
+
+.footer-h {
+    padding: 1em 0;
+}
+
+.footer-h .inner-img::before {
+    position: static;
+    vertical-align: middle;
+    height: 1.1em;
+    width: 1.1em;
+    margin-right: 0.5em;
+}
+
+.footer-h li:nth-child(1) .inner-img::before {
+    background-image: url("../images/small-icons/location.png");
+}
+
+.footer-h li:nth-child(2) .inner-img::before {
+    background-image: url("../images/small-icons/phone-call.png");
+}
+
+.block-list li {
+    padding: 0.25em 0; /* mobile: 8px, desktop: 16px */
+}
+
+.footer-cont h4 {
+    color: #000000;
+}
+
+.inner-footer-cont .f-content-wrapper {
+    padding: 0.75em 0;
+}
+
+.subscribe-cont {
+    display: flex;
+    padding: 0.5em 0;
+}
+
+.subscribe-cont input {
+    padding: 0.75em;
+    background-color: #F4F5F7;
+}
+
+.subscribe-cont .inner-img {
+    width: 3em;
+    background-color: #E89F71;
+}
+
+.subscribe-cont .inner-img::before {
+    top: 20%;
+    left: 22%;
+
+    width: 1.5em;
+    height: 1.5em;
+    background-image: url("../images/small-icons/telegram.png");
+}

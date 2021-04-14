@@ -1,507 +1,534 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
-        <link href="css/index.css" rel="stylesheet">
 
-        <title>My number two figma template</title>
-    </head>
-    <body id="body">
-        <!-- Main header block -->
-        <header aria-label="Main header of page">
-            <nav>
-                <div id="menu-header" class="o-container absolute-header">
-                    <div class="flex-nav-content external-flex-h">
-                        <div class="flex-nav-content">
-                            <!-- Flex contanier for menu styles -->
-                            <div class="mobile-main-menu-flex">
-                                <a aria-label="Our company logo, tap to back on homepage" href="#">Funiro.</a>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
+    <link href="css/index.css" rel="stylesheet">
 
-                                <button id="menu-button" class="inner-img" aria-label="The toggle button for open the main menu"></button>
-                            </div>
-                            
-                            <!-- Main nav menu of page -->
-                            <ul id="hidden-menu" class="main-menu hidden">
-                                <li class="sub-menu-cont">
-                                    <span id="p-sub-menu-toggle" class="inner-img">Products</span>
+    <title>My number two figma template</title>
+</head>
 
-                                    <ul id="products-sub-menu" class="sub-menu hidden">
-                                        <li><a href="#">Feautures</a></li>
-                                        <li><a href="#">Channels</a></li>
-                                        <li><a href="#">Integration</a></li>
-                                        <li><a href="#">Security</a></li>
-                                        <li><a href="#">Slack Connect</a></li>
-                                        <li><a href="#">Solutions</a></li>
-                                        <li><a href="#">Customers</a></li>
-                                    </ul>
-                                </li>
+<body id="body">
+    <!-- Main header block -->
+    <header aria-label="Main header of page">
+        <nav>
+            <div id="menu-header" class="o-container absolute-header">
+                <div class="flex-nav-content external-flex-h">
+                    <!-- Flex contanier for menu styles -->
+                    <div class="mobile-main-menu-flex">
+                        <a aria-label="Our company logo, tap to back on homepage" href="#">Funiro.</a>
 
-                                <li class="sub-menu-cont">
-                                    <span class="inner-img" id="r-sub-menu-toggle">Rooms</span>
+                        <button id="menu-button" class="inner-img"
+                            aria-label="The toggle button for open the main menu"></button>
+                    </div>
 
-                                    <ul id="rooms-sub-menu" class="sub-menu hidden">
-                                        <li><a href="#">Bathroom</a></li>
-                                        <li><a href="#">Bedroom</a></li>
-                                        <li><a href="#">Living room</a></li>
-                                        <li><a href="#">Children's room</a></li>
-                                    </ul>
-                                </li>
+                    <!-- Main nav menu of page -->
+                    <ul id="hidden-menu" class="main-menu hidden">
+                        <li class="sub-menu-cont">
+                            <span id="p-sub-menu-toggle" class="inner-img">Products</span>
 
-                                <li>Inspirations</li>
+                            <ul id="products-sub-menu" class="sub-menu hidden">
+                                <li><a href="#">Feautures</a></li>
+                                <li><a href="#">Channels</a></li>
+                                <li><a href="#">Integration</a></li>
+                                <li><a href="#">Security</a></li>
+                                <li><a href="#">Slack Connect</a></li>
+                                <li><a href="#">Solutions</a></li>
+                                <li><a href="#">Customers</a></li>
                             </ul>
+                        </li>
 
-                            <input id="hidden-search" class="search-inp hidden" aria-label="Field for search our products" type="text" placeholder="Search for minimalist chair">
-                        </div>
+                        <li class="sub-menu-cont">
+                            <span class="inner-img" id="r-sub-menu-toggle">Rooms</span>
 
-                        <!-- User pannel in main navigation -->
-                        <ul id="hidden-panel" class="user-panel hidden">
-                            <li><a href="#"><img src="images/header-like.png" alt="Your favourite products"></a></li>
-                            <li><a href="#"><img src="images/header-cart.png" alt="Your cart with products"></a></li>
-                            <li><a href="#"><img src="images/header-avatar.png" alt="Your avatar"></a></li>
-                        </ul>
-                    </div>
+                            <ul id="rooms-sub-menu" class="sub-menu hidden">
+                                <li><a href="#">Bathroom</a></li>
+                                <li><a href="#">Bedroom</a></li>
+                                <li><a href="#">Living room</a></li>
+                                <li><a href="#">Children's room</a></li>
+                            </ul>
+                        </li>
+
+                        <li>Inspirations</li>
+                    </ul>
+
+                    <input id="hidden-search" class="search-inp hidden" aria-label="Field for search our products"
+                        type="text" placeholder="Search for minimalist chair">
+
+                    <!-- User pannel in main navigation -->
+                    <ul id="hidden-panel" class="user-panel hidden">
+                        <li><a href="#"><img src="images/small-icons/heart.png" alt="Your favourite products"></a></li>
+                        <li><a href="#"><img src="images/small-icons/shopping-cart.png" alt="Your cart with products"></a></li>
+                        <li><a href="#"><img src="images/small-icons/avatar.png" alt="Your avatar"></a></li>
+                    </ul>
                 </div>
-            </nav>
-        </header>
+            </div>
+        </nav>
+    </header>
 
-        <!-- Main block -->
-        <main>
-            <!-- Hero content block -->
-            <section aria-label="Hero baner for our site">
-                <div class="background-cont hero-wrapper">
-                    <div class="hero-cont">
-                        <div class="o-container">
-                            <!-- Header of hero content -->
-                            <div class="mobile-hero">
-                                <header aria-label="The main part of kind our work">
-                                    <div class="hero-header">
-                                        <h1>High-Quality Furniture Just For You</h1>
-                                        <p>Our furniture is made from selected and best quality materials that are suitable for your dream home</p>
-                                        <button class="orange-btn">Shop Now</button>        
-                                    </div>
-                                </header>
-        
-                                <!-- Addition info about some product from page-->
-                                <section aria-label="Information about our product">
-                                    <!-- 1 same container -->
-                                    <div class="product-info-box">
-                                        <span class="info-h">Bohauss</span>
-                                        <p>Luxury big sofa 2-seat</p>
-            
-                                        <span class="cost">Rp 17.000.000</span>
-                                        <button aria-label="Information about product button" class="inner-img"></button>    
-                                    </div>
-                                </section>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Feautures information block-->
-            <section aria-label="What we can propose for you">
-                <div class="o-container">
-                    <div class="flex-wrap-cont features-cont">
-                        <section class="test" aria-label="The propose content">
-                            <div class="feature-content t-b-wrapper">
-                                <img src="images/preview-cup.png" alt="">
-                    
-                                <section>
-                                    <h3>High Quality</h3>
-                                    <p>Crafted from top materials</p>
-                                </section>
-                            </div>
-                        </section>
-
-                        <section aria-label="The propose content">
-                            <div class="feature-content t-b-wrapper">
-                                <img src="images/preview-accept.png" alt="">
-
-                                <section>
-                                    <h3>Warrany Protection</h3>
-                                    <p>Over 2 years</p>
-                                </section>
-                            </div>
-                        </section>
-
-                        <section aria-label="The propose content">
-                            <div class="feature-content t-b-wrapper">
-                                <img src="images/preview-gift.png" alt="">
-
-                                <section aria-label="Propose content">
-                                    <h3>Free Shipping</h3>
-                                    <p>Order over 150 &#36;</p>
-                                </section>
-                            </div>
-                        </section>
-
-                        <section aria-label="Propose content">
-                            <div class="feature-content t-b-wrapper">
-                                <img src="images/preview-support.png" alt="">
-
-                                <section aria-label="Propose content">
-                                    <h3>24 / 7 Support</h3>
-                                    <p>Dedicated support</p>
-                                </section>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Our products block -->
-            <section class="o-section" aria-label="All what you can buy here">
-                <div class="o-container o-our-products">
-                    <h2>Our Products</h2>
-
-                    <div class="flex-wrap-cont our-products-cont">
-                        <section aria-label="Product card">
-                            <div class="info-wrapper">
-                                <div class="product-card">
-                                    <img src="images/products/product-1.png" alt="">
-                                
-                                    <section aria-label="Product information">
-                                        <div class="product-content-wrap">
-                                            <span class="info-h">Syltherine</span>
-                                            <p>Stylish cafe chair</p>
-                                            <span class="cost">Rp 2.500.000</span>
-                                        </div>
-                                    </section>
-                                </div>
-                            </div>
-                        </section>
-
-                        <section aria-label="Product card">
-                            <div class="info-wrapper">
-                                <div class="product-card">
-                                    <img src="images/products/product-2.png" alt="">
-                                
-                                    <section aria-label="Product information">
-                                        <div class="product-content-wrap">
-                                            <span class="info-h">Leviosa</span>
-                                            <p>Stylish cafe chair</p>
-                                            <span class="cost">Rp 2.500.000</span>
-                                        </div>
-                                    </section>
-                                </div>
-                            </div>
-                        </section>
-
-                        <section aria-label="Product card">
-                            <div class="info-wrapper">
-                                <div class="product-card">
-                                    <img src="images/products/product-3.png" alt="">
-                                
-                                    <section aria-label="Product information">
-                                        <div class="product-content-wrap">
-                                            <span class="info-h">Lolito</span>
-                                            <p>Luxury big sofa</p>
-                                            <span class="cost">Rp 7.000.000</span>
-                                        </div>
-                                    </section>
-                                </div>
-                            </div>
-                        </section>
-
-                        <section aria-label="Product card">
-                                <div class="info-wrapper">
-                                    <div class="product-card">
-                                        <img src="images/products/product-4.png" alt="">
-                                    
-                                        <section aria-label="Product information">
-                                            <div class="product-content-wrap">
-                                                <span class="info-h">Respira</span>
-                                                <p>Minimalist fun</p>
-                                                <span class="cost">Rp 500.000</span>
-                                            </div>
-                                        </section>
-                                    </div>
-                                </div>
-                        </section>
-
-                        <section aria-label="Product card">
-                                <div class="info-wrapper">
-                                    <div class="product-card">
-                                        <img src="images/products/product-5.png" alt="">
-                                    
-                                        <section aria-label="Product information">
-                                            <div class="product-content-wrap">
-                                                <span class="info-h">Grifo</span>
-                                                <p>Night lamp</p>
-                                                <span class="cost">Rp 1.500.000</span>
-                                            </div>
-                                        </section>
-                                    </div>
-                                </div>
-                        </section>
-
-                        <section aria-label="Product card">
-                                <div class="info-wrapper">
-                                    <div class="product-card">
-                                        <img src="images/products/product-6.png" alt="">
-                                    
-                                        <section aria-label="Product information">
-                                            <div class="product-content-wrap">
-                                                <span class="info-h">Muggo</span>
-                                                <p>Small mug</p>
-                                                <span class="cost">Rp 150.000</span>
-                                            </div>
-                                        </section>
-                                    </div>
-                                </div>
-                        </section>
-
-                        <section aria-label="Product card">
-                                <div class="info-wrapper">
-                                    <div class="product-card">
-                                        <img src="images/products/product-7.png" alt="">
-                                    
-                                        <section aria-label="Product information">
-                                            <div class="product-content-wrap">
-                                                <span class="info-h">Pingky</span>
-                                                <p>Cute bed set</p>
-                                                <span class="cost">Rp 7.000.000</span>
-                                            </div>
-                                        </section>
-                                    </div>
-                                </div>
-                        </section>
-
-                        <section aria-label="Product card">
-                                <div class="info-wrapper">
-                                    <div class="product-card">
-                                        <img src="images/products/product-8.png" alt="">
-                                    
-                                        <section aria-label="Product information">
-                                            <div class="product-content-wrap">
-                                                <span class="info-h">Potty</span>
-                                                <p>Minimalist flower pot</p>
-                                                <span class="cost">Rp 500.000</span>
-                                            </div>
-                                        </section>
-                                    </div>
-                                </div>
-                        </section>
-                    </div>
-
-                    <button class="show-more-btn">Show more</button>
-                </div>
-            </section>
-
-            <!-- Inspirations block -->
-            <section class="o-section" aria-label="Here shown our room design for you">
-                <div class="inspiration-wrapper">
+    <!-- Main block -->
+    <main>
+        <!-- Hero content block -->
+        <section aria-label="Hero baner for our site">
+            <div class="background-cont hero-wrapper">
+                <div class="hero-cont">
                     <div class="o-container">
-                        <div class="flex-wrap-cont inspirations-cont">
-                            <header aria-label="The header of addition info of what we can do for you">
-                                <div class="inspirations-h">
-                                    <h2>50&#43; Beautiful rooms inspiration</h2>
-                                    <p>Our designer already made a lot of beautiful prototipe of rooms that inspire you</p>
-                                    <button aria-label="Click to see our design for your rooms" class="orange-btn">Explore more</button>    
+                        <!-- Header of hero content -->
+                        <div class="mobile-hero">
+                            <header aria-label="The main part of kind our work">
+                                <div class="hero-header">
+                                    <h1>High-Quality Furniture Just For You</h1>
+                                    <p>Our furniture is made from selected and best quality materials that are suitable
+                                        for your dream home</p>
+                                    <button class="orange-btn">Shop Now</button>
                                 </div>
                             </header>
-                        
-                            <!-- Galary with two images -->
-                            <div class="flex-wrap-cont galary">
-                                <div class="addition-info-cont">
-                                    <img src="images/pre-last-block-1.png" alt="">
 
-                                    <div class="product-info-box insp-content">
-                                        <span>01 &#8213; Bed Room</span>
-                                        <p class="info-h">Inner Peace</p>
+                            <!-- Addition info about some product from page-->
+                            <section aria-label="Information about our product">
+                                <!-- 1 same container -->
+                                <div class="product-info-box h-info-box">
+                                    <span class="info-h">Bohauss</span>
+                                    <p>Luxury big sofa 2-seat</p>
 
-                                        <button class="inner-img" aria-label="Click to see more info about this room"></button>
-                                    </div>
+                                    <span class="cost">Rp 17.000.000</span>
+                                    <button aria-label="Information about product button" class="inner-img"></button>
                                 </div>
-
-                                <img src="images/pre-last-block-2.png" alt="">
-                            </div>
+                            </section>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Tips & Tricks Block -->
-            <section class="o-section">
-                <div class="o-container">
-                    <h2>Tips &#38; Tricks</h2>
-
-                    <div class="flex-wrap-cont tips-tricks-cont">
-                        <section>
-                            <div class="info-wrapper">
-                                <div class="info-card">
-                                    <a aria-label="The link that send you to plain article with live triks" href="#"><img src="images/pre-footer-block-1.png" alt=""></a>
-    
-                                    <div class="info-content-wrapper">
-                                        <h3>How to create a living room to love</h3>
-                                        <span class="date">20 jan 2020</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-    
-                        <section>
-                            <div class="info-wrapper">
-                                <div class="info-card">
-                                    <a aria-label="The link that send you to plain article with live triks" href="#"><img src="images/pre-footer-block-2.png" alt=""></a>
-
-                                    <div class="info-content-wrapper">
-                                        <h3>Solution for clean look working space</h3>
-                                        <span class="date">20 jan 2020</span>
-                                    </div>  
-                                </div>
-                            </div>
-                        </section>
-    
-                        <section>
-                            <div class="info-wrapper">
-                                <div class="info-card">
-                                    <a aria-label="The link that send you to plain article with live triks" href="#"><img src="images/pre-footer-block-3.png" alt=""></a>
-
-                                    <div class="info-content-wrapper">
-                                        <h3>Make your cooking activity more fun with good setup</h3>
-                                        <span class="date">20 jan 2020</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Share block -->
-            <section>
-                <div class="background-cont share-cont">
-                    <h2>Share your setup with</h2>
-                    <span>&#35;FuniroFurniture</span>
-                </div>
-            </section>
-        </main>
-
-        <!-- Line that separate main content to footer content-->
-        <hr>
-
-        <!-- Footer block -->
-        <footer>
+        <!-- Feautures information block-->
+        <section aria-label="What we can propose for you">
             <div class="o-container">
-                <!-- Main flex container -->
-                <div class="flex-wrap-cont footer-cont">
-                    <!-- Header of footer -->
-                    <header aria-label="The footer header of page">
-                        <div class="footer-h">
-                            <h4 aria-label="Information about company">Funiro.</h4>
-                            <p>Worldwide furniture store since 2020. We sell over 1000+ branded products on our website</p>
-            
-                            <ul class="block-list">
-                                <li><span class="inner-img">Sawojajar Malang, Indonesia</span></li>
-                                <li><span class="inner-img">&#43;6289 456 3455</span></li>
-                                <li><a href="#">www.funiro.com</a></li>
-                            </ul>   
-                        </div>
-                    </header>
-                        
-                    <!-- Inner flex container for short lists -->
-                    <div class="flex-warp-cont inner-footer-cont">
-                        <section aria-label="The menu in footer">
-                            <div class="f-content-wrapper">
-                                <h4 aria-label="The header for footer list">Menu</h4>
-                                
-                                <ul class="block-list">
-                                    <li><a href="#">Products</a></li>
-                                    <li><a href="#">Rooms</a></li>
-                                    <li><a href="#">Inspirations</a></li>
-                                    <li><a href="#">About us</a></li>
-                                    <li><a href="#">Terms &#38; Policy </a></li>
-                                </ul>
-                            </div>
+                <div class="flex-wrap-cont features-cont">
+                    <section aria-label="The propose content">
+                        <img src="images/preview-cup.png" alt="">
+
+                        <section class="float-content">
+                            <h3>High Quality</h3>
+                            <p>Crafted from top materials</p>
                         </section>
+                    </section>
 
-                        <section aria-label="Some account functions">
-                            <div class="f-content-wrapper">
-                                <h4 aria-label="The header for footer list">Account</h4>
-                                
-                                <ul class="block-list">
-                                    <li><a href="#">My Account</a></li>
-                                    <li><a href="#">Checkout</a></li>
-                                    <li><a href="#">My Cart</a></li>
-                                    <li><a href="#">My catalog</a></li>
-                                </ul>
-                            </div>
+                    <section aria-label="The propose content">
+                        <img src="images/preview-accept.png" alt="">
+
+                        <section class="float-content">
+                            <h3>Warrany Protection</h3>
+                            <p>Over 2 years</p>
                         </section>
+                    </section>
 
-                        <section aria-label="We in social medias">
-                            <div class="f-content-wrapper">
-                                <h4 aria-label="The header for footer list">Stay Connected</h4>
-                                
-                                <ul class="block-list">
-                                    <li><a href="#">Facebook</a></li>
-                                    <li><a href="#">Instagram</a></li>
-                                    <li><a href="#">Twitter</a></li>
-                                </ul>
-                            </div>
+                    <section aria-label="The propose content">
+                        <img src="images/preview-gift.png" alt="">
+
+                        <section class="float-content">
+                            <h3>Free Shipping</h3>
+                            <p>Order over 150 &#36;</p>
                         </section>
-                    </div>
+                    </section>
 
-                    <section aria-label="The subscribe section">
-                        <div class="f-content-wrapper">
-                            <h4 aria-label="The header for footer list">Stay Updated</h4>
+                    <section aria-label="Propose content">
+                        <img src="images/preview-support.png" alt="">
 
-                            <div class="subscribe-cont">
-                                <input aria-label="Write your email and we send you our new offers" type="text" placeholder="Enter your email">
-                                <button class="inner-img" aria-label="Send us your email"></button> 
-                            </div>
-                        </div>               
+                        <section class="float-content">
+                            <h3>24 / 7 Support</h3>
+                            <p>Dedicated support</p>
+                        </section>
                     </section>
                 </div>
             </div>
-        </footer>
+        </section>
 
-        <script>
-            (function() {
-                // products-sub-menu, r-sub-menu-toggle
-                var productSubMenuB = document.getElementById("p-sub-menu-toggle");
-                productSubMenuB.addEventListener("click", function(event) {
-                    event.preventDefault();
+        <!-- Our products block -->
+        <section class="o-section" aria-label="All what you can buy here">
+            <div class="o-container o-our-products">
+                <h2>Our Products</h2>
 
-                    var productSubMenu = document.getElementById("products-sub-menu");
-                    productSubMenu.classList.toggle("visible");
-                });
+                <div class="flex-wrap-cont our-products-cont">
+                    <section aria-label="Product card">
+                        <div class="info-wrapper">
+                            <div class="product-card">
+                                <img src="images/products/product-1.png" alt="">
 
-                var roomsSubMenuB = document.getElementById("r-sub-menu-toggle");
-                roomsSubMenuB.addEventListener("click", function(event) {
-                    event.preventDefault();
+                                <section aria-label="Product information">
+                                    <div class="product-content-wrap">
+                                        <span class="info-h">Syltherine</span>
+                                        <p>Stylish cafe chair</p>
+                                        <span class="cost">Rp 2.500.000</span>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </section>
 
-                    var roomsSubMenu = document.getElementById("rooms-sub-menu");
-                    roomsSubMenu.classList.toggle("visible");
-                });
-            })();
-        </script>
+                    <section aria-label="Product card">
+                        <div class="info-wrapper">
+                            <div class="product-card">
+                                <img src="images/products/product-2.png" alt="">
 
-        <script>
-            (function() {
-                var menuButton = document.getElementById("menu-button");
-                
-                menuButton.addEventListener("click", function(event) {
-                    event.preventDefault();
+                                <section aria-label="Product information">
+                                    <div class="product-content-wrap">
+                                        <span class="info-h">Leviosa</span>
+                                        <p>Stylish cafe chair</p>
+                                        <span class="cost">Rp 2.500.000</span>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </section>
 
-                    var body = document.getElementById("body");
-                    var header = document.getElementById("menu-header");
+                    <section aria-label="Product card">
+                        <div class="info-wrapper">
+                            <div class="product-card">
+                                <img src="images/products/product-3.png" alt="">
 
-                    var hiddenMenu = document.getElementById("hidden-menu");
-                    var hiddenSearch = document.getElementById("hidden-search");
-                    var hiddenPanel = document.getElementById("hidden-panel");
+                                <section aria-label="Product information">
+                                    <div class="product-content-wrap">
+                                        <span class="info-h">Lolito</span>
+                                        <p>Luxury big sofa</p>
+                                        <span class="cost">Rp 7.000.000</span>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </section>
 
-                    body.classList.toggle("is-overflow");
-                    header.classList.toggle("mobile-header");
+                    <section aria-label="Product card">
+                        <div class="info-wrapper">
+                            <div class="product-card">
+                                <img src="images/products/product-4.png" alt="">
 
-                    hiddenMenu.classList.toggle("visible");
-                    hiddenSearch.classList.toggle("visible");
-                    hiddenPanel.classList.toggle("visible");
-                });
-            })();
+                                <section aria-label="Product information">
+                                    <div class="product-content-wrap">
+                                        <span class="info-h">Respira</span>
+                                        <p>Minimalist fun</p>
+                                        <span class="cost">Rp 500.000</span>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </section>
 
+                    <section aria-label="Product card">
+                        <div class="info-wrapper">
+                            <div class="product-card">
+                                <img src="images/products/product-5.png" alt="">
 
-        </script>
-    </body>
+                                <section aria-label="Product information">
+                                    <div class="product-content-wrap">
+                                        <span class="info-h">Grifo</span>
+                                        <p>Night lamp</p>
+                                        <span class="cost">Rp 1.500.000</span>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section aria-label="Product card">
+                        <div class="info-wrapper">
+                            <div class="product-card">
+                                <img src="images/products/product-6.png" alt="">
+
+                                <section aria-label="Product information">
+                                    <div class="product-content-wrap">
+                                        <span class="info-h">Muggo</span>
+                                        <p>Small mug</p>
+                                        <span class="cost">Rp 150.000</span>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section aria-label="Product card">
+                        <div class="info-wrapper">
+                            <div class="product-card">
+                                <img src="images/products/product-7.png" alt="">
+
+                                <section aria-label="Product information">
+                                    <div class="product-content-wrap">
+                                        <span class="info-h">Pingky</span>
+                                        <p>Cute bed set</p>
+                                        <span class="cost">Rp 7.000.000</span>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section aria-label="Product card">
+                        <div class="info-wrapper">
+                            <div class="product-card">
+                                <img src="images/products/product-8.png" alt="">
+
+                                <section aria-label="Product information">
+                                    <div class="product-content-wrap">
+                                        <span class="info-h">Potty</span>
+                                        <p>Minimalist flower pot</p>
+                                        <span class="cost">Rp 500.000</span>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <button class="show-more-btn">Show more</button>
+            </div>
+        </section>
+
+        <!-- Inspirations block -->
+        <section class="o-section" aria-label="Here shown our room design for you">
+            <div class="inspiration-wrapper">
+                <div class="o-container">
+                    <div class="flex-wrap-cont inspirations-cont">
+                        <header aria-label="The header of addition info of what we can do for you">
+                            <div class="inspirations-h">
+                                <h2>50&#43; Beautiful rooms inspiration</h2>
+                                <p>Our designer already made a lot of beautiful prototipe of rooms that inspire you</p>
+                                <button aria-label="Click to see our design for your rooms" class="orange-btn">Explore
+                                    more</button>
+                            </div>
+                        </header>
+
+                        <!-- Galary with two images -->
+                        <div class="flex-wrap-cont galary">
+                            <div class="addition-info-cont">
+                                <img src="images/pre-last-block-1.png" alt="">
+
+                                <div class="product-info-box i-info-box">
+                                    <span>01 &#8213; Bed Room</span>
+                                    <p class="info-h">Inner Peace</p>
+
+                                    <button class="inner-img" aria-label="Click to see more info about this room"></button>
+                                </div>
+                            </div>
+
+                            <img src="images/pre-last-block-2.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips & Tricks Block -->
+        <section class="o-section">
+            <div class="o-container">
+                <h2>Tips &#38; Tricks</h2>
+
+                <div class="flex-wrap-cont tips-tricks-cont">
+                    <section>
+                        <div class="info-wrapper">
+                            <div class="info-card">
+                                <a aria-label="The link that send you to plain article with live triks" href="#"><img
+                                        src="images/pre-footer-block-1.png" alt=""></a>
+
+                                <div class="info-content-wrapper">
+                                    <h3>How to create a living room to love</h3>
+                                    <span class="date">20 jan 2020</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div class="info-wrapper">
+                            <div class="info-card">
+                                <a aria-label="The link that send you to plain article with live triks" href="#"><img
+                                        src="images/pre-footer-block-2.png" alt=""></a>
+
+                                <div class="info-content-wrapper">
+                                    <h3>Solution for clean look working space</h3>
+                                    <span class="date">20 jan 2020</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div class="info-wrapper">
+                            <div class="info-card">
+                                <a aria-label="The link that send you to plain article with live triks" href="#"><img
+                                        src="images/pre-footer-block-3.png" alt=""></a>
+
+                                <div class="info-content-wrapper">
+                                    <h3>Make your cooking activity more fun with good setup</h3>
+                                    <span class="date">20 jan 2020</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <!-- Share block -->
+        <section>
+            <div class="background-cont share-cont">
+                <h2>Share your setup with</h2>
+                <span>&#35;FuniroFurniture</span>
+            </div>
+        </section>
+    </main>
+
+    <!-- Line that separate main content to footer content-->
+    <hr>
+
+    <!-- Footer block -->
+    <footer>
+        <div class="o-container">
+            <!-- Main flex container -->
+            <div class="flex-wrap-cont footer-cont">
+                <!-- Header of footer -->
+                <header aria-label="The footer header of page">
+                    <div class="footer-h">
+                        <h4 aria-label="Information about company">Funiro.</h4>
+                        <p>Worldwide furniture store since 2020. We sell over 1000+ branded products on our website</p>
+
+                        <ul class="block-list">
+                            <li><span class="inner-img">Sawojajar Malang, Indonesia</span></li>
+                            <li><span class="inner-img">&#43;6289 456 3455</span></li>
+                            <li><a href="#">www.funiro.com</a></li>
+                        </ul>
+                    </div>
+                </header>
+
+                <!-- Inner flex container for short lists -->
+                <div class="flex-warp-cont inner-footer-cont">
+                    <section aria-label="The menu in footer">
+                        <div class="f-content-wrapper">
+                            <h4 id="fl-first" aria-label="The header for footer list" class="fl-h inner-img">Menu</h4>
+
+                            <ul id="f-list" class="block-list hidden">
+                                <li><a href="#">Products</a></li>
+                                <li><a href="#">Rooms</a></li>
+                                <li><a href="#">Inspirations</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Terms &#38; Policy </a></li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section aria-label="Some account functions">
+                        <div class="f-content-wrapper">
+                            <h4 id="fl-second" aria-label="The header for footer list, click to see navigation"
+                                class="fl-h inner-img">Account</h4>
+
+                            <ul id="s-list" class="block-list hidden">
+                                <li><a href="#">My Account</a></li>
+                                <li><a href="#">Checkout</a></li>
+                                <li><a href="#">My Cart</a></li>
+                                <li><a href="#">My catalog</a></li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section aria-label="We in social medias">
+                        <div class="f-content-wrapper">
+                            <h4 id="fl-last" aria-label="The header for footer list, click to see navigation"
+                                class="fl-h inner-img">Stay Connected</h4>
+
+                            <ul id="l-list" class="block-list hidden">
+                                <li><a href="#">Facebook</a></li>
+                                <li><a href="#">Instagram</a></li>
+                                <li><a href="#">Twitter</a></li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+
+                <section aria-label="The subscribe section">
+                    <div class="f-content-wrapper sub-wrapper">
+                        <h4 aria-label="The header for footer list, click to see navigation">Stay Updated</h4>
+
+                        <div class="subscribe-cont">
+                            <input aria-label="Write your email and we send you our new offers" type="text"
+                                placeholder="Enter your email">
+                            <button class="inner-img" aria-label="Send us your email"></button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </footer>
+
+    <!-- When i learn more about js after some knowlages of Css and Html i improve these lines :) -->
+    <script>
+        (function () {
+
+            var productSubMenuB = document.getElementById("p-sub-menu-toggle");
+            productSubMenuB.addEventListener("click", function (event) {
+                event.preventDefault();
+
+                var productSubMenu = document.getElementById("products-sub-menu");
+                productSubMenu.classList.toggle("visible");
+            });
+
+            var roomsSubMenuB = document.getElementById("r-sub-menu-toggle");
+            roomsSubMenuB.addEventListener("click", function (event) {
+                event.preventDefault();
+
+                var roomsSubMenu = document.getElementById("rooms-sub-menu");
+                roomsSubMenu.classList.toggle("visible");
+            });
+
+        })();
+
+        (function () {
+            var menuButton = document.getElementById("menu-button");
+
+            menuButton.addEventListener("click", function (event) {
+                event.preventDefault();
+
+                var body = document.getElementById("body");
+                var header = document.getElementById("menu-header");
+
+                var hiddenMenu = document.getElementById("hidden-menu");
+                var hiddenSearch = document.getElementById("hidden-search");
+                var hiddenPanel = document.getElementById("hidden-panel");
+
+                body.classList.toggle("is-overflow");
+                header.classList.toggle("mobile-header");
+
+                hiddenMenu.classList.toggle("visible");
+                hiddenSearch.classList.toggle("visible");
+                hiddenPanel.classList.toggle("visible");
+            });
+        })();
+
+        (function () {
+            var flFirst = document.getElementById("fl-first");
+            flFirst.addEventListener("click", function (event) {
+                event.preventDefault();
+
+                var firstList = document.getElementById("f-list");
+                firstList.classList.toggle("visible");
+            });
+
+            var flSecond = document.getElementById("fl-second");
+            flSecond.addEventListener("click", function (event) {
+                event.preventDefault();
+
+                var secondList = document.getElementById("s-list");
+                secondList.classList.toggle("visible");
+            });
+
+            var flLast = document.getElementById("fl-last");
+            flLast.addEventListener("click", function (event) {
+                event.preventDefault();
+
+                var lastList = document.getElementById("l-list");
+                lastList.classList.toggle("visible");
+            });
+        })();
+    </script>
+</body>
+
 </html>

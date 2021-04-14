@@ -28,12 +28,11 @@
 
 body, html {
     height: 100%;
-    padding: 0;
-    margin: 0;
 }
 
 /* Some global styles for page */
 body {
+    margin: 0;
     position: relative;
     z-index: 0;
     font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -176,6 +175,10 @@ header {
     padding: 1em 0;
 }
 
+main {
+    display: block; /*For delete bug in IE*/
+}
+
 /* Header styles */
 .header-wrapper {
     display: flex;
@@ -190,6 +193,7 @@ header {
         flex-direction: row;
         font-size: 0.889rem;
     }
+
 }
 
 /* after  1439px*/

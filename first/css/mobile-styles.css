@@ -581,38 +581,18 @@ figure.o-section figcaption {
     line-height: 1.63em;
 }
 
-.change-img {
-    margin-top: 3em;
-    background-image: url('../images/mobile-images/mobile-pre-footer-img.png');
-    background-repeat: no-repeat; 
-    background-size: contain;
-    background-position: bottom;
-    padding-top: 100%;
-    vertical-align: middle;
+.simplicity-wrapper picture {
+    display: block;
+    text-align: center;
 }
 
-/* after 424px */
-@media(min-width: 26.5em) {
-    .change-img {
-        padding-top: 35%;
-        background-image: url('../images/medium-images/pre-footer-900px-img.png');
+@media (min-width: 48em) {
+    .simplicity-wrapper picture {
+        text-align: none;
     }
-}
 
-/* after 920px */
-@media(min-width: 57.5em) {
-    .change-img {
-        padding-top: 35%;
-        background-position: center;
-        background-image: url('../images/large-screen/pre-footer-img.png');
-    }
-}
-
-/* after 1439px */
-@media(min-width: 89.9375em) {
-    .change-img {
-        padding-top: 35%;
-        background-image: url('../images/large-screen/pre-footer-img-1920px.png');
+    .simplicity-wrapper img {
+        width: 100%;
     }
 }
 

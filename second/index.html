@@ -13,55 +13,57 @@
     <!-- Main header block -->
     <header aria-label="Main header of page">
         <nav>
-            <div id="menu-header" class="o-container absolute-header">
-                <div class="flex-nav-content external-flex-h">
-                    <!-- Flex contanier for menu styles -->
-                    <div class="mobile-main-menu-flex">
-                        <a aria-label="Our company logo, tap to back on homepage" href="#">Funiro.</a>
+            <div id="menu-header" class="absolute-header">
+                <div class="o-container">
+                    <div class="flex-nav-content">
+                        <!-- Flex contanier for menu styles -->
+                        <div class="mobile-main-menu-flex">
+                            <a aria-label="Our company logo, tap to back on homepage" href="#">Funiro.</a>
 
-                        <button id="menu-button" class="inner-img"
-                            aria-label="The toggle button for open the main menu"></button>
+                            <button id="menu-button" class="inner-img"
+                                aria-label="The toggle button for open the main menu"></button>
+                        </div>
+
+                        <!-- Main nav menu of page -->
+                        <ul id="hidden-menu" class="main-menu hidden">
+                            <li class="sub-menu-cont">
+                                <span id="p-sub-menu-toggle" class="inner-img">Products</span>
+
+                                <ul id="products-sub-menu" class="sub-menu sub-menu-h">
+                                    <li><a href="#">Feautures</a></li>
+                                    <li><a href="#">Channels</a></li>
+                                    <li><a href="#">Integration</a></li>
+                                    <li><a href="#">Security</a></li>
+                                    <li><a href="#">Slack Connect</a></li>
+                                    <li><a href="#">Solutions</a></li>
+                                    <li><a href="#">Customers</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="sub-menu-cont">
+                                <span class="inner-img" id="r-sub-menu-toggle">Rooms</span>
+
+                                <ul id="rooms-sub-menu" class="sub-menu sub-menu-h">
+                                    <li><a href="#">Bathroom</a></li>
+                                    <li><a href="#">Bedroom</a></li>
+                                    <li><a href="#">Living room</a></li>
+                                    <li><a href="#">Children's room</a></li>
+                                </ul>
+                            </li>
+
+                            <li>Inspirations</li>
+                        </ul>
+
+                        <input id="hidden-search" class="search-inp hidden" aria-label="Field for search our products"
+                            type="text" placeholder="Search for minimalist chair">
+
+                        <!-- User pannel in main navigation -->
+                        <ul id="hidden-panel" class="user-panel hidden">
+                            <li><a href="#"><img src="images/small-icons/heart.png" alt="Your favourite products"></a></li>
+                            <li><a href="#"><img src="images/small-icons/shopping-cart.png" alt="Your cart with products"></a></li>
+                            <li><a href="#"><img src="images/small-icons/avatar.png" alt="Your avatar"></a></li>
+                        </ul>
                     </div>
-
-                    <!-- Main nav menu of page -->
-                    <ul id="hidden-menu" class="main-menu hidden">
-                        <li class="sub-menu-cont">
-                            <span id="p-sub-menu-toggle" class="inner-img">Products</span>
-
-                            <ul id="products-sub-menu" class="sub-menu hidden">
-                                <li><a href="#">Feautures</a></li>
-                                <li><a href="#">Channels</a></li>
-                                <li><a href="#">Integration</a></li>
-                                <li><a href="#">Security</a></li>
-                                <li><a href="#">Slack Connect</a></li>
-                                <li><a href="#">Solutions</a></li>
-                                <li><a href="#">Customers</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="sub-menu-cont">
-                            <span class="inner-img" id="r-sub-menu-toggle">Rooms</span>
-
-                            <ul id="rooms-sub-menu" class="sub-menu hidden">
-                                <li><a href="#">Bathroom</a></li>
-                                <li><a href="#">Bedroom</a></li>
-                                <li><a href="#">Living room</a></li>
-                                <li><a href="#">Children's room</a></li>
-                            </ul>
-                        </li>
-
-                        <li>Inspirations</li>
-                    </ul>
-
-                    <input id="hidden-search" class="search-inp hidden" aria-label="Field for search our products"
-                        type="text" placeholder="Search for minimalist chair">
-
-                    <!-- User pannel in main navigation -->
-                    <ul id="hidden-panel" class="user-panel hidden">
-                        <li><a href="#"><img src="images/small-icons/heart.png" alt="Your favourite products"></a></li>
-                        <li><a href="#"><img src="images/small-icons/shopping-cart.png" alt="Your cart with products"></a></li>
-                        <li><a href="#"><img src="images/small-icons/avatar.png" alt="Your avatar"></a></li>
-                    </ul>
                 </div>
             </div>
         </nav>
@@ -72,31 +74,29 @@
         <!-- Hero content block -->
         <section aria-label="Hero baner for our site">
             <div class="background-cont hero-wrapper">
-                <div class="hero-cont">
-                    <div class="o-container">
-                        <!-- Header of hero content -->
-                        <div class="mobile-hero">
-                            <header aria-label="The main part of kind our work">
-                                <div class="hero-header">
-                                    <h1>High-Quality Furniture Just For You</h1>
-                                    <p>Our furniture is made from selected and best quality materials that are suitable
-                                        for your dream home</p>
-                                    <button class="orange-btn">Shop Now</button>
-                                </div>
-                            </header>
+                <div class="o-container">
+                    <!-- Header of hero content -->
+                    <div class="hero-cont">
+                        <header aria-label="The main part of kind our work">
+                            <div class="hero-header">
+                                <h1>High-Quality Furniture Just For You</h1>
+                                <p>Our furniture is made from selected and best quality materials that are suitable
+                                    for your dream home</p>
+                                <button class="orange-btn">Shop Now</button>
+                            </div>
+                        </header>
 
-                            <!-- Addition info about some product from page-->
-                            <section aria-label="Information about our product">
-                                <!-- 1 same container -->
-                                <div class="product-info-box h-info-box">
-                                    <span class="info-h">Bohauss</span>
-                                    <p>Luxury big sofa 2-seat</p>
+                        <!-- Addition info about some product from page-->
+                        <section aria-label="Information about our product">
+                            <!-- 1 same container -->
+                            <div class="product-info-box h-info-box">
+                                <span class="info-h">Bohauss</span>
+                                <p>Luxury big sofa 2-seat</p>
 
-                                    <span class="cost">Rp 17.000.000</span>
-                                    <button aria-label="Information about product button" class="inner-img"></button>
-                                </div>
-                            </section>
-                        </div>
+                                <span class="cost">Rp 17.000.000</span>
+                                <button aria-label="Information about product button" class="inner-img"></button>
+                            </div>
+                        </section>
                     </div>
                 </div>
             </div>
@@ -379,7 +379,9 @@
     </main>
 
     <!-- Line that separate main content to footer content-->
-    <hr>
+    <div class="o-container">
+        <hr>
+    </div>
 
     <!-- Footer block -->
     <footer>
@@ -406,7 +408,7 @@
                         <div class="f-content-wrapper">
                             <h4 id="fl-first" aria-label="The header for footer list" class="fl-h inner-img">Menu</h4>
 
-                            <ul id="f-list" class="block-list hidden">
+                            <ul id="f-list" class="block-list sub-menu-h">
                                 <li><a href="#">Products</a></li>
                                 <li><a href="#">Rooms</a></li>
                                 <li><a href="#">Inspirations</a></li>
@@ -421,7 +423,7 @@
                             <h4 id="fl-second" aria-label="The header for footer list, click to see navigation"
                                 class="fl-h inner-img">Account</h4>
 
-                            <ul id="s-list" class="block-list hidden">
+                            <ul id="s-list" class="block-list sub-menu-h">
                                 <li><a href="#">My Account</a></li>
                                 <li><a href="#">Checkout</a></li>
                                 <li><a href="#">My Cart</a></li>
@@ -435,7 +437,7 @@
                             <h4 id="fl-last" aria-label="The header for footer list, click to see navigation"
                                 class="fl-h inner-img">Stay Connected</h4>
 
-                            <ul id="l-list" class="block-list hidden">
+                            <ul id="l-list" class="block-list sub-menu-h">
                                 <li><a href="#">Facebook</a></li>
                                 <li><a href="#">Instagram</a></li>
                                 <li><a href="#">Twitter</a></li>

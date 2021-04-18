@@ -28,12 +28,11 @@
 
 body, html {
     height: 100%;
-    padding: 0;
-    margin: 0;
 }
 
 /* Some global styles for page */
 body {
+    margin: 0;
     position: relative;
     z-index: 0;
     font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -176,6 +175,10 @@ header {
     padding: 1em 0;
 }
 
+main {
+    display: block; /*For delete bug in IE*/
+}
+
 /* Header styles */
 .header-wrapper {
     display: flex;
@@ -190,6 +193,7 @@ header {
         flex-direction: row;
         font-size: 0.889rem;
     }
+
 }
 
 /* after  1439px*/
@@ -577,38 +581,18 @@ figure.o-section figcaption {
     line-height: 1.63em;
 }
 
-.change-img {
-    margin-top: 3em;
-    background-image: url('../images/mobile-images/mobile-pre-footer-img.png');
-    background-repeat: no-repeat; 
-    background-size: contain;
-    background-position: bottom;
-    padding-top: 100%;
-    vertical-align: middle;
+.simplicity-wrapper picture {
+    display: block;
+    text-align: center;
 }
 
-/* after 424px */
-@media(min-width: 26.5em) {
-    .change-img {
-        padding-top: 35%;
-        background-image: url('../images/medium-images/pre-footer-900px-img.png');
+@media (min-width: 48em) {
+    .simplicity-wrapper picture {
+        text-align: none;
     }
-}
 
-/* after 920px */
-@media(min-width: 57.5em) {
-    .change-img {
-        padding-top: 35%;
-        background-position: center;
-        background-image: url('../images/large-screen/pre-footer-img.png');
-    }
-}
-
-/* after 1439px */
-@media(min-width: 89.9375em) {
-    .change-img {
-        padding-top: 35%;
-        background-image: url('../images/large-screen/pre-footer-img-1920px.png');
+    .simplicity-wrapper img {
+        width: 100%;
     }
 }
 

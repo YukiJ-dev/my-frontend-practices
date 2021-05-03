@@ -1,30 +1,32 @@
 <!DOCTYPE html>
-<html lang="en"> 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
+<html lang="en">
 
-        <link rel="stylesheet" href="css/mobile-styles.css">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
 
-        <title>My first figma template</title>
-    </head>
+    <link rel="stylesheet" href="css/mobile-styles.css">
 
-    <body id="body">
-        <header> 
-            <div id="mobile-menu-container" class="header-wrapper o-container">
+    <title>My first figma template</title>
+</head>
+
+<body>
+    <div>
+        <header id="main-header">
+            <div id="main-h-container" class="header-wrapper o-container">
                 <nav>
                     <div class="header-flex-container">
                         <div class="mobile-header-flex-wrapper">
                             <a href="#"><img src="images/main-logo.png" alt="Our company logo"></a>
-            
-                            <button id="toggle-button" class="menu-button">View mobile menu</button>    
+
+                            <button id="menu-btn" class="menu-button" aria-label="Show main menu" data-is-close="true"></button>
                         </div>
-    
+
                         <ul id="main-menu" class="menu is-hidden">
-                            <li>
-                                <span id="sub-menu-toggle" class="sub-menu-preview">Company </span>
-    
-                                <ul id="sub-menu-js" class="sub-menu">
+                            <li class="sub-menu-l">
+                                <span class="sub-menu-btn">Company </span>
+
+                                <ul class="sub-menu">
                                     <li><a href="#">About us</a></li>
                                     <li><a href="#">Contacts</a></li>
                                     <li><a href="#">Our workers</a></li>
@@ -33,308 +35,299 @@
                             <li><a href="#">Homepages</a></li>
                             <li><a href="#">Products</a></li>
                             <li><a href="#">Pricing</a></li>
-                            <li><a href="#">Blog</a></li>
-                        </ul> 
+                            <li class="sub-menu-l">
+                                <span class="sub-menu-btn">Blogs </span>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Test1</a></li>
+                                    <li><a href="#">Test2</a></li>
+                                    <li><a href="#">Test3</a></li>
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
                 </nav>
 
-                <div id="hide-container" class="contact-info-cont is-hidden">
+                <div id="contact-info" class="contact-info-cont is-hidden">
                     <span>+00 123 456 709</span>
                     <button class="btn blue-btn">Contact Us</button>
                 </div>
             </div>
         </header>
+    </div>
+    
+    <main>
+        <section>
+            <div class="hero-cont preview-cont">
+                <div class="o-container">
+                    <h1>Good desigh meets<br class="h-brake-rule"> great user experience</h1>
+                    <p>For everyone, from beginners to experts</p>
 
-        <main>
-                <section>
-                    <div class="hero-cont preview-cont">
-                        <div class="o-container">
-                            <h1>Good desigh meets<br class="h-brake-rule"> great user experience</h1>
-                            <p>For everyone, from beginners to experts</p>
-            
-                            <button class="btn blue-btn">Buy Digits</button>
-                            <button class="btn white-btn">See the Features</button>
-        
-                            <div class="hero-img-wrapper">
-                                <img src="images/medium-images/hero-standart-img.png" srcset="images/mobile-images/hero-mobile-img.png 350w, images/medium-images/hero-standart-img.png 1440w" alt="">
-                            </div>
-                        </div>
+                    <button class="btn blue-btn">Buy Digits</button>
+                    <button id="feature-btn" class="btn white-btn">See the Features</button>
+
+                    <div class="hero-img-wrapper">
+                        <img src="images/medium-images/hero-standart-img.png"
+                            srcset="images/mobile-images/hero-mobile-img.png 350w, images/medium-images/hero-standart-img.png 1440w"
+                            alt="">
                     </div>
-                  
-                        <aside>
-                            <figure class="o-section">
-                                    <figcaption>Trusted by forward-thinking software teams around the world</figcaption>
-        
-                                    <div class="flex-companies-logo o-container">
-                                        <div class="link-wrapper">
-                                            <a href="#"><img src="images/company-logo-1.png" alt="Netflix logo"></a>
-                                        </div>
-        
-                                        <div class="link-wrapper">
-                                            <a href="#"><img src="images/company-logo-2.png" alt="DrawKit logo"></a>
-                                        </div>
-        
-                                        <div class="link-wrapper">
-                                            <a href="#"><img src="images/company-logo-3.png" alt="Figma logo"></a>
-                                        </div>
-        
-                                        <div class="link-wrapper">
-                                            <a href="#"><img src="images/company-logo-4.png" alt="Cinemax logo"></a>
-                                        </div>
-        
-                                        <div class="link-wrapper">
-                                            <a href="#"><img src="images/company-logo-5.png" alt="Striple logo"></a>
-                                        </div>
-        
-                                        <div class="link-wrapper">
-                                            <a href="#"><img src="images/company-logo-6.png" alt="Google logo"></a>
-                                        </div>
-        
-                                        <div class="link-wrapper">
-                                            <a href="#"><img src="images/company-logo-7.png" alt="Disney logo"></a>
-                                        </div>                            
-                                    </div>
-                            </figure>
-                        </aside>
-        
-                        <section class="o-section">
-                            <div class="whatever-wrapper o-container">
-                                <h2>Whatever work you do,<br class="h-brake-rule"> we're able to help</h2>
-        
-                                <div class="flex-features-container">
-                                    <div class="workers-img-wrapper">
-                                        <img srcset="images/mobile-images/content-about-mobile.png 350w, images/medium-images/content-about-standart.png 1440w" alt="Collage image with our workers team">
-                                    </div>
-
-                                    <div class="features-content">
-                                        <article>
-                                            <div class="flex-about-cont">
-                                                <div class="img-wrapper">
-                                                    <img src="images/about-icon1.png" alt="">
-                                                </div>
-                
-                                                <div class="about-wrapper">
-                                                    <h3>Design and Assets</h3>
-                                                    <p>Make your brand stand out with pixel-perfect design crafted to perfection.</p>
-                                                </div>
-                                            </div>
-                                        </article>
-            
-                                        <hr>
-            
-                                        <article>
-                                            <div class="flex-about-cont">
-                                                <div class="img-wrapper">
-                                                    <img src="images/about-icon2.png" alt="">
-                                                </div>
-                
-                                                <div class="about-wrapper">
-                                                    <h3>Easy Content</h3>
-                                                    <p>Import your demos or build pages visually. Bonus: All images and illustrations included!</p>
-                                                </div>
-                                            </div>
-                                        </article>
-            
-                                        <hr>
-            
-                                        <article>
-                                            <div class="flex-about-cont">
-                                                <div class="img-wrapper">
-                                                    <img src="images/about-icon3.png" alt="">
-                                                </div>
-                
-                                                <div class="about-wrapper">
-                                                    <h3>Fast and Reliable</h3>
-                                                    <p>No heavy-weight plugins. No builders. No unneccesary file loading. Pure WordPress.</p>
-                                                </div>
-                                            </div>
-                                        </article>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                    <section class="o-section">
-                        <div class="simplicity-wrapper">
-                            <div class="o-container">
-                                <h2>Simplicity meets innovative design</h2>
-
-                                <div class="simp-cont-wrapper">
-                                    <p>It's really easy to start using Digits. Install the theme, choose a demo and start designing the future of your business!</p>
-                                    <button class="btn blue-btn">Buy Digits</button>    
-                                </div>
-                            </div>
-
-                            <picture>
-                                <source srcset="images/large-screen/pre-footer-img-1920px.png" media="(min-width: 1440px)">
-                                <source srcset="images/large-screen/pre-footer-img.png" media="(min-width: 1024px)">
-                                <source srcset="images/medium-images/pre-footer-900px-img.png" media="(min-width: 768px)">
-                                <img src="images/mobile-images/mobile-pre-footer-img.png" alt="">
-                            </picture>
-                            <!-- <div class="change-img"></div> -->
-                        </div> 
-                    </section>
-    
-                    <section class="o-section">
-                        <div class="o-container">
-                            <h2>What others are saying</h2>
-    
-                            <div class="flex-content-comment-container">
-                                <section>
-                                    <div class="comment-cont-flex">
-                                        <p>Completely beautiful website and amazing support! This is my second website from this author and I love both of the sites so much and she has helped me so well when I needed it!</p>
-    
-                                        <ul>
-                                            <li><img src="images/person-img1.png" alt="The Girl image"></li>
-                                            <li>Anji Beautiful</li>
-                                            <li><a href="#">temp.club</a></li>
-                                        </ul>
-                                    </div>
-                                </section>
-                            
-                                <section>
-                                    <div class="comment-cont-flex">
-                                        <p>Really easy to use and customize. easy to understand. Darinka helped me with my site! She answers very quickly, a good service! Thank you very much!</p>
-    
-                                        <ul>
-                                            <li><img src="images/person-img2.png" alt="The Man image"></li>
-                                            <li>Abdula Dendy</li>
-                                            <li><a href="#">temp.club</a></li>
-                                        </ul>
-                                    </div>
-                                </section>
-                    
-                                <section>
-                                    <div class="comment-cont-flex">
-                                        <p>Really pleasing to look at! Documentation (including installation instructions) are clear and that is coming from a relatively new WordPress user.</p>
-                                        <ul>
-                                            <li><img src="images/person-img3.png" alt="The Girl image"></li>
-                                            <li>Ammy Wonderful</li>
-                                            <li><a href="#">temp.club</a></li>
-                                        </ul>
-                                    </div>
-                                </section>
-                            </div>
-                        </div>
-                    </section>
-           
-                    <section class="o-section">
-                        <div class="pre-footer-wrapper">
-                            <div class="pre-footer-flex-container o-container">
-                                <h2>Ready to launch<br class="h-brake-rule"> your next website?</h2>
-        
-                                <div class="pre-footer-cont-wrapper">
-                                    <button class="btn white-btn">Get in touch now</button>
-                                    <p>Or, take a peek inside our <a href="#">design studio</a></p>
-                                </div>
-                            </div>
-                        </div> 
-                    </section>
-                </section>
-        </main>
-
-        <footer>
-            <div class="o-container">
-                <div class="first-footer-flex-container">
-                    <div class="footer-content-wrapper">
-                        <img src="images/main-logo.png" alt="Our brand logo">
-    
-                        <p>Digits is a website template built to work seamlesly with the WordPress block editor to create beautifully designed pages in minutes.</p>
-                    </div>
-
-                    <div class="lists-flex-container">
-                        <section>
-                            <div class="list-content-wrapper">
-                                <h4>Pages</h4>
-        
-                                <ul class="footer-list">
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">About</a></li>
-                                    <li><a href="#">News</a></li>
-                                    <li><a href="#">Pricing</a></li>
-                                    <li><a href="#">Contact</a></li>
-                                </ul>
-                            </div>
-                        </section>
-        
-                        <section>
-                            <div class="list-content-wrapper">
-                                <h4>Demons</h4>
-        
-                                <ul class="footer-list">
-                                    <li><a href="#">Classic</a></li>
-                                    <li><a href="#">Boxy</a></li>
-                                    <li><a href="#">Gradient</a></li>
-                                    <li><a href="#">Minimal</a></li>
-                                    <li><a href="#">Night</a></li>
-                                </ul>
-                            </div>
-                        </section>
-        
-                        <section>
-                            <div class="list-content-wrapper">
-                                <h4>Resources</h4>
-        
-                                <ul class="social-list line-list">
-                                    <li><a href="#"><img src="images/social-icon1.png" alt="Facebook logo"></a></li>
-                                    <li><a href="#"><img src="images/social-icon2.png" alt="Twitter logo"></a></li>
-                                    <li><a href="#"><img src="images/social-icon3.png" alt="Instagram logo"></a></li>
-                                    <li><a href="#"><img src="images/social-icon4.png" alt="Dribbble logo"></a></li>
-                                    <li><a href="#"><img src="images/social-icon5.png" alt="Envanto logo"></a></li>
-                                </ul>
-            
-                                <ul class="line-list">
-                                    <li><a href="#">Download now</a></li>
-                                    <li><a href="#">Documentation</a></li>
-                                </ul>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-    
-                <div class="second-footer-flex-container">
-                    <span>Copyright &#169; 2020 tempy.club</span>
-    
-                    <ul class="line-list">
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Use</a></li>
-                        <li><a href="#">GDPR</a></li>
-                    </ul>
                 </div>
             </div>
-        </footer>
 
-        <!-- Some JS for page -->
-        <script>
-            (function() {
+            <aside>
+                <figure class="o-section">
+                    <figcaption>Trusted by forward-thinking software teams around the world</figcaption>
 
-                var toggleButton = document.getElementById('sub-menu-toggle');
-                toggleButton.addEventListener('click', function(event) {
-                    event.preventDefault();
-                    var subMenu = document.getElementById('sub-menu-js');
-                    subMenu.classList.toggle('is-open');
-                });
+                    <div class="flex-companies-logo o-container">
+                        <div class="link-wrapper">
+                            <a href="#"><img src="images/company-logo-1.png" alt="Netflix logo"></a>
+                        </div>
 
-            })();
+                        <div class="link-wrapper">
+                            <a href="#"><img src="images/company-logo-2.png" alt="DrawKit logo"></a>
+                        </div>
 
-            (function() {
+                        <div class="link-wrapper">
+                            <a href="#"><img src="images/company-logo-3.png" alt="Figma logo"></a>
+                        </div>
 
-                var button = document.getElementById('toggle-button');
-                button.addEventListener('click', function(event) {
-                event.preventDefault();
-                console.log("Click");
-                var body = document.getElementById('body');
-                var menuContanier = document.getElementById('mobile-menu-container');
-                var mainMenu = document.getElementById('main-menu');
-                var hideContainer = document.getElementById('hide-container');
+                        <div class="link-wrapper">
+                            <a href="#"><img src="images/company-logo-4.png" alt="Cinemax logo"></a>
+                        </div>
 
-                body.classList.toggle('body-is-open');
-                menuContanier.classList.toggle('header-opened');
-                mainMenu.classList.toggle('is-open');
-                hideContainer.classList.toggle('is-open');
-                });
+                        <div class="link-wrapper">
+                            <a href="#"><img src="images/company-logo-5.png" alt="Striple logo"></a>
+                        </div>
 
-            })();
-        </script>
-    </body>
+                        <div class="link-wrapper">
+                            <a href="#"><img src="images/company-logo-6.png" alt="Google logo"></a>
+                        </div>
+
+                        <div class="link-wrapper">
+                            <a href="#"><img src="images/company-logo-7.png" alt="Disney logo"></a>
+                        </div>
+                    </div>
+                </figure>
+            </aside>
+
+            <section class="o-section">
+                <div class="whatever-wrapper o-container">
+                    <h2>Whatever work you do,<br class="h-brake-rule"> we're able to help</h2>
+
+                    <div class="flex-features-container">
+                        <div class="workers-img-wrapper">
+                            <img srcset="images/mobile-images/content-about-mobile.png 350w, images/medium-images/content-about-standart.png 1440w"
+                                alt="Collage image with our workers team">
+                        </div>
+
+                        <div class="features-content">
+                            <article>
+                                <div class="flex-about-cont">
+                                    <div class="img-wrapper">
+                                        <img src="images/about-icon1.png" alt="">
+                                    </div>
+
+                                    <div class="about-wrapper">
+                                        <h3>Design and Assets</h3>
+                                        <p>Make your brand stand out with pixel-perfect design crafted to perfection.
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <hr>
+
+                            <article>
+                                <div class="flex-about-cont">
+                                    <div class="img-wrapper">
+                                        <img src="images/about-icon2.png" alt="">
+                                    </div>
+
+                                    <div class="about-wrapper">
+                                        <h3>Easy Content</h3>
+                                        <p>Import your demos or build pages visually. Bonus: All images and
+                                            illustrations included!</p>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <hr>
+
+                            <article>
+                                <div class="flex-about-cont">
+                                    <div class="img-wrapper">
+                                        <img src="images/about-icon3.png" alt="">
+                                    </div>
+
+                                    <div class="about-wrapper">
+                                        <h3>Fast and Reliable</h3>
+                                        <p>No heavy-weight plugins. No builders. No unneccesary file loading. Pure
+                                            WordPress.</p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="o-section">
+                <div class="simplicity-wrapper">
+                    <div class="o-container">
+                        <h2>Simplicity meets innovative design</h2>
+
+                        <div class="simp-cont-wrapper">
+                            <p>It's really easy to start using Digits. Install the theme, choose a demo and start
+                                designing the future of your business!</p>
+                            <button class="btn blue-btn">Buy Digits</button>
+                        </div>
+                    </div>
+
+                    <picture>
+                        <source srcset="images/large-screen/pre-footer-img-1920px.png" media="(min-width: 1440px)">
+                        <source srcset="images/large-screen/pre-footer-img.png" media="(min-width: 1024px)">
+                        <source srcset="images/medium-images/pre-footer-900px-img.png" media="(min-width: 768px)">
+                        <img src="images/mobile-images/mobile-pre-footer-img.png" alt="">
+                    </picture>
+                    <!-- <div class="change-img"></div> -->
+                </div>
+            </section>
+
+            <section class="o-section">
+                <div class="o-container">
+                    <h2>What others are saying</h2>
+
+                    <div class="flex-content-comment-container">
+                        <section>
+                            <div class="comment-cont-flex">
+                                <p>Completely beautiful website and amazing support! This is my second website from this
+                                    author and I love both of the sites so much and she has helped me so well when I
+                                    needed it!</p>
+
+                                <ul>
+                                    <li><img src="images/person-img1.png" alt="The Girl image"></li>
+                                    <li>Anji Beautiful</li>
+                                    <li><a href="#">temp.club</a></li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section>
+                            <div class="comment-cont-flex">
+                                <p>Really easy to use and customize. easy to understand. Darinka helped me with my site!
+                                    She answers very quickly, a good service! Thank you very much!</p>
+
+                                <ul>
+                                    <li><img src="images/person-img2.png" alt="The Man image"></li>
+                                    <li>Abdula Dendy</li>
+                                    <li><a href="#">temp.club</a></li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section>
+                            <div class="comment-cont-flex">
+                                <p>Really pleasing to look at! Documentation (including installation instructions) are
+                                    clear and that is coming from a relatively new WordPress user.</p>
+                                <ul>
+                                    <li><img src="images/person-img3.png" alt="The Girl image"></li>
+                                    <li>Ammy Wonderful</li>
+                                    <li><a href="#">temp.club</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+
+            <section class="o-section">
+                <div class="pre-footer-wrapper">
+                    <div class="pre-footer-flex-container o-container">
+                        <h2>Ready to launch<br class="h-brake-rule"> your next website?</h2>
+
+                        <div class="pre-footer-cont-wrapper">
+                            <button class="btn white-btn">Get in touch now</button>
+                            <p>Or, take a peek inside our <a href="#">design studio</a></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <div class="o-container">
+            <div class="first-footer-flex-container">
+                <div class="footer-content-wrapper">
+                    <img src="images/main-logo.png" alt="Our brand logo">
+
+                    <p>Digits is a website template built to work seamlesly with the WordPress block editor to create
+                        beautifully designed pages in minutes.</p>
+                </div>
+
+                <div class="lists-flex-container">
+                    <section>
+                        <div class="list-content-wrapper">
+                            <h4>Pages</h4>
+
+                            <ul class="footer-list">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">News</a></li>
+                                <li><a href="#">Pricing</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div class="list-content-wrapper">
+                            <h4>Demons</h4>
+
+                            <ul class="footer-list">
+                                <li><a href="#">Classic</a></li>
+                                <li><a href="#">Boxy</a></li>
+                                <li><a href="#">Gradient</a></li>
+                                <li><a href="#">Minimal</a></li>
+                                <li><a href="#">Night</a></li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div class="list-content-wrapper">
+                            <h4>Resources</h4>
+
+                            <ul class="social-list line-list">
+                                <li><a href="#"><img src="images/social-icon1.png" alt="Facebook logo"></a></li>
+                                <li><a href="#"><img src="images/social-icon2.png" alt="Twitter logo"></a></li>
+                                <li><a href="#"><img src="images/social-icon3.png" alt="Instagram logo"></a></li>
+                                <li><a href="#"><img src="images/social-icon4.png" alt="Dribbble logo"></a></li>
+                                <li><a href="#"><img src="images/social-icon5.png" alt="Envanto logo"></a></li>
+                            </ul>
+
+                            <ul class="line-list">
+                                <li><a href="#">Download now</a></li>
+                                <li><a href="#">Documentation</a></li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <div class="second-footer-flex-container">
+                <span>Copyright &#169; 2020 tempy.club</span>
+
+                <ul class="line-list">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">GDPR</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Some JS for page -->
+    <script src="script.js"></script>
+</body>
+
 </html>

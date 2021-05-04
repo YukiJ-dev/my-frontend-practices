@@ -1,3 +1,4 @@
+/* Same styles for page */
 :root {
     box-sizing: border-box;
     font-size: 1em;
@@ -19,7 +20,575 @@ body {
     margin: 0;
 }
 
+body.opend-mobile-menu {
+    overflow: hidden;
+}
+
 img { 
     max-width: 100%;
     vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul, h1, h2, h3 {
+    margin: 0;
+}
+
+h1, h2, h3 {
+    color: #0B132A;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 2rem; /* des: 32px */
+    line-height: 2.5rem; /* des: 70px */
+} 
+
+h2 {
+    font-size: 1.5625rem; /* des: 25px */
+}
+
+h3 {
+    font-size: 1.125rem; /* des: same */ 
+}
+
+p {
+    line-height: 1.5625; /* des: 30px*/
+}
+
+button, input {
+    font-family: inherit;
+    font-size: inherit;
+    border: 0;
+}
+
+button {
+    padding: 0;
+    cursor: pointer; 
+}
+
+main {
+    display: block;
+}
+
+.o-content-container {
+    padding: 0 4%;
+}
+
+.s-bold {
+    font-weight: 700;
+}
+
+.img-button {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.marker-img::before,
+.marker-img::after {
+    content: "";
+    display: inline-block;
+
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    vertical-align: middle;
+}
+
+/* Для того что-бы понять когда нужно это сделать,
+   Нужно просто определиться с тем когда размер внутреннего контента
+   без учета отступов будет равен максимальной ширине контейнера и в этот момент установить её */
+/* 1240px */
+@media (min-width: 77.5em) {
+    .o-content-container {
+        padding: 0;
+        max-width: 71.25em;
+        margin: 0 auto;
+    }
+}
+
+.mobile-block-img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Different styles for containers*/
+
+
+/* For all blocks that placed in main flow of page */
+main > * + * {
+    padding-top: 1.5625em; /* des: 50px*/
+}
+
+/* Styles for header block */
+.f-main-header {
+    padding: 1.4375em 0; /* des: 46px */
+}
+
+.f-between-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.125rem; /* des: 20px */
+}
+
+.logo::before {
+    background-image: url("../images/logo.png");
+
+    margin-right: 0.25em;
+    height: 2em;
+    width: 2em;
+}
+
+.opening-m-btn {
+    height: 2em;
+    width: 2em;
+
+    transition: transform 0.2s;
+}
+
+.opening-m-btn[data-is-toggled="false"] {
+    background-image: url("../images/mobile-menu.png");
+}
+
+.opening-m-btn[data-is-toggled="true"] {
+    transform: translateX(0);
+    background-image: url("../images/mobile-menu-closed.png");
+}
+
+nav.opend-mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    background-color: #fff;
+    padding: 0 4%;
+    z-index: 1000;
+    overflow: auto;
+}
+
+
+.f-main-header {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.main-menu {
+    display: none;
+    
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    flex: 30em 0;
+}
+
+.main-menu[data-is-hidden = "false"] {
+    display: flex;
+}
+
+.main-menu li {
+    font-size: 1.75rem;
+    font-weight: 500;
+    opacity: 0;
+
+    transition: opacity 0.5s ease-in;
+}
+
+.main-menu li[data-is-hidden = "false"] {
+    opacity: 1;
+}   
+
+.auth-container {
+    display: none;
+    margin-top: auto;
+    text-align: center;
+}
+
+.auth-container[data-is-hidden = "false"] {
+    display: block;
+}
+
+.auth-container button {
+    font-weight: 500;
+    background-color: transparent;
+    font-size: 1.25rem;
+}
+
+.auth-container button:first-of-type {
+    color: #0B132A;
+    padding: 0 1em;
+}
+
+.auth-container button:last-of-type {
+    color: #F53855;
+    border: solid #F53855 2.5px;
+    padding: 0.5em 2em;
+    border-radius: 1.5em;
+}
+
+/* Styles for hero block */
+.f-hero-container {
+    padding: 1.3437em 3%; /* des: top, bottom: 43px */
+}
+
+.f-hero-container * + * {
+    padding-top: 2em;
+}
+
+.f-hero-container p {
+    margin: 0;
+    padding: 0.625em 0 3.125em; /* des: top 20px, bottom: 50px */
+}
+
+.main-button {
+    color: #FFFFFF;
+    font-weight: bold;
+    background-color: #F53838;
+    padding: 1em 0; /* des: top 17.5px left right 65px */
+    border-radius: 0.5em;
+    width: 100%;
+
+    box-shadow: 1px 15px 30px rgba(245, 56, 56, 0.7);
+}
+
+/* Styles for feauture block */
+.f-features-container {
+    padding: 1.1875em 0; /* des: 38px*/
+}
+
+.f-features-container > .feature-content + .feature-content {
+    border-top: solid #EEEFF2 3px;
+}
+
+.feature-content {
+    padding: 1.875em 0; /* des: 60px */
+}
+
+.feature-content img {
+    margin-right: 0.5em;
+}
+
+.inline-container {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.inline-container > span {
+    color: #0B132A;
+    font-size: 1.25rem; /* des: 25px */
+}
+
+.inline-container > p {
+    margin: 0;
+    font-size: 1.125rem; /* des: 18px */
+    padding-top: 0.25em;
+}
+
+/* Styles for addition block */
+.f-addition-container {
+    padding: 1.25em 0; /* des: 40px*/
+}
+
+.f-addition-container > * + * {
+    padding-top: 1.5em;
+}
+
+.features-list {
+    font-size: 0.875rem;
+}
+
+.features-list > li + li {
+    padding-top: 1.0714em;
+}
+
+.features-list .marker-img::before {
+    background-image: url("../images/list-icon.png");
+    height: 1.4285em;
+    width: 1.4285em;
+    margin-right: 0.75em;
+}
+
+/* Styles for plans block */
+
+.plans-wrapper {
+    padding: 3.6562em 0 1.5625em; /* des: top 117px, bottom 50px */
+}
+
+.f-plans-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1.875em;
+}
+
+.f-plans-container > .plan-card + .plan-card {
+    margin-top: 1.5em;
+}
+
+.plan-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border-radius: 1em;
+    border: solid #DDDDDD 2px;
+    padding: 2.5em 1.5em 1.5625em;
+    width: 100%;
+    text-align: center;
+    height: 40em;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.plan-card:hover {
+    border: solid #F53838 2px;
+}
+
+/* 375px */
+@media (min-width: 23.4375em) {
+    .plan-card:hover {
+        transform: translate(50px, -10px);
+        box-shadow: -50px 10px 0 rgb(0, 0, 0);
+    }
+}
+
+.plan-card:hover .select-btn {
+    background-color: #F53838;
+    color: #FFFFFF;
+}
+
+/* 375px */
+@media (min-width: 23.4375em) {
+    .plan-card {
+        width: auto;
+        min-width: 15.625em;
+    }
+}
+
+.plan-card h3 {
+    padding: 0.9375em;
+}
+
+.plan-list {
+    display: inline-block;
+    text-align: initial;
+    font-size: 0.875rem;
+}
+
+.plan-list .marker-img::before {
+    background-image: url("../images/plan-list-icon.png");
+    font-size: 1rem;
+    width: 0.875em;
+    height: 0.625em;
+
+    margin-right: 1.5em;
+}
+
+.plan-list > li + li {
+    padding-top: 1.25em;
+}
+
+.plan-cost {
+    font-size: 1.5625rem;
+    display: block;
+}
+
+.plan-cost .s-bold {
+    color: #0B132A;
+}
+
+.select-btn {
+    margin-top: 1em;
+    border-radius: 3.125em;
+    background-color: transparent;
+    border: solid #F53838 2px;
+    color: #F53838;
+    font-weight: 700;
+
+    width: 100%;
+    padding: 0.75em 0;
+
+    box-shadow: 0 1.0625em 10px rgba(245, 56, 56, 0.2);
+    transition-property: color, background-color;
+    transition-duration: 0.5s;
+    transition-delay: 0.1s;
+    transition-timing-function: ease-in-out;
+}
+
+/* 375px */
+@media (min-width: 23.4375em) {
+    .select-btn {
+        width: auto;
+        padding: 0.75em 4.0625em;
+    }
+}
+
+/* Styles for network block */
+
+.network-wrapper {
+    padding-top: 1.5625em; /* des: 50px*/
+}
+
+.network-wrapper p {
+    margin: 0;
+     padding: 1.25em 0;
+}
+
+.network-wrapper > img{
+    padding: 4.2187em 0 1.25em; /*des: top 135px, bottom 40px*/
+}
+
+.f-wrap-company-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.f-wrap-company-logos img {
+    padding: 0.5em;
+    max-width: 9.375em; /* delete this on des*/
+}
+
+/* Styles for trusted block */
+.trusted-customers-wrapper {
+    padding: 0 2% 0.625em; /* des: 20px*/
+}
+
+.f-customers-container > * + * {
+    margin-top: 1.5em;
+}
+
+.comment-wrapper {
+    padding: 0.9375em;
+    border: solid #DDDDDD 2px;
+    border-radius: 0.5em;
+    color: #0B132A;
+}
+
+.comment-wrapper p{
+    margin: 0;
+    padding-top: 1.25em;
+}
+
+.avatar-wrapper img {
+    margin-right: 0.5em;
+}
+
+.customer-info span {
+    font-weight: 500    ;
+    font-size: 1.125rem; /*des: 20px*/
+}
+
+.customer-info p {
+    font-size: 0.875rem;
+    color: #4F5665;
+}
+
+.star-img::after {
+    background-image: url("../images/star-icon.png");
+    width: 0.875em;
+    height: 0.875em;
+    margin-left: 0.5em;
+    vertical-align: -7%;
+}
+
+/* Same styles for plans, network, trusted blocks */
+.centred-h {
+    text-align: center;
+}
+
+/* Styles for subscribe block */
+.f-subscribe-container {
+    position: relative;
+    transform: translateY(50%);
+    margin-top: -50%;
+    padding: 1.8125em 2.1875em; /* des: 58px right: delete*/
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    border-radius: 1em;
+}
+
+/* Styles for footer container */
+
+.o-content-container > .f-footer-container {
+    /* This padding must change when container placed above would stretch to normal width */
+    padding: 12em 0 3.125em; /* des: top 185px, bottom 100px*/
+}
+
+.footer-container {
+    background-color: #F8F8F8;
+}
+
+.footer-header > * + * {
+    padding-top: 0.5em;
+}
+
+.inline-list {
+    padding: 0;
+}
+
+.inline-list > li {
+    display: inline-block;
+    padding: 0.5em;
+}
+
+.inline-list > li:first-child {
+    padding-left: 0;
+}
+
+.footer-header > span {
+    display: inline-block;
+}
+
+.f-footer-container > * + * {
+    padding-top: 1em;
+}
+
+.footer-h {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #0B132A;
+    display: block;
+    width: 100%;
+}
+
+.footer-h::after {
+    background-image: url("../images/right-arrow.png");
+    width: 1em;
+    height: 1em;
+
+    background-size: cover;
+    float: right;
+}
+
+.footer-h.is-open::after {
+    background-image: url("../images/down-arrow.png");
+}
+
+.footer-list > li {
+    padding: 0.5em 0;
+}
+
+.footer-list.is-hidden {
+    display: none;
+}
+
+.footer-list.is-open {
+    display: block;
 }

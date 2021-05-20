@@ -1,5 +1,10 @@
+/* Main styles for page */
+
 :root {
     box-sizing: border-box;
+    --white-color: #ffffff;
+    --gradient-for-page: linear-gradient(#FD749B 0%, #281AC8 100%);
+    --reserve-color: #FD749B;
 }
 
 *,
@@ -8,22 +13,908 @@
     box-sizing: inherit;
 }
 
-
 html,
 body {
     height: 100%;
 }
 
 body {
+    position: relative;
+    z-index: 500;
     font-family: "Poppins", 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0;
+    font-weight: 400;
+    color: #333333;
+}
+
+
+/* when mobile menu is opend */
+
+body.opend-menu {
+    overflow: hidden;
 }
 
 svg,
 img {
+    max-width: 100%;
     vertical-align: middle;
 }
 
-img {
-    max-width: 100%;   
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+.inline-list>li {
+    display: inline-block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+input,
+button {
+    border: 0;
+    padding: 0;
+    font: inherit;
+}
+
+input {
+    max-width: 100%;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* typography for page */
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+    margin: 0;
+}
+
+h1 {
+    font-size: 1.75rem;
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 1.375rem;
+}
+
+h3,
+h4 {
+    font-size: 1.125rem;
+}
+
+p {
+    line-height: 1.875;
+}
+
+.white-color {
+    color: var(--white-color);
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.c-inline {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.block-sp {
+    display: block;
+}
+
+
+/* screen reader inforamtion */
+
+.sr-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+    -webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+
+
+/* Adding gradient to page */
+
+.prpl-text-gradient {
+    background-color: var(--reserve-color);
+    background-image: var(--gradient-for-page);
+}
+
+
+/* gradient for text */
+
+.prpl-text-gradient {
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+
+/* bottom border gradient for headers */
+
+.bottom-line {
+    position: relative;
+    /* for bottom line */
+    margin-bottom: 15px;
+}
+
+.bottom-line::before {
+    content: " ";
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    height: 7px;
+    width: 50px;
+    border-radius: 2em;
+    background: var(--reserve-color);
+}
+
+.bottom-line.center-line::before {
+    width: 100%;
+    background: url("../images/line.svg") center no-repeat;
+}
+
+
+/* for image buttons */
+
+.img-btn {
+    background: transparent;
+}
+
+
+/* styles for hidden elements */
+
+.menu-hidden,
+.mobile-hidden,
+.desctop-hidden {
+    display: none;
+}
+
+
+/* styles for main content containers */
+
+.o-content-container {
+    padding: 0 4%;
+}
+
+
+/* styles for flex elements */
+
+.c-f-row-between,
+.c-f-column-around {
+    display: flex;
+}
+
+.c-f-row-between {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.c-f-column-around {
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.c-f-column {
+    flex-direction: column;
+}
+
+.i-f-top {
+    align-self: flex-start;
+}
+
+.c-f-wrap {
+    flex-wrap: wrap;
+}
+
+
+/* styles for grid elements */
+
+.c-g-row-between {
+    display: grid;
+    row-gap: 2em;
+}
+
+
+/* styles for page buttons */
+
+.white-btn,
+.prpl-btn {
+    font-weight: 900;
+}
+
+.white-btn {
+    position: relative;
+    background-color: var(--white-color);
+    border-radius: 2em;
+}
+
+.white-btn::before {
+    content: " ";
+    background-color: var(--reserve-color);
+    background-image: var(--gradient-for-page);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.prpl-btn {
+    background-image: var(--gradient-for-page);
+    border-radius: 2em;
+    color: #ffffff;
+}
+
+.transp-btn {
+    border: solid white 2px;
+    color: white;
+    font-weight: bold;
+    border-radius: 2em;
+    background-color: transparent;
+}
+
+
+/* style for 100% width buttons */
+
+.width-btn {
+    width: 100%;
+    padding: 1em 0;
+}
+
+
+/* styles for icons */
+
+.icon::before {
+    content: " ";
+    display: inline-block;
+    vertical-align: middle;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 0.5em;
+}
+
+.bitcoin-i::before {
+    height: 1.75em;
+    width: 1.6875em;
+    background-image: url("../images/bitcoin.svg");
+}
+
+.ethereum-i::before {
+    height: 1.875em;
+    width: 1.0625em;
+    margin-right: 0.5em;
+    background-image: url("../images/eth.svg");
+}
+
+.bank-i::before {
+    height: 1.6875em;
+    width: 1.6875em;
+    background-image: url("../images/bank.svg");
+}
+
+
+/* styles for centred containers */
+
+.centred-container {
+    text-align: center;
+}
+
+
+/* style for gradient border elements */
+
+.border-gradient-wrapper {
+    background-image: var(--gradient-for-page);
+    padding: 1px;
+    border-radius: 0.5em;
+}
+
+
+/* Different styles for containers */
+
+
+/* Styles for page header */
+
+.main-nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: var(--white-color);
+    z-index: 700;
+}
+
+
+/* main part of mobile menu hidden for PC */
+
+.c-f--main-nav {
+    padding: 1em 2%;
+    height: inherit;
+    align-items: initial;
+    justify-content: initial;
+    max-width: 93.75em;
+    margin: 0 auto;
+}
+
+
+/* 1024px */
+
+
+/* @media (min-width: 64em) {
+    .c-f--main-nav {
+        padding: 2.375em 6% 2.375em 7%;
+    }
+} */
+
+.c-f--inner-nav {
+    flex-basis: 100%;
+    align-items: initial;
+    justify-content: space-around;
+}
+
+.c-f--inner-nav>*+* {
+    padding-top: 2em;
+}
+
+.c-f--inner-nav.menu-hidden {
+    display: none;
+}
+
+.c-f--main-menu {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: var(--white-color);
+    flex-basis: 15em;
+}
+
+.mobile-btn-wrapper>*+* {
+    margin-top: 1em;
+}
+
+.mobile-btn-wrapper>.white-btn::before {
+    content: "Sell Bitcoin";
+}
+
+
+/* Styles for mobile menu */
+
+
+/* For opend or closed menu state */
+
+.main-nav.opend-menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    overflow: auto;
+    z-index: 1000;
+    overflow-y: scroll;
+    background-image: var(--gradient-for-page);
+}
+
+
+/* it makes the logo wihte */
+
+.logo[data-menu-is-opend="true"] .logo-text,
+.logo[data-menu-is-opend="true"] .logo-inner {
+    fill: #ffffff;
+}
+
+.logo[data-menu-is-opend="true"] .logo-text-str,
+.logo[data-menu-is-opend="true"] .logo-outer,
+.logo[data-menu-is-opend="true"] .logo-inner {
+    stroke: #ffffff;
+}
+
+
+/* hide the close icon when the menu is closed and hide them when vice versa */
+
+.menu-toggle[data-is-opend="false"] .close-icon,
+.menu-toggle[data-is-opend="true"] .menu-icon {
+    display: none;
+}
+
+
+/* it makes the close icon white */
+
+.menu-toggle[data-is-opend="true"] .close-icon {
+    fill: var(--white-color);
+}
+
+
+/* show the menu icon when the menu opend and hide then show the icon closed when vice versa */
+
+.menu-toggle[data-is-opend="false"] .menu-icon,
+.menu-toggle[data-is-opend="true"] .close-icon {
+    display: initial;
+}
+
+
+/* Styles for hero block */
+
+.hero-s {
+    /* top: nav height + 65px bottom: height of wave*/
+    padding: 6.0937em 0 5.1562em;
+    /* height of wave: 165px */
+    background: url("../images/back-wave-for-hero.png") bottom / 100% 5.1562em no-repeat, linear-gradient(#FD749B 2.31%, #281AC8 66.14%)
+}
+
+.hero-h>*+* {
+    padding-top: 0.625em;
+}
+
+.hero-h>button {
+    margin-top: 0.9375em;
+    padding-top: 1em;
+}
+
+.hero-h>button::before {
+    content: "GET STARTED";
+}
+
+
+/* Styles for welcome block */
+
+.h-welcome>p {
+    padding: 1.0937em 0;
+}
+
+
+/* Styles for exchange block */
+
+.rates-s {
+    /* border: solid red 1px; */
+    /* top: wave height + 50px  bottom height of weve + 20px  */
+    padding: 7.8125em 0 4.375em;
+    /* height of first wave: 200px height fo second wave: 120px*/
+    background: url("../images/top-wave-table.png") top / 100% 6.25em, url("../images/bottom-wave-table.png") bottom / 100% 3.75em, var(--gradient-for-page);
+    background-repeat: no-repeat;
+}
+
+
+/* main style for table */
+
+.rates-table {
+    width: 100%;
+    background-color: var(--white-color);
+    border-radius: 1.875em;
+    /* same 32px  65px*/
+    padding: 0.75em 1em 2.0312em;
+}
+
+.rates-table td {
+    display: block;
+    padding-bottom: 1em;
+    /* font-size = 14px for desctop */
+}
+
+.rates-table td:last-child {
+    padding-bottom: 0;
+}
+
+.rates-table td+td {
+    border-top: solid #BBBBBB 3px;
+}
+
+
+/* delete when t-head will be visible */
+
+.rates-table h3 {
+    padding-bottom: 0.5em;
+}
+
+
+/* styles for first cell */
+
+.first-cell>section+section {
+    padding-top: 1em;
+}
+
+.cost-wrapper>.block-sp+.block-sp {
+    padding-top: 0.675em;
+}
+
+
+/* styles for second cell */
+
+.reserves-list>li+li {
+    padding-top: 1em;
+}
+
+
+/* styles for last cell */
+
+.exchanges-wrapper {
+    max-height: 15.125em;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #E5E5E5 var(--reserve-color);
+}
+
+.exchanges-wrapper::-webkit-scrollbar {
+    width: 5px;
+}
+
+.exchanges-wrapper::-webkit-scrollbar-track,
+.exchanges-wrapper::-webkit-scrollbar-thumb {
+    border-radius: 1em;
+}
+
+.exchanges-wrapper::-webkit-scrollbar-track {
+    background: #E5E5E5;
+}
+
+.exchanges-wrapper::-webkit-scrollbar-thumb {
+    background-color: var(--reserve-color);
+}
+
+.prpl-label {
+    background-color: var(--reserve-color);
+    background-image: var(--gradient-for-page);
+    color: var(--white-color);
+    font-weight: bold;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.exchange-s {
+    padding: 1em 0;
+    border-bottom: solid #928c8c 1px;
+}
+
+.i-prpl-arrow {
+    height: 0.5em;
+    width: 1.0625em;
+}
+
+.double-exchange {
+    padding: 1em 0 0.5em;
+}
+
+.double-exchange>svg {
+    height: 0.8125em;
+    width: 1.0625em;
+}
+
+
+/* styles for great experience block */
+
+.experience-s {
+    /* top 72px bottom 120px */
+    padding: 2.1875em 0 3.75em;
+}
+
+.experience-h>p {
+    /* top 50px bottom 30px */
+    padding: 1.5625em 0 0.9375em;
+}
+
+
+/* styles for trade block */
+
+.trade-s {
+    /* top 121px */
+    padding: 3.75em 2% 0;
+    /* wave top 381px */
+    background: url("../images/bottom-wave-for-card.png") bottom / 100% 14em no-repeat, var(--gradient-for-page);
+}
+
+.trade-card {
+    /* top 75px bottom 85px */
+    padding: 2.4337em 0 2.6562em;
+    background-color: var(--white-color);
+    border-radius: 2em;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 5px 0 20px rgba(0, 0, 0, 0.3), -5px 0 20px rgba(0, 0, 0, 0.3);
+    max-width: 61.25em;
+}
+
+.trade-card>*+* {
+    /* 60px */
+    padding-top: 1.875em;
+}
+
+
+/* addition styles for grid container */
+
+.c-cards {
+    justify-content: center;
+    grid-template-rows: repeat(2, 9.375em);
+    grid-template-columns: 10.9375em;
+}
+
+
+/* inner card flex container  */
+
+.card-cell {
+    height: 100%;
+    border-radius: 0.5em;
+    min-width: 8.4375em;
+    background-color: white;
+}
+
+
+/* styles for blog block */
+
+.blog-s {
+    /* 140px */
+    padding-top: 4.375em;
+}
+
+.blog-h>p {
+    /* 25px */
+    padding: 1.5625em 0;
+}
+
+
+/* styles for blog card */
+
+.blog-card {
+    /* 10px */
+    font-size: 0.875rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    /* top 45px bottom 28px */
+    padding: 1.4062rem 1rem 0.875rem;
+}
+
+.blog-card>*+* {
+    padding-top: 0.9375rem;
+}
+
+.blog-card>p,
+.blog-card>h3 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.blog-card>h3 {
+    -webkit-line-clamp: 2;
+}
+
+.blog-card>p {
+    padding-top: 0.75rem;
+    -webkit-line-clamp: 3;
+}
+
+.blog-card>button {
+    margin-top: 1.0625rem;
+}
+
+
+/* Satisfied clients block */
+
+.clients-s {
+    /* top 322px, bottom 180px */
+    padding: 10.0625em 0 5.625em;
+    /* wave top 188px, bottom 125px */
+    background: url("../images/top-wave-customers.png") top / 100% 5.875em, url("../images/bottom-wave-customers.png") bottom / 100% 3.9063em, url("../images/back-booble.svg") 10.8% 16.3%, url("../images/back-booble.svg") bottom 9.73% right 8.4% / 5.75em 4.8125em, var(--gradient-for-page);
+    /* background: , var(--gradient-for-page); */
+    background-repeat: no-repeat;
+}
+
+.client-h>p {
+    /* top 45px, bottom 36px */
+    padding: 1.4062em 0 1.125em;
+}
+
+
+/* styles for customers comments */
+
+.customers-wrapper>*+* {
+    margin-top: 1em;
+}
+
+.comment-card {
+    background-color: white;
+    padding: 1.25em 0.625em 0.9375em;
+    border-radius: 1em;
+}
+
+.comment-card>span {
+    padding-top: 0.625em;
+    font-size: 1.125rem;
+}
+
+.avatar-wrapper>svg {
+    margin-right: 0.5em;
+}
+
+.info-wrapper>span:last-child {
+    font-size: 0.875rem;
+}
+
+
+/* styles for Download our app block */
+
+.our-app-s {
+    background: url("../images/top-wave-download.png") top / 100% 15.75em, url("../images/back-booble.svg") left 14.8% bottom 4.1333% / 5.75em 4.8125em, var(--gradient-for-page);
+    background-repeat: no-repeat;
+}
+
+.download-h>p {
+    padding: 1.1875em 0;
+}
+
+.c-g--app-demo {
+    position: relative;
+    /* 191px */
+    bottom: -7.8125em;
+    justify-items: center;
+}
+
+.c-g--app-demo>img {
+    min-width: 9.375em;
+    /* delete width on desctop */
+    width: 15.625em;
+}
+
+
+/* styles for Subscribe block */
+
+.subscribe-s {
+    max-width: 34.625em;
+    margin: 0 auto;
+    padding: 11em 0 2.8437em;
+}
+
+.subscribe-h>p {
+    padding: 1.1875em 0 2.5em;
+}
+
+
+/* make on desctop flex and set flex-basis for button */
+
+.c-f-email-wrapper {
+    padding: 0 1em;
+}
+
+.email-input-wrapper,
+.prpl-input {
+    border-radius: 6.25rem;
+}
+
+.prpl-input {
+    outline: 0;
+    width: 100%;
+    font-size: 0.875rem;
+    padding: 1.0625rem 1.375rem;
+}
+
+.prpl-input:focus {
+    box-shadow: 0 0 3px 3px var(--reserve-color);
+}
+
+.subm-email-btn {
+    margin-top: 1em;
+}
+
+
+/* styles for footer block */
+
+.footer-block {
+    padding: 2.8125em 2% 2.4062em;
+    background-color: #151515;
+    color: #A2A2A2;
+}
+
+.c-g--footer>*+* {
+    padding-top: 1.5em;
+}
+
+.c-g--footer h4 {
+    /* 18px */
+    font-size: 1.25rem;
+}
+
+.footer-header>p {
+    /* font-size 16px on desctop */
+    padding-top: 1.0625em;
+}
+
+.social-media-l>li {
+    padding: 1em;
+}
+
+.social-media-l>li:first-child {
+    padding-left: 0;
+}
+
+.social-media-l svg:hover path {
+    fill: #33ccff;
+}
+
+
+/* styles for footer nav */
+
+.c-f--footer-nav {
+    display: block;
+}
+
+.c-f--footer-nav>*+* {
+    padding-top: 0.75em;
+}
+
+.footer-list {
+    /* 12 px */
+    font-size: 1.125rem;
+}
+
+.footer-list>li+li {
+    padding-top: 0.5em;
+}
+
+.footer-list>li:hover {
+    color: #33ccff;
+}
+
+.c-f-contact-list>li:first-child:hover {
+    color: inherit;
+}
+
+.i-right-arrow {
+    transform: rotate(0deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.opend-sub-menu {
+    transform: rotate(90deg);
+}
+
+
+/* instagram grid styles */
+
+.c-grid-collage {
+    display: grid;
+    padding-top: 2em;
+    grid-template-columns: repeat(2, 4.375em);
+    grid-template-rows: repeat(4, 4.375em);
+    gap: 0.625em;
+}
+
+
+/* 320px */
+
+@media (min-width: 20em) {
+    .c-grid-collage {
+        grid-template-columns: repeat(4, 4.375em);
+        grid-template-rows: repeat(2, 4.375em);
+    }
+}
+
+.gray-shape {
+    background-color: #C4C4C4;
+}
+
+.gray-shape:hover {
+    background: url("../images/plus.svg") center / 1.5em no-repeat, #D8D8D8;
 }

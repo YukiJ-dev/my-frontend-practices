@@ -57,7 +57,7 @@
                         </svg>
                     </a>
 
-                    <button id="menu-btn" class="img-btn menu-toggle" aria-label="Menu" data-is-opend="false">
+                    <button id="menu-btn" class="menu-toggle" aria-label="Menu" data-is-opend="false">
                         <!-- Mobile menu icon -->
                         <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
                             <path d="M24 6H0V2h24v4zm0 4H0v4h24v-4zm0 8H0v4h24v-4z"/>
@@ -69,7 +69,7 @@
                     </button>
                 </div>
 
-                <div id="inner-nav" class="c-f-row-between c-f-column c-f--inner-nav menu-hidden">
+                <div id="inner-nav" class="c-f-row-between c-f-column c-f--inner-nav">
                     <ul class="c-f-row-between c-f-column c-f--main-menu">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About Us</a></li>
@@ -78,27 +78,25 @@
                     </ul>
 
                     <!-- Markup for desctop -->
-                    <div class="c-nav-wrapper" hidden>
-                        <span class="sell-sub-menu">
-                            Sell Bitcoin/ Giftcard
+                    <div id="sales-wrapper" class="c-f-row-between actions-wrapper">
+                        <button id="submenu-btn" aria-label="Sub Menu" class="icon-element submenu-btn">Sell Bitcoin/ Giftcard</button>
 
-                            <svg class="sm-arrow" width="8" height="6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M4.83 5.13a1 1 0 01-1.66 0L.74 1.56A1 1 0 011.57 0h4.86a1 1 0 01.83 1.56L4.83 5.13z"
-                                fill="#333" />
+                        <div class="sales-submenu-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="24" height="20" viewBox="0 0 24 24">
+                                    <path d="M12 5.887l8.468 14.113h-16.936l8.468-14.113zm0-3.887l-12 20h24l-12-20z" fill="#E0E0E0"/>
                             </svg>
 
-                            <ul class="sub-menu">
+                            <ul id="sales-submenu" class="sales-submenu">
                                 <li><button>Sell Bitcoin</button></li>
                                 <li><button>Sell Giftcard</button></li>
                             </ul>
-                        </span>
+                        </div>
 
-                        <button class="prpl-btn">LOGIN</button>
+                        <button class="prpl-btn login-btn">LOGIN</button>
                     </div>
 
                     <!-- Other configuration of markup for mobile -->
-                    <div class="mobile-btn-wrapper menu-hidden" id="sell-actions-c">
+                    <div id="sell-actions-c" class="mobile-btn-wrapper">
                         <button class="white-btn width-btn" aria-label="Sell Bitcoin"></button>
                         <button class="transp-btn width-btn">Sell Giftcard</button>
                     </div>
@@ -111,7 +109,7 @@
         <!-- Hero box -->
         <section class="hero-s">
             <div class="o-content-container">
-                <div class="c-g-row-between">
+                <div class="c-g-row-between c-g--hero">
                     <header class="hero-h white-color">
                         <h1>We provide easy solution to exchange your <span class="bold">Bitcoin/ GiftCard for
                                 money</span></h1>
@@ -119,7 +117,7 @@
                         <button class="white-btn width-btn" aria-label="Get Started"></button>
                     </header>
 
-                    <img src="resources/images/illustration1.png" alt="">
+                    <img src="resources/images/hero-illustration.png" alt="">
                 </div>
             </div>
         </section>
@@ -127,7 +125,7 @@
         <!-- Welcome box -->
         <section>
             <div class="o-content-container">
-                <div class="c-g-row-between c-g-welcome">
+                <div class="c-g-row-between c-g--welcome">
                     <header class="h-welcome">
                         <h2 class="bottom-line prpl-text-gradient">Welcome to CoinBase</h2>
                         <p>We have the best rates . Simply start your exchange right now. Sign up for our Affiliate program and earn commission from each exchange. The earnings are credited in your account instantly and can be withdrawn right away. Also
@@ -135,7 +133,7 @@
                         <button class="prpl-btn width-btn">DISCOVER</button>
                     </header>
 
-                    <img src="resources/images/illustration2.png" alt="">
+                    <img src="resources/images/welcome-illustration.png" alt="">
                 </div>
             </div>
         </section>
@@ -144,8 +142,8 @@
         <section class="rates-s">
             <div class="o-content-container">
                 <table class="rates-table">
-                    <thead class="sr-only">
-                        <tr class="prpl-text-gradient">
+                    <thead>
+                        <tr class="prpl-text-gradient upper t-h-row">
                             <th>
                                 <h3>Our rates</h3>
                             </th>
@@ -161,11 +159,12 @@
                     <tbody>
                         <tr class="c-tb-content">
                             <!-- Our rates cell -->
+
                             <td class="cell-wrapper first-cell">
-                                <h3 class="prpl-text-gradient upper" aria-hidden="true">Our rates</h3>
+                                <h3 class="prpl-text-gradient upper sr-only-h3" aria-hidden="true">Our rates</h3>
 
                                 <section class="c-f-row-between">
-                                    <span class="i-f-top icon bitcoin-i">BTC</span>
+                                    <span class="i-f-top icon-element bitcoin-i">BTC</span>
 
                                     <div class="cost-wrapper">
                                         <span class="block-sp">We Buy @ <span class="bold">&#8358;350/$</span></span>
@@ -174,7 +173,7 @@
                                 </section>
 
                                 <section class="c-f-row-between">
-                                    <span class="i-f-top icon ethereum-i">ETH</span>
+                                    <span class="i-f-top icon-element ethereum-i">ETH</span>
 
                                     <div class="cost-wrapper">
                                         <span class="block-sp">We Buy @ <span class="bold">&#8358;345/$</span></span>
@@ -185,21 +184,21 @@
 
                             <!-- Our reserves cell -->
                             <td class="cell-wrapper">
-                                <h3 class="prpl-text-gradient upper" aria-hidden="true">Our reserves</h3>
+                                <h3 class="prpl-text-gradient upper sr-only-h3" aria-hidden="true">Our reserves</h3>
 
                                 <ul class="reserves-list">
                                     <li class="c-f-row-between c-f-wrap">
-                                        <span class="icon bank-i">Bank Transfer</span>
-                                        <span class="cost"><span class="bold">#3452030300303.24/$</span> NGN</span>
+                                        <span class="icon-element bank-i">Bank Transfer</span>
+                                        <span class="cost"><span class="bold">#345203.24/$</span> NGN</span>
                                     </li>
 
                                     <li class="c-f-row-between">
-                                        <span class="icon bitcoin-i">Bitcoin</span>
+                                        <span class="icon-element bitcoin-i">Bitcoin</span>
                                         <span class="cost"><span class="bold">399.98</span> BTC</span>
                                     </li>
 
                                     <li class="c-f-row-between">
-                                        <span class="icon ethereum-i">Ethereum</span>
+                                        <span class="icon-element ethereum-i">Ethereum</span>
                                         <span class="cost"><span class="bold">1000.00</span> ETH</span>
                                     </li>
                                 </ul>
@@ -207,7 +206,7 @@
 
                             <!-- Exchange cell -->
                             <td>
-                                <h3 class="prpl-text-gradient upper" aria-hidden="true">Latest exchanges</h3>
+                                <h3 class="prpl-text-gradient upper sr-only-h3" aria-hidden="true">Latest exchanges</h3>
 
                                 <div class="exchanges-wrapper">
                                     <span class="block-sp prpl-label">8 hours ago</span>
@@ -319,7 +318,7 @@
         <!-- Greate Experience block -->
         <section class="experience-s">
             <div class="o-content-container">
-                <div class="c-g-row-between">
+                <div class="c-g-row-between c-g--experience">
                     <header class="experience-h">
                         <h2 class="bottom-line prpl-text-gradient">Great experience with CoinBase</h2>
                         <p>CoinBase is an online site and a p2admin platform that allows users to buy, sell and/ or exchange digital and fiat assets safely. Owned and managed by CoinBase Business Services established and Incoperated in Nigeria.</p>
@@ -336,10 +335,9 @@
             <div class="centred-container trade-card">
                 <h2 class="bottom-line center-line prpl-text-gradient">Trade from anywhere</h2>
 
-                <div class="c-g-row-between c-cards">
-                    <div class="border-gradient-wrapper">
-                        <div class="c-f-column-around card-cell">
-                            <svg aria-hidden="true" width="59" height="59" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <div class="c-g-row-between c-g--trade-cards">
+                    <div class="c-f-column-around prpl-border-gradient c-f--card-cell">
+                        <svg aria-hidden="true" width="59" height="59" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0)">
                                     <path
                                         d="M29.05.36a29 29 0 10-.05 58 29 29 0 00.05-58zM29 53.53a24.17 24.17 0 110-48.35 24.17 24.17 0 010 48.35z"
@@ -365,14 +363,12 @@
                                 </defs>
                             </svg>
 
-                            <span class="block-sp bold">Bitcoin</span>
-                        </div>
+                        <span class="block-sp bold">Bitcoin</span>
                     </div>
 
 
-                    <div class="border-gradient-wrapper">
-                        <div class="c-f-column-around card-cell">
-                            <svg aria-hidden="true" width="70" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <div class="c-f-column-around prpl-border-gradient c-f--card-cell">
+                        <svg aria-hidden="true" width="70" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="69.55" height="39.01" rx="5" fill="url(#paint0_linear)" />
                                 <rect x="23.78" y="23.89" width="22" height="3.5" rx="1.75" fill="#fff" />
                                 <rect x="17.78" y="14.94" width="33.99" height="5.41" rx="2.7" fill="#fff" />
@@ -385,8 +381,7 @@
                                 </defs>
                             </svg>
 
-                            <span class="block-sp bold">Gift Cards</span>
-                        </div>
+                        <span class="block-sp bold">Gift Cards</span>
                     </div>
                 </div>
             </div>
@@ -400,58 +395,53 @@
                     <p>Get to know the latest stuff via our blog post.</p>
                 </header>
 
-                <section class="c-g-row-between c-g-blog-cards">
-                    <div class="border-gradient-wrapper">
-                        <section class="blog-card">
-                            <span class="upper date">01 feb, 2019&#160; | &#160;technology</span>
+                <section id="blog-container" class="c-g-row-between c-g--blog-cards" data-grid-structure="center">
+                    <section class="prpl-border-gradient blog-card" data-is-choosed="false" data-card-position="left">
+                        <span class="upper date">01 feb, 2019&#160; | &#160;technology</span>
 
-                            <h3 class="upper prpl-text-gradient">How to sell your itunes giftcard with us.</h3>
+                        <h3 class="upper prpl-text-gradient">How to sell your itunes giftcard with us.</h3>
 
-                            <p class="text-overflow">Lorem ipsum dolor sit amet, magna habemus ius ad, qui minimum voluptaria in. Ad mei modus quodsi complectitur, postea something that overflow width of container</p>
+                        <p class="text-overflow">Lorem ipsum dolor sit amet, magna habemus ius ad, qui minimum voluptaria in. Ad mei modus quodsi complectitur, postea something that overflow width of container</p>
 
-                            <button class="prpl-btn width-btn">READ MORE</button>
-                        </section>
-                    </div>
+                        <button class="prpl-btn width-btn">READ MORE</button>
+                    </section>
 
-                    <div class="border-gradient-wrapper">
-                        <section class="blog-card">
-                            <span class="upper date">19 june, 2019&#160; | &#160;business</span>
 
-                            <h3 class="upper prpl-text-gradient">Eth to naira exchange rate is now #400 per</h3>
+                    <section class="prpl-border-gradient blog-card" data-is-choosed="true" data-card-position="center">
+                        <span class="upper date">19 june, 2019&#160; | &#160;business</span>
 
-                            <p class="text-overflow">Lorem ipsum dolor sit amet, magna habemus ius ad, qui minimum voluptaria in. Ad mei modus quodsi complectitur, postea something that overflow width of container</p>
+                        <h3 class="upper prpl-text-gradient">Eth to naira exchange rate is now #400 per</h3>
 
-                            <button class="prpl-btn width-btn">READ MORE</button>
-                        </section>
-                    </div>
+                        <p class="text-overflow">Lorem ipsum dolor sit amet, magna habemus ius ad, qui minimum voluptaria in. Ad mei modus quodsi complectitur, postea something that overflow width of container</p>
 
-                    <div class="border-gradient-wrapper">
-                        <section class="blog-card">
-                            <span class="upper date">01 dec, 2019&#160; | &#160;lifystyle</span>
+                        <button class="prpl-btn width-btn">READ MORE</button>
+                    </section>
 
-                            <h3 class="upper prpl-text-gradient">Exchange 5 products & get 1 free product</h3>
+                    <section class="prpl-border-gradient blog-card" data-is-choosed="false" data-card-position="right">
+                        <span class="upper date">01 dec, 2019&#160; | &#160;lifystyle</span>
 
-                            <p class="text-overflow">Lorem ipsum dolor sit amet, magna habemus ius ad, qui minimum voluptaria in. Ad mei modus quodsi complectitur, postea something that overflow width of container</p>
+                        <h3 class="upper prpl-text-gradient">Exchange 5 products & get 1 free product</h3>
 
-                            <button class="prpl-btn width-btn">READ MORE</button>
-                        </section>
-                    </div>
+                        <p class="text-overflow">Lorem ipsum dolor sit amet, magna habemus ius ad, qui minimum voluptaria in. Ad mei modus quodsi complectitur, postea something that overflow width of container</p>
+
+                        <button class="prpl-btn width-btn">READ MORE</button>
+                    </section>
                 </section>
             </div>
         </section>
 
         <!-- Satisfied clients block -->
         <section class="clients-s">
-            <div class="o-content-container">
-                <header class="centred-container white-color client-h ">
+            <div class="o-content-container centred-container">
+                <header class="white-color client-h">
                     <h2 class="bottom-line center-line white-color">10,000 Satisfied clients around the world</h2>
 
                     <p>Yeah! we’re proud with numbers. We’ve helped thousands of clients all around the world with our bespoke service. Hover ontop of them pic to view their testimonials.</p>
                 </header>
 
-                <!-- Not for screen reader and visual view on mobile -->
-                <div hidden>
-                    <svg width="1067" height="389" viewBox="0 0 1067 389" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- hidden for mobile -->
+                <div id="avatars-wrapper" class="avatars-wrapper" hidden>
+                    <svg id="customer-avatars" width="1067" height="389" viewBox="0 0 1067 389" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M810.067 164.604C833.37 164.604 852.262 145.712 852.262 122.408C852.262 99.1044 833.37 80.2129 810.067 80.2129C786.763 80.2129 767.871 99.1044 767.871 122.408C767.871 145.712 786.763 164.604 810.067 164.604Z" fill="#D8D8D8"/>
                         <path d="M157.502 218.079C195.572 218.079 226.435 187.217 226.435 149.146C226.435 111.075 195.572 80.2129 157.502 80.2129C119.431 80.2129 88.5685 111.075 88.5685 149.146C88.5685 187.217 119.431 218.079 157.502 218.079Z" fill="#D8D8D8"/>
                         <path d="M484.203 302.47C507.507 302.47 526.399 283.578 526.399 260.274C526.399 236.971 507.507 218.079 484.203 218.079C460.899 218.079 442.008 236.971 442.008 260.274C442.008 283.578 460.899 302.47 484.203 302.47Z" fill="#D8D8D8"/>
@@ -469,22 +459,100 @@
                 </div>
 
                 <!-- Hidden for desctop -->
-                <div class="customers-wrapper">
+                <div id="mob-comment-wrapper" class="customers-wrapper">
                     <!-- Customers card 1-->
-                    <section class="comment-card">
-                        <div class="avatar-wrapper">
-                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="48" height="50" viewBox="0 0 24 26">
-                                <path d="M16.5 14.5c0 .82-.56 1.5-1.25 1.5S14 15.31 14 14.5s.56-1.5 1.25-1.5 1.25.66 1.25 1.5zM8.75 13c-.69 0-1.25.66-1.25 1.5S8.06 16 8.75 16 10 15.31 10 14.5 9.44 13 8.75 13zM12 21.34c2.23 0 3-2.36 3-2.36H9s.85 2.36 3 2.36zm12-6.05c0 1.77-.98 4-3.14 4.91C18.51 23.94 15.38 26 12 26c-3.38 0-6.51-2.05-8.86-5.78A5.39 5.39 0 010 15.31c0-1.48.39-2.94 1.68-3.64-.38-2.31-.12-6.18 4.2-7.6C6.9 2.1 9 0 12 0s5.1 2.1 6.13 4.09c4.3 1.41 4.57 5.28 4.19 7.59 1.3.7 1.68 2.16 1.68 3.64zm-2.18-1.25c-4.68-.26-6.83-4.66-7.24-7.4-1.16 6.34-9 1.8-9.9 9.06a5.96 5.96 0 01-2.2-2.16c-1 1-.55 4.16 1.65 4.9a1 1 0 01.54.43C6.66 22.18 9.27 24 12 24s5.34-1.81 7.33-5.1a1 1 0 01.54-.44c1.77-.6 2.51-2.77 1.95-4.4z"/>
+                    <div class="comment-card-wrapper">
+                        <svg aria-label="Show comment" width="138" height="138" viewBox="0 0 138 138" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M68.933 137.866C107.004 137.866 137.866 107.004 137.866 68.933C137.866 30.8624 107.004 0 68.933 0C30.8624 0 0 30.8624 0 68.933C0 107.004 30.8624 137.866 68.933 137.866Z" fill="#D8D8D8"/>
+                        </svg>
+
+                        <section class="comment-card">
+                            <div class="avatar-wrapper">
+                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="48" height="50" viewBox="0 0 24 26">
+                                    <path d="M16.5 14.5c0 .82-.56 1.5-1.25 1.5S14 15.31 14 14.5s.56-1.5 1.25-1.5 1.25.66 1.25 1.5zM8.75 13c-.69 0-1.25.66-1.25 1.5S8.06 16 8.75 16 10 15.31 10 14.5 9.44 13 8.75 13zM12 21.34c2.23 0 3-2.36 3-2.36H9s.85 2.36 3 2.36zm12-6.05c0 1.77-.98 4-3.14 4.91C18.51 23.94 15.38 26 12 26c-3.38 0-6.51-2.05-8.86-5.78A5.39 5.39 0 010 15.31c0-1.48.39-2.94 1.68-3.64-.38-2.31-.12-6.18 4.2-7.6C6.9 2.1 9 0 12 0s5.1 2.1 6.13 4.09c4.3 1.41 4.57 5.28 4.19 7.59 1.3.7 1.68 2.16 1.68 3.64zm-2.18-1.25c-4.68-.26-6.83-4.66-7.24-7.4-1.16 6.34-9 1.8-9.9 9.06a5.96 5.96 0 01-2.2-2.16c-1 1-.55 4.16 1.65 4.9a1 1 0 01.54.43C6.66 22.18 9.27 24 12 24s5.34-1.81 7.33-5.1a1 1 0 01.54-.44c1.77-.6 2.51-2.77 1.95-4.4z"/>
+                                </svg>
+
+                                <div class="c-inline info-wrapper">
+                                    <span class="bold block-sp">Inna Gray</span>
+                                    <span class="block-sp">Nigeria</span>
+                                </div>
+                            </div>
+
+                            <!-- stars -->
+                            <svg aria-hidden="true" width="78" height="12" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 78 12">
+                                <path d="M5.75 10.94l-2.2.9c-.5.2-1.1 0-1.3-.5-.1-.2-.1-.3-.1-.5l.2-2.4c0-.3-.1-.5-.2-.7l-1.6-1.8c-.3-.4-.3-1.1.1-1.4.2-.1.3-.2.5-.2l2.3-.5c.3-.1.5-.2.6-.5l1.2-2c.3-.5.9-.6 1.4-.3.1.1.3.2.3.3l1.2 2c.1.2.4.4.6.5l2.4.5c.5.1.9.7.7 1.2 0 .2-.1.3-.2.4l-1.5 1.8c-.2.2-.3.5-.2.7l.2 2.4c0 .6-.4 1-.9 1.1-.2 0-.3 0-.5-.1l-2.2-.9c-.3-.1-.5-.1-.8 0z" fill="url(#paint0_linear)"/>
+                                <path d="M22.06 10.94l-2.2.9c-.5.2-1.1 0-1.3-.5-.1-.2-.1-.3-.1-.5l.2-2.4c0-.3-.1-.5-.2-.7l-1.6-1.8c-.3-.4-.3-1.1.1-1.4.2-.1.3-.2.5-.2l2.3-.5c.3-.1.5-.2.6-.5l1.2-2c.3-.5.9-.6 1.4-.3.1.1.3.2.3.3l1.2 2c.1.2.4.4.6.5l2.4.5c.5.1.9.7.7 1.2 0 .2-.1.3-.2.4l-1.5 1.8c-.2.2-.3.5-.2.7l.2 2.4c0 .6-.4 1-.9 1.1-.2 0-.3 0-.5-.1l-2.2-.9c-.3-.1-.5-.1-.8 0z" fill="url(#paint1_linear)"/>
+                                <path d="M38.38 10.94l-2.2.9c-.5.2-1.1 0-1.3-.5-.1-.2-.1-.3-.1-.5l.2-2.4c0-.3-.1-.5-.2-.7l-1.6-1.8c-.3-.4-.3-1.1.1-1.4.2-.1.3-.2.5-.2l2.3-.5c.3-.1.5-.2.6-.5l1.2-2c.3-.5.9-.6 1.4-.3.1.1.3.2.3.3l1.2 2c.1.2.4.4.6.5l2.4.5c.5.1.9.7.7 1.2 0 .2-.1.3-.2.4l-1.5 1.8c-.2.2-.3.5-.2.7l.2 2.4c0 .6-.4 1-.9 1.1-.2 0-.3 0-.5-.1l-2.2-.9c-.3-.1-.5-.1-.8 0z" fill="url(#paint2_linear)"/>
+                                <path d="M54.7 10.94l-2.2.9c-.5.2-1.1 0-1.3-.5-.1-.2-.1-.3-.1-.5l.2-2.4c0-.3-.1-.5-.2-.7l-1.6-1.8c-.3-.4-.3-1.1.1-1.4.2-.1.3-.2.5-.2l2.3-.5c.3-.1.5-.2.6-.5l1.2-2c.3-.5.9-.6 1.4-.3.1.1.3.2.3.3l1.2 2c.1.2.4.4.6.5l2.4.5c.5.1.9.7.7 1.2 0 .2-.1.3-.2.4l-1.5 1.8c-.2.2-.3.5-.2.7l.2 2.4c0 .6-.4 1-.9 1.1-.2 0-.3 0-.5-.1l-2.2-.9c-.3-.1-.5-.1-.8 0z" fill="url(#paint3_linear)"/>
+                                <path d="M71.01 10.94l-2.2.9c-.5.2-1.1 0-1.3-.5-.1-.2-.1-.3-.1-.5l.2-2.4c0-.3-.1-.5-.2-.7l-1.6-1.8c-.3-.4-.3-1.1.1-1.4.2-.1.3-.2.5-.2l2.3-.5c.3-.1.5-.2.6-.5l1.2-2c.3-.5.9-.6 1.4-.3.1.1.3.2.3.3l1.2 2c.1.2.4.4.6.5l2.4.5c.5.1.9.7.7 1.2 0 .2-.1.3-.2.4l-1.5 1.8c-.2.2-.3.5-.2.7l.2 2.4c0 .6-.4 1-.9 1.1-.2 0-.3 0-.5-.1l-2.2-.9c-.3-.1-.5-.1-.8 0z" fill="url(#paint4_linear)"/>
+                                <defs>
+                                  <linearGradient id="paint0_linear" x1="6.69" y1="-.87" x2="7.29" y2="18.74" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FD749B"/>
+                                    <stop offset="1" stop-color="#281AC8"/>
+                                  </linearGradient>
+                                  <linearGradient id="paint1_linear" x1="23.01" y1="-.87" x2="23.61" y2="18.74" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FD749B"/>
+                                    <stop offset="1" stop-color="#281AC8"/>
+                                  </linearGradient>
+                                  <linearGradient id="paint2_linear" x1="39.33" y1="-.87" x2="39.92" y2="18.74" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FD749B"/>
+                                    <stop offset="1" stop-color="#281AC8"/>
+                                  </linearGradient>
+                                  <linearGradient id="paint3_linear" x1="55.64" y1="-.87" x2="56.24" y2="18.74" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FD749B"/>
+                                    <stop offset="1" stop-color="#281AC8"/>
+                                  </linearGradient>
+                                  <linearGradient id="paint4_linear" x1="71.96" y1="-.87" x2="72.56" y2="18.74" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FD749B"/>
+                                    <stop offset="1" stop-color="#281AC8"/>
+                                  </linearGradient>
+                                </defs>
                             </svg>
 
-                            <div class="c-inline info-wrapper">
-                                <span class="bold block-sp">Inna Gray</span>
-                                <span class="block-sp">Nigeria</span>
-                            </div>
-                        </div>
+                            <span class="block-sp bold">I am reach</span>
 
-                        <!-- stars -->
-                        <svg aria-hidden="true" width="78" height="12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <p>With this service i will be a reach, thanks for this.</p>
+
+                            <button class="close-dialog-btn" aria-label="Close comment">
+                                <svg aria-hidden="true" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.0088 0.683476C5.38095 0.677898 0.00509419 6.04635 -0.000483938 12.6742C-0.00606206 19.302 5.36239 24.6779 11.9902 24.6835C18.6172 24.6779 23.9893 19.3104 23.9995 12.6835C23.9995 6.05934 18.6329 0.689054 12.0088 0.683476ZM11.9902 22.6866C6.46578 22.6866 1.98716 18.2079 1.98716 12.6835C1.98716 7.15902 6.46578 2.6804 11.9902 2.6804C17.5128 2.68598 21.9877 7.1609 21.9933 12.6835C21.9933 18.2079 17.5147 22.6866 11.9902 22.6866Z" fill="url(#paint0_linear)"/>
+                                    <path d="M15.231 12.0986C16.0335 11.6463 16.4673 10.7407 16.3177 9.83233C16.132 8.42988 14.4602 7.90043 13.1412 7.78901V5.68066H11.8409V7.77044H10.9679V5.68066H9.66758V7.77044H7.04834V9.11721H8.02357C8.46012 9.11721 8.67373 9.24724 8.67373 9.60016V15.3866C8.67373 15.8695 8.43223 16.0181 8.17217 16.0181H7.17837V17.3928H9.7047V19.529H11.0143V17.3928H11.8873V19.529H13.1598V17.3928H13.4384C16.1134 17.3928 17.005 16.0832 17.005 14.2999C16.9836 13.2484 16.2545 12.3438 15.231 12.0986ZM10.9678 9.20079H11.8966C12.5468 9.20079 13.8285 9.31226 13.8285 10.3711C13.8731 11.0621 13.3725 11.6677 12.6861 11.755H10.9678C10.9678 11.755 10.9678 9.20079 10.9678 9.20079ZM12.4075 15.8881V15.8788H10.9678V13.0924H12.6397C13.0298 13.0924 14.4972 13.2224 14.4972 14.2627C14.4972 15.3029 13.8007 15.8881 12.4075 15.8881Z" fill="url(#paint1_linear)"/>
+                                    <defs>
+                                    <linearGradient id="paint0_linear" x1="13.1995" y1="-3.09431" x2="14.5536" y2="39.4212" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FD749B"/>
+                                    <stop offset="1" stop-color="#281AC8"/>
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear" x1="12.5245" y1="3.50084" x2="13.6102" y2="28.0096" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FD749B"/>
+                                    <stop offset="1" stop-color="#281AC8"/>
+                                    </linearGradient>
+                                    </defs>
+                                </svg>  
+                            </button>
+                        </section>
+                    </div>
+
+                    <div class="comment-card-wrapper">
+                        <svg aria-label="Show comment" width="160" height="160" viewBox="0 0 138 138" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M68.933 137.866C107.004 137.866 137.866 107.004 137.866 68.933C137.866 30.8624 107.004 0 68.933 0C30.8624 0 0 30.8624 0 68.933C0 107.004 30.8624 137.866 68.933 137.866Z" fill="#D8D8D8"/>
+                        </svg>
+
+                        <!-- Customers card 2-->
+                        <section class="comment-card">
+                            <div class="avatar-wrapper">
+                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="49" height="50" viewBox="0 0 24 25">
+                                    <path d="M16.5 13.5c0 .83-.56 1.5-1.25 1.5S14 14.33 14 13.5s.56-1.5 1.25-1.5 1.25.67 1.25 1.5zM8.75 12c-.69 0-1.25.67-1.25 1.5S8.06 15 8.75 15 10 14.33 10 13.5 9.44 12 8.75 12zM24 14.31c0 1.77-.98 4-3.14 4.9C18.8 22.52 15.87 25 12 25c-3.74 0-6.85-2.56-8.86-5.78A5.39 5.39 0 010 14.32c0-2.06.75-3.03 1.42-3.5-.4-1.52-1.03-5.14.96-7.4A4.45 4.45 0 016.5 2.14C7.22.61 10.11 0 12 0c3 0 6.6.64 9.14 3.52 1.97 2.23 1.65 5.74 1.39 7.27.67.44 1.47 1.41 1.47 3.52zM14.4 19H9.6s.68 1.88 2.4 1.88c1.79 0 2.4-1.88 2.4-1.88zm7.06-6.5c-4.1.39-7.77-3.07-9.07-5.28-.08.8.19 2.56.97 3.35A8.95 8.95 0 015.9 6.71a9.36 9.36 0 00-1.24 4.77 1 1 0 01-1.4.91.75.75 0 00-.68.06c-1 .65-.9 4.18 1.55 5a1 1 0 01.54.44 14.52 14.52 0 002.09 2.72c.92.63 1.05-1.87 1.66-2.72.69-.95 2.46-1.12 3.58-.32 1.12-.8 2.9-.63 3.58.32.6.85.74 3.36 1.66 2.72.74-.74 1.44-1.63 2.1-2.72a1 1 0 01.53-.43c2.36-.8 2.6-4.19 1.6-4.97z"/>
+                                </svg>
+
+
+                                <div class="c-inline info-wrapper">
+                                    <span class="bold block-sp">John Freid</span>
+                                    <span class="block-sp">Nigeria</span>
+                                </div>
+                            </div>
+
+                            <!-- stars -->
+                            <svg aria-hidden="true" width="78" height="12" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 78 12">
                             <path d="M5.75 10.94l-2.2.9c-.5.2-1.1 0-1.3-.5-.1-.2-.1-.3-.1-.5l.2-2.4c0-.3-.1-.5-.2-.7l-1.6-1.8c-.3-.4-.3-1.1.1-1.4.2-.1.3-.2.5-.2l2.3-.5c.3-.1.5-.2.6-.5l1.2-2c.3-.5.9-.6 1.4-.3.1.1.3.2.3.3l1.2 2c.1.2.4.4.6.5l2.4.5c.5.1.9.7.7 1.2 0 .2-.1.3-.2.4l-1.5 1.8c-.2.2-.3.5-.2.7l.2 2.4c0 .6-.4 1-.9 1.1-.2 0-.3 0-.5-.1l-2.2-.9c-.3-.1-.5-.1-.8 0z" fill="url(#paint0_linear)"/>
                             <path d="M22.06 10.94l-2.2.9c-.5.2-1.1 0-1.3-.5-.1-.2-.1-.3-.1-.5l.2-2.4c0-.3-.1-.5-.2-.7l-1.6-1.8c-.3-.4-.3-1.1.1-1.4.2-.1.3-.2.5-.2l2.3-.5c.3-.1.5-.2.6-.5l1.2-2c.3-.5.9-.6 1.4-.3.1.1.3.2.3.3l1.2 2c.1.2.4.4.6.5l2.4.5c.5.1.9.7.7 1.2 0 .2-.1.3-.2.4l-1.5 1.8c-.2.2-.3.5-.2.7l.2 2.4c0 .6-.4 1-.9 1.1-.2 0-.3 0-.5-.1l-2.2-.9c-.3-.1-.5-.1-.8 0z" fill="url(#paint1_linear)"/>
                             <path d="M38.38 10.94l-2.2.9c-.5.2-1.1 0-1.3-.5-.1-.2-.1-.3-.1-.5l.2-2.4c0-.3-.1-.5-.2-.7l-1.6-1.8c-.3-.4-.3-1.1.1-1.4.2-.1.3-.2.5-.2l2.3-.5c.3-.1.5-.2.6-.5l1.2-2c.3-.5.9-.6 1.4-.3.1.1.3.2.3.3l1.2 2c.1.2.4.4.6.5l2.4.5c.5.1.9.7.7 1.2 0 .2-.1.3-.2.4l-1.5 1.8c-.2.2-.3.5-.2.7l.2 2.4c0 .6-.4 1-.9 1.1-.2 0-.3 0-.5-.1l-2.2-.9c-.3-.1-.5-.1-.8 0z" fill="url(#paint2_linear)"/>
@@ -512,29 +580,52 @@
                                 <stop offset="1" stop-color="#281AC8"/>
                               </linearGradient>
                             </defs>
-                        </svg>
-
-                        <span class="block-sp bold">I am reach</span>
-
-                        <p>With this service i will be a reach, thanks for this.</p>
-                    </section>
-
-                    <!-- Customers card 2-->
-                    <section class="comment-card">
-                        <div class="avatar-wrapper">
-                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="49" height="50" viewBox="0 0 24 25">
-                                <path d="M16.5 13.5c0 .83-.56 1.5-1.25 1.5S14 14.33 14 13.5s.56-1.5 1.25-1.5 1.25.67 1.25 1.5zM8.75 12c-.69 0-1.25.67-1.25 1.5S8.06 15 8.75 15 10 14.33 10 13.5 9.44 12 8.75 12zM24 14.31c0 1.77-.98 4-3.14 4.9C18.8 22.52 15.87 25 12 25c-3.74 0-6.85-2.56-8.86-5.78A5.39 5.39 0 010 14.32c0-2.06.75-3.03 1.42-3.5-.4-1.52-1.03-5.14.96-7.4A4.45 4.45 0 016.5 2.14C7.22.61 10.11 0 12 0c3 0 6.6.64 9.14 3.52 1.97 2.23 1.65 5.74 1.39 7.27.67.44 1.47 1.41 1.47 3.52zM14.4 19H9.6s.68 1.88 2.4 1.88c1.79 0 2.4-1.88 2.4-1.88zm7.06-6.5c-4.1.39-7.77-3.07-9.07-5.28-.08.8.19 2.56.97 3.35A8.95 8.95 0 015.9 6.71a9.36 9.36 0 00-1.24 4.77 1 1 0 01-1.4.91.75.75 0 00-.68.06c-1 .65-.9 4.18 1.55 5a1 1 0 01.54.44 14.52 14.52 0 002.09 2.72c.92.63 1.05-1.87 1.66-2.72.69-.95 2.46-1.12 3.58-.32 1.12-.8 2.9-.63 3.58.32.6.85.74 3.36 1.66 2.72.74-.74 1.44-1.63 2.1-2.72a1 1 0 01.53-.43c2.36-.8 2.6-4.19 1.6-4.97z"/>
                             </svg>
 
+                            <span class="block-sp bold">Wonderful service</span>
 
-                            <div class="c-inline info-wrapper">
-                                <span class="bold block-sp">John Freid</span>
-                                <span class="block-sp">Nigeria</span>
+                            <p>Good deal and very wonderful service thank you.</p>
+
+                            <button class="close-dialog-btn" aria-label="Close comment">
+                                <svg aria-hidden="true" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.0088 0.683476C5.38095 0.677898 0.00509419 6.04635 -0.000483938 12.6742C-0.00606206 19.302 5.36239 24.6779 11.9902 24.6835C18.6172 24.6779 23.9893 19.3104 23.9995 12.6835C23.9995 6.05934 18.6329 0.689054 12.0088 0.683476ZM11.9902 22.6866C6.46578 22.6866 1.98716 18.2079 1.98716 12.6835C1.98716 7.15902 6.46578 2.6804 11.9902 2.6804C17.5128 2.68598 21.9877 7.1609 21.9933 12.6835C21.9933 18.2079 17.5147 22.6866 11.9902 22.6866Z" fill="url(#paint0_linear)"/>
+                                    <path d="M15.231 12.0986C16.0335 11.6463 16.4673 10.7407 16.3177 9.83233C16.132 8.42988 14.4602 7.90043 13.1412 7.78901V5.68066H11.8409V7.77044H10.9679V5.68066H9.66758V7.77044H7.04834V9.11721H8.02357C8.46012 9.11721 8.67373 9.24724 8.67373 9.60016V15.3866C8.67373 15.8695 8.43223 16.0181 8.17217 16.0181H7.17837V17.3928H9.7047V19.529H11.0143V17.3928H11.8873V19.529H13.1598V17.3928H13.4384C16.1134 17.3928 17.005 16.0832 17.005 14.2999C16.9836 13.2484 16.2545 12.3438 15.231 12.0986ZM10.9678 9.20079H11.8966C12.5468 9.20079 13.8285 9.31226 13.8285 10.3711C13.8731 11.0621 13.3725 11.6677 12.6861 11.755H10.9678C10.9678 11.755 10.9678 9.20079 10.9678 9.20079ZM12.4075 15.8881V15.8788H10.9678V13.0924H12.6397C13.0298 13.0924 14.4972 13.2224 14.4972 14.2627C14.4972 15.3029 13.8007 15.8881 12.4075 15.8881Z" fill="url(#paint1_linear)"/>
+                                    <defs>
+                                    <linearGradient id="paint0_linear" x1="13.1995" y1="-3.09431" x2="14.5536" y2="39.4212" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FD749B"/>
+                                    <stop offset="1" stop-color="#281AC8"/>
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear" x1="12.5245" y1="3.50084" x2="13.6102" y2="28.0096" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FD749B"/>
+                                    <stop offset="1" stop-color="#281AC8"/>
+                                    </linearGradient>
+                                    </defs>
+                                </svg> 
+                            </button>
+                        </section>
+                    </div>
+
+                    <div class="comment-card-wrapper">
+                        <svg aria-label="Show comment" width="130" height="130" viewBox="0 0 138 138" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M68.933 137.866C107.004 137.866 137.866 107.004 137.866 68.933C137.866 30.8624 107.004 0 68.933 0C30.8624 0 0 30.8624 0 68.933C0 107.004 30.8624 137.866 68.933 137.866Z" fill="#D8D8D8"/>
+                        </svg>
+
+                        <!-- Customers card 3-->
+                        <section class="comment-card">
+                            <div class="avatar-wrapper">
+                                <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="48" height="50" viewBox="0 0 24 26">
+                                    <path d="M16.5 14.5c0 .83-.56 1.5-1.25 1.5S14 15.33 14 14.5s.56-1.5 1.25-1.5 1.25.67 1.25 1.5zM8.75 13c-.69 0-1.25.67-1.25 1.5S8.06 16 8.75 16 10 15.33 10 14.5 9.44 13 8.75 13zM12 21.35c2.23 0 3-2.35 3-2.35H9s.85 2.35 3 2.35zm12-6.04c0 1.77-.98 4-3.14 4.9C18.84 23.46 16.04 26 12 26c-3.83 0-6.84-2.55-8.86-5.78A5.4 5.4 0 010 15.32c0-2.06.86-3.8 2.71-3.97.85-9.1 8.57-8.4 9.84-10.85.32.56.47 1.57-.02 2.29.87-.05 2.34-1.3 2.75-2.56.76.37 1.04 1.58.66 2.36.54-.1 2.19-1.15 3.06-2.59.69 1.56.03 3.56-.7 4.77h-.02c1.8 1.7 2.78 4.13 3.01 6.58 1.86.16 2.71 1.91 2.71 3.96zm-2.58-1.86a.76.76 0 00-.67-.06 1 1 0 01-1.37-.66v.02c-.34-2.6-1.13-4.85-2.62-5.57-6.42 7.01-10.82-.9-11.94 3.53-.1.59-.16 1.18-.16 1.77a1 1 0 01-1.4.91.76.76 0 00-.68.06c-1 .65-.9 4.18 1.55 5a1 1 0 01.54.44C7.12 22.94 9.89 24 12 24c3.29 0 5.62-2.27 7.33-5.11a1 1 0 01.54-.43c2.44-.83 2.55-4.36 1.55-5.01z"/>
+                                </svg>
+
+
+                                <div class="c-inline info-wrapper">
+                                    <span class="bold block-sp">Ivan Uderm</span>
+                                    <span class="block-sp">Nigeria</span>
+                                </div>
                             </div>
-                        </div>
 
-                        <!-- stars -->
-                        <svg aria-hidden="true" width="78" height="12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- stars -->
+                            <svg aria-hidden="true" width="78" height="12" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 78 12">
                             <path d="M5.75 10.94l-2.2.9c-.5.2-1.1 0-1.3-.5-.1-.2-.1-.3-.1-.5l.2-2.4c0-.3-.1-.5-.2-.7l-1.6-1.8c-.3-.4-.3-1.1.1-1.4.2-.1.3-.2.5-.2l2.3-.5c.3-.1.5-.2.6-.5l1.2-2c.3-.5.9-.6 1.4-.3.1.1.3.2.3.3l1.2 2c.1.2.4.4.6.5l2.4.5c.5.1.9.7.7 1.2 0 .2-.1.3-.2.4l-1.5 1.8c-.2.2-.3.5-.2.7l.2 2.4c0 .6-.4 1-.9 1.1-.2 0-.3 0-.5-.1l-2.2-.9c-.3-.1-.5-.1-.8 0z" fill="url(#paint0_linear)"/>
                             <path d="M22.06 10.94l-2.2.9c-.5.2-1.1 0-1.3-.5-.1-.2-.1-.3-.1-.5l.2-2.4c0-.3-.1-.5-.2-.7l-1.6-1.8c-.3-.4-.3-1.1.1-1.4.2-.1.3-.2.5-.2l2.3-.5c.3-.1.5-.2.6-.5l1.2-2c.3-.5.9-.6 1.4-.3.1.1.3.2.3.3l1.2 2c.1.2.4.4.6.5l2.4.5c.5.1.9.7.7 1.2 0 .2-.1.3-.2.4l-1.5 1.8c-.2.2-.3.5-.2.7l.2 2.4c0 .6-.4 1-.9 1.1-.2 0-.3 0-.5-.1l-2.2-.9c-.3-.1-.5-.1-.8 0z" fill="url(#paint1_linear)"/>
                             <path d="M38.38 10.94l-2.2.9c-.5.2-1.1 0-1.3-.5-.1-.2-.1-.3-.1-.5l.2-2.4c0-.3-.1-.5-.2-.7l-1.6-1.8c-.3-.4-.3-1.1.1-1.4.2-.1.3-.2.5-.2l2.3-.5c.3-.1.5-.2.6-.5l1.2-2c.3-.5.9-.6 1.4-.3.1.1.3.2.3.3l1.2 2c.1.2.4.4.6.5l2.4.5c.5.1.9.7.7 1.2 0 .2-.1.3-.2.4l-1.5 1.8c-.2.2-.3.5-.2.7l.2 2.4c0 .6-.4 1-.9 1.1-.2 0-.3 0-.5-.1l-2.2-.9c-.3-.1-.5-.1-.8 0z" fill="url(#paint2_linear)"/>
@@ -562,62 +653,30 @@
                                 <stop offset="1" stop-color="#281AC8"/>
                               </linearGradient>
                             </defs>
-                        </svg>
-
-                        <span class="block-sp bold">Wonderful service</span>
-
-                        <p>Good deal and very wonderful service thank you.</p>
-                    </section>
-
-                    <!-- Customers card 3-->
-                    <section class="comment-card">
-                        <div class="avatar-wrapper">
-                            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="48" height="50" viewBox="0 0 24 26">
-                                <path d="M16.5 14.5c0 .83-.56 1.5-1.25 1.5S14 15.33 14 14.5s.56-1.5 1.25-1.5 1.25.67 1.25 1.5zM8.75 13c-.69 0-1.25.67-1.25 1.5S8.06 16 8.75 16 10 15.33 10 14.5 9.44 13 8.75 13zM12 21.35c2.23 0 3-2.35 3-2.35H9s.85 2.35 3 2.35zm12-6.04c0 1.77-.98 4-3.14 4.9C18.84 23.46 16.04 26 12 26c-3.83 0-6.84-2.55-8.86-5.78A5.4 5.4 0 010 15.32c0-2.06.86-3.8 2.71-3.97.85-9.1 8.57-8.4 9.84-10.85.32.56.47 1.57-.02 2.29.87-.05 2.34-1.3 2.75-2.56.76.37 1.04 1.58.66 2.36.54-.1 2.19-1.15 3.06-2.59.69 1.56.03 3.56-.7 4.77h-.02c1.8 1.7 2.78 4.13 3.01 6.58 1.86.16 2.71 1.91 2.71 3.96zm-2.58-1.86a.76.76 0 00-.67-.06 1 1 0 01-1.37-.66v.02c-.34-2.6-1.13-4.85-2.62-5.57-6.42 7.01-10.82-.9-11.94 3.53-.1.59-.16 1.18-.16 1.77a1 1 0 01-1.4.91.76.76 0 00-.68.06c-1 .65-.9 4.18 1.55 5a1 1 0 01.54.44C7.12 22.94 9.89 24 12 24c3.29 0 5.62-2.27 7.33-5.11a1 1 0 01.54-.43c2.44-.83 2.55-4.36 1.55-5.01z"/>
                             </svg>
 
+                            <span class="block-sp bold">Easy to use</span>
 
-                            <div class="c-inline info-wrapper">
-                                <span class="bold block-sp">Ivan Uderm</span>
-                                <span class="block-sp">Nigeria</span>
-                            </div>
-                        </div>
+                            <p>For my 45 years in my life i haven't found anything easier like this service, thanks for your work.</p>
 
-                        <!-- stars -->
-                        <svg aria-hidden="true" width="78" height="12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5.75 10.94l-2.2.9c-.5.2-1.1 0-1.3-.5-.1-.2-.1-.3-.1-.5l.2-2.4c0-.3-.1-.5-.2-.7l-1.6-1.8c-.3-.4-.3-1.1.1-1.4.2-.1.3-.2.5-.2l2.3-.5c.3-.1.5-.2.6-.5l1.2-2c.3-.5.9-.6 1.4-.3.1.1.3.2.3.3l1.2 2c.1.2.4.4.6.5l2.4.5c.5.1.9.7.7 1.2 0 .2-.1.3-.2.4l-1.5 1.8c-.2.2-.3.5-.2.7l.2 2.4c0 .6-.4 1-.9 1.1-.2 0-.3 0-.5-.1l-2.2-.9c-.3-.1-.5-.1-.8 0z" fill="url(#paint0_linear)"/>
-                            <path d="M22.06 10.94l-2.2.9c-.5.2-1.1 0-1.3-.5-.1-.2-.1-.3-.1-.5l.2-2.4c0-.3-.1-.5-.2-.7l-1.6-1.8c-.3-.4-.3-1.1.1-1.4.2-.1.3-.2.5-.2l2.3-.5c.3-.1.5-.2.6-.5l1.2-2c.3-.5.9-.6 1.4-.3.1.1.3.2.3.3l1.2 2c.1.2.4.4.6.5l2.4.5c.5.1.9.7.7 1.2 0 .2-.1.3-.2.4l-1.5 1.8c-.2.2-.3.5-.2.7l.2 2.4c0 .6-.4 1-.9 1.1-.2 0-.3 0-.5-.1l-2.2-.9c-.3-.1-.5-.1-.8 0z" fill="url(#paint1_linear)"/>
-                            <path d="M38.38 10.94l-2.2.9c-.5.2-1.1 0-1.3-.5-.1-.2-.1-.3-.1-.5l.2-2.4c0-.3-.1-.5-.2-.7l-1.6-1.8c-.3-.4-.3-1.1.1-1.4.2-.1.3-.2.5-.2l2.3-.5c.3-.1.5-.2.6-.5l1.2-2c.3-.5.9-.6 1.4-.3.1.1.3.2.3.3l1.2 2c.1.2.4.4.6.5l2.4.5c.5.1.9.7.7 1.2 0 .2-.1.3-.2.4l-1.5 1.8c-.2.2-.3.5-.2.7l.2 2.4c0 .6-.4 1-.9 1.1-.2 0-.3 0-.5-.1l-2.2-.9c-.3-.1-.5-.1-.8 0z" fill="url(#paint2_linear)"/>
-                            <path d="M54.7 10.94l-2.2.9c-.5.2-1.1 0-1.3-.5-.1-.2-.1-.3-.1-.5l.2-2.4c0-.3-.1-.5-.2-.7l-1.6-1.8c-.3-.4-.3-1.1.1-1.4.2-.1.3-.2.5-.2l2.3-.5c.3-.1.5-.2.6-.5l1.2-2c.3-.5.9-.6 1.4-.3.1.1.3.2.3.3l1.2 2c.1.2.4.4.6.5l2.4.5c.5.1.9.7.7 1.2 0 .2-.1.3-.2.4l-1.5 1.8c-.2.2-.3.5-.2.7l.2 2.4c0 .6-.4 1-.9 1.1-.2 0-.3 0-.5-.1l-2.2-.9c-.3-.1-.5-.1-.8 0z" fill="url(#paint3_linear)"/>
-                            <path d="M71.01 10.94l-2.2.9c-.5.2-1.1 0-1.3-.5-.1-.2-.1-.3-.1-.5l.2-2.4c0-.3-.1-.5-.2-.7l-1.6-1.8c-.3-.4-.3-1.1.1-1.4.2-.1.3-.2.5-.2l2.3-.5c.3-.1.5-.2.6-.5l1.2-2c.3-.5.9-.6 1.4-.3.1.1.3.2.3.3l1.2 2c.1.2.4.4.6.5l2.4.5c.5.1.9.7.7 1.2 0 .2-.1.3-.2.4l-1.5 1.8c-.2.2-.3.5-.2.7l.2 2.4c0 .6-.4 1-.9 1.1-.2 0-.3 0-.5-.1l-2.2-.9c-.3-.1-.5-.1-.8 0z" fill="url(#paint4_linear)"/>
-                            <defs>
-                              <linearGradient id="paint0_linear" x1="6.69" y1="-.87" x2="7.29" y2="18.74" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#FD749B"/>
-                                <stop offset="1" stop-color="#281AC8"/>
-                              </linearGradient>
-                              <linearGradient id="paint1_linear" x1="23.01" y1="-.87" x2="23.61" y2="18.74" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#FD749B"/>
-                                <stop offset="1" stop-color="#281AC8"/>
-                              </linearGradient>
-                              <linearGradient id="paint2_linear" x1="39.33" y1="-.87" x2="39.92" y2="18.74" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#FD749B"/>
-                                <stop offset="1" stop-color="#281AC8"/>
-                              </linearGradient>
-                              <linearGradient id="paint3_linear" x1="55.64" y1="-.87" x2="56.24" y2="18.74" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#FD749B"/>
-                                <stop offset="1" stop-color="#281AC8"/>
-                              </linearGradient>
-                              <linearGradient id="paint4_linear" x1="71.96" y1="-.87" x2="72.56" y2="18.74" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#FD749B"/>
-                                <stop offset="1" stop-color="#281AC8"/>
-                              </linearGradient>
-                            </defs>
-                        </svg>
-
-                        <span class="block-sp bold">Easy to use</span>
-
-                        <p>For my 45 years in my life i haven't found anything easier like this service, thanks for your work.</p>
-                    </section>
+                            <button class="close-dialog-btn" aria-label="Close comment">
+                                <svg aria-hidden="true" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.0088 0.683476C5.38095 0.677898 0.00509419 6.04635 -0.000483938 12.6742C-0.00606206 19.302 5.36239 24.6779 11.9902 24.6835C18.6172 24.6779 23.9893 19.3104 23.9995 12.6835C23.9995 6.05934 18.6329 0.689054 12.0088 0.683476ZM11.9902 22.6866C6.46578 22.6866 1.98716 18.2079 1.98716 12.6835C1.98716 7.15902 6.46578 2.6804 11.9902 2.6804C17.5128 2.68598 21.9877 7.1609 21.9933 12.6835C21.9933 18.2079 17.5147 22.6866 11.9902 22.6866Z" fill="url(#paint0_linear)"/>
+                                    <path d="M15.231 12.0986C16.0335 11.6463 16.4673 10.7407 16.3177 9.83233C16.132 8.42988 14.4602 7.90043 13.1412 7.78901V5.68066H11.8409V7.77044H10.9679V5.68066H9.66758V7.77044H7.04834V9.11721H8.02357C8.46012 9.11721 8.67373 9.24724 8.67373 9.60016V15.3866C8.67373 15.8695 8.43223 16.0181 8.17217 16.0181H7.17837V17.3928H9.7047V19.529H11.0143V17.3928H11.8873V19.529H13.1598V17.3928H13.4384C16.1134 17.3928 17.005 16.0832 17.005 14.2999C16.9836 13.2484 16.2545 12.3438 15.231 12.0986ZM10.9678 9.20079H11.8966C12.5468 9.20079 13.8285 9.31226 13.8285 10.3711C13.8731 11.0621 13.3725 11.6677 12.6861 11.755H10.9678C10.9678 11.755 10.9678 9.20079 10.9678 9.20079ZM12.4075 15.8881V15.8788H10.9678V13.0924H12.6397C13.0298 13.0924 14.4972 13.2224 14.4972 14.2627C14.4972 15.3029 13.8007 15.8881 12.4075 15.8881Z" fill="url(#paint1_linear)"/>
+                                    <defs>
+                                    <linearGradient id="paint0_linear" x1="13.1995" y1="-3.09431" x2="14.5536" y2="39.4212" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FD749B"/>
+                                    <stop offset="1" stop-color="#281AC8"/>
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear" x1="12.5245" y1="3.50084" x2="13.6102" y2="28.0096" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FD749B"/>
+                                    <stop offset="1" stop-color="#281AC8"/>
+                                    </linearGradient>
+                                    </defs>
+                                </svg>  
+                            </button>
+                        </section>
+                    </div>
                 </div>
             </div>
         </section>
@@ -636,7 +695,7 @@
                     </div>
                 </header>
 
-                <div class="c-g-row-between c-g--app-demo">
+                <div class="c-g-row-between c-g--app-demo o-content-container">
                     <img src="resources/images/phone1.png" alt="">
                     <img src="resources/images/phone2.png" alt="">
                 </div>
@@ -651,10 +710,8 @@
                     <p>Subscribe to our newsletter for daily/weekly update of our products and services.</p>
                 </header>
 
-                <div class="c-f-email-wrapper">
-                    <div class="border-gradient-wrapper email-input-wrapper">
-                        <input class="prpl-input" type="text" placeholder="EMAIL">
-                    </div>
+                <div class="c-f-row-between c-f-email-wrapper">
+                    <input class="prpl-input prpl-border-gradient" type="text" placeholder="EMAIL">
 
                     <button class="prpl-btn width-btn subm-email-btn" type="submit">DISCOVER</button>
                 </div>
@@ -716,41 +773,51 @@
                 </ul>
             </header>
 
-            <nav class="c-f-row-between c-f--footer-nav" aria-label="Footer Navigation">
-                <section>
-                    <div id="sub-menu-action1" class="c-f-row-between">
-                        <h4 class="white-color sub-menu-h">CoinBase Links</h4>
+            <nav aria-label="Footer Navigation">
+                <ul id="footer-nav-list" class="c-f--footer-nav-list">
+                    <li>
+                        <button class="c-f-row-between footer-nav-btn">
+                            <h4 class="white-color sub-menu-h">CoinBase Links</h4>
 
-                        <svg class="i-right-arrow" aria-label="Sub menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                            <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" fill="#fff"/>
-                        </svg>
-                    </div>
+                            <svg class="i-right-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" fill="#fff"/>
+                            </svg>
+                        </button>
 
-                    <ul class="footer-list sr-only">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
-                </section>
+                        <div class="c-f-column--inner-list">
+                            <h4 class="white-color sub-menu-h" hidden>CoinBase Links</h4>
 
-                <section>
-                    <div id="sub-menu-action2" class="c-f-row-between">
-                        <h4 class="white-color sub-menu-h">Contact Us</h4>
+                            <ul class="footer-list">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </li>
 
-                        <svg class="i-right-arrow" aria-label="Sub menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                            <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" fill="#fff"/>
-                        </svg>
-                    </div>
+                    <li>
+                        <button class="c-f-row-between footer-nav-btn">
+                            <h4 class="white-color sub-menu-h">Contact Us</h4>
 
-                    <ul id="footer-list2" class="footer-list c-f-contact-list sr-only">
-                        <li>(+234) 137 632 128</li>
-                        <li><a href="#">Coinbase@yahoo.com</a></li>
-                        <li><a href="#">Address goes here</a></li>
-                        <li><a href="#">Download Our App</a></li>
-                    </ul>
-                </section>
+                            <svg class="i-right-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" fill="#fff"/>
+                            </svg>
+                        </button>
+
+                        <div class="c-f-column--inner-list">
+                            <h4 class="white-color sub-menu-h" hidden>Contact Us</h4>
+
+                            <ul class="footer-list c-f-contact-list">
+                                <li>(+234) 137 632 128</li>
+                                <li><a href="#">Coinbase@yahoo.com</a></li>
+                                <li><a href="#">Address goes here</a></li>
+                                <li><a href="#">Download Our App</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
             </nav>
 
             <section class="instagram-s">

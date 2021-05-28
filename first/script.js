@@ -63,18 +63,18 @@
 
     let scrollElements = [mainHeader, genericCont];
   
-    const scrollingSpace = mainHeader.scrollHeight * 2;
+    const scrollingSpace = mainHeader.offsetHeight * 2;
 
     window.addEventListener("scroll", e => {
       let isScrolled = mainHeader.classList.contains("scroll-menu");
 
       if (window.pageYOffset > scrollingSpace && !isScrolled) {
         mainHeader.style.transform = "translateY(-100%)";
-
+        
         setTimeout(() => {
           mainHeader.style.transform = "translateY(0%)";
           scrollElements.forEach(htmlEl => htmlEl.classList.add("scroll-menu"));
-          mainHeader.style = null;
+          mainHeader.style = "";
         }, 500);
         
       } else if (window.pageYOffset <= scrollingSpace && isScrolled) {

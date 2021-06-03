@@ -27,12 +27,12 @@ body {
     color: #333333;
 }
 
-
-/* when mobile menu is opend */
-
 body.opend-menu {
     overflow: hidden;
 }
+
+
+/* when mobile menu is opend */
 
 svg,
 img {
@@ -318,8 +318,9 @@ p {
 
 @media (min-width: 46.875em) {
     .width-btn {
-        padding: 1.0625rem 2.0625rem;
-        width: auto;
+        width: 9.8125rem;
+        text-align: center;
+        padding: 1.0625rem 0;
     }
 }
 
@@ -447,7 +448,7 @@ p {
 
 /* dynamic js style */
 
-.c-f--inner-nav.opend-menu {
+.opend-menu .c-f--inner-nav {
     display: flex;
 }
 
@@ -517,12 +518,15 @@ p {
 /* styles for popup container */
 
 .sales-submenu-wrapper {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
     position: absolute;
+    transition: opacity 0.3s ease;
 }
 
-.sales-submenu-wrapper.opend-submenu {
-    display: block;
+.submenu-btn.opend-submenu+.sales-submenu-wrapper {
+    opacity: 1;
+    visibility: visible;
 }
 
 .sales-submenu-wrapper svg {
@@ -605,7 +609,7 @@ p {
 
 /* For opend or closed menu state */
 
-.main-nav.opend-menu {
+.opend-menu .main-nav {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -618,17 +622,10 @@ p {
 }
 
 
-/* it makes the logo white */
+/* styles for opend-menu */
 
-.logo[data-menu-is-opend="true"] .logo-text,
-.logo[data-menu-is-opend="true"] .logo-inner {
-    fill: #ffffff;
-}
-
-.logo[data-menu-is-opend="true"] .logo-text-str,
-.logo[data-menu-is-opend="true"] .logo-outer,
-.logo[data-menu-is-opend="true"] .logo-inner {
-    stroke: #ffffff;
+.opend-menu .logo {
+    display: none;
 }
 
 
@@ -640,24 +637,19 @@ p {
     }
 }
 
-.menu-toggle[data-is-opend="false"] .close-icon,
-.menu-toggle[data-is-opend="true"] .menu-icon {
+.mobile-hidden {
     display: none;
 }
 
-
-/* it makes the close icon white */
-
-.menu-toggle[data-is-opend="true"] .close-icon {
-    fill: var(--white-color);
+.opend-menu .mobile-hidden {
+    display: initial;
 }
 
 
-/* show the menu icon when the menu opend and hide then show the icon closed when vice versa */
+/* when menu was opend */
 
-.menu-toggle[data-is-opend="false"] .menu-icon,
-.menu-toggle[data-is-opend="true"] .close-icon {
-    display: initial;
+.opend-menu .menu-icon {
+    display: none;
 }
 
 
@@ -1279,6 +1271,7 @@ p {
         padding-top: 1.6875rem;
     }
     .blog-card>button {
+        width: auto;
         padding: 0.75rem 1.375rem;
         font-size: 0.5625rem;
         background-color: #888888;
@@ -1729,7 +1722,7 @@ p {
 }
 
 
-/* when delete right and left paddings 1428px */
+/*  1428px */
 
 @media (min-width: 89.25em) {
     .c-g--footer {

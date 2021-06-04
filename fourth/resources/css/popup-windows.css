@@ -99,8 +99,9 @@ body.modal-active {
 }
 
 .close-win::before {
-    height: 1.5em;
-    width: 1.5em;
+    content: " ";
+    height: 1.6em;
+    width: 1.6em;
     background: url("../images/close-btn.svg") no-repeat center / cover;
 }
 
@@ -111,6 +112,7 @@ body.modal-active {
 }
 
 .close-mobile-win::before {
+    content: " ";
     height: 3em;
     width: 3em;
     background: url("../images/close-arrow.svg") no-repeat center / cover;

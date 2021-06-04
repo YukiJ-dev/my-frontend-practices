@@ -165,7 +165,6 @@ document.addEventListener("DOMContentLoaded", event => {
                         this.lastSelected = Array.from(options).find(item => item.dataset.isSelected === "true");
 
                         this.list.addEventListener("click", this.event = event => {
-                            console.log("event work");
                             let currentOption = event.target;
 
                             // check that click was in the correct place (on option from list)
@@ -194,6 +193,7 @@ document.addEventListener("DOMContentLoaded", event => {
                         this.event = null;
                     },
 
+                    // check that element is shown if yes then hide
                     hideIfShown() {
                         if (this.targetBtn.classList.contains("shown")) {
                             this.targetBtn.classList.remove("shown");

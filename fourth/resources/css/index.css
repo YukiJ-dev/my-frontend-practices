@@ -68,6 +68,7 @@ input {
 button {
     cursor: pointer;
     background-color: transparent;
+    font-size: 0.875rem;
 }
 
 
@@ -85,7 +86,6 @@ ul {
 h1 {
     font-size: 1.75rem;
     line-height: 1.5;
-    font-weight: 300;
 }
 
 h2 {
@@ -200,6 +200,9 @@ p {
     padding: 0 4%;
 }
 
+
+/* 1260px */
+
 @media (min-width: 78.75em) {
     .o-content-container {
         padding: 0;
@@ -264,6 +267,15 @@ p {
 
 @media (min-width: 46.875em) {
     .c-g-row-between {
+        gap: 0 2em;
+    }
+}
+
+
+/* 1024px */
+
+@media (min-width: 93.75em) {
+    .c-g-row-between {
         gap: 0;
     }
 }
@@ -318,9 +330,19 @@ p {
 
 @media (min-width: 46.875em) {
     .width-btn {
-        width: 9.8125rem;
-        text-align: center;
-        padding: 1.0625rem 0;
+        width: auto;
+    }
+}
+
+
+/* for discaver btn on pages */
+
+
+/* 750px */
+
+@media (min-width: 46.875em) {
+    .discover-btn {
+        padding: 1.0625rem 2.6875rem;
     }
 }
 
@@ -661,15 +683,6 @@ p {
 }
 
 
-/* 750px */
-
-@media (min-width: 46.875em) {
-    .c-g--hero {
-        grid-template-columns: 45.6822% auto;
-    }
-}
-
-
 /* 1024px */
 
 @media (min-width: 64em) {
@@ -679,24 +692,47 @@ p {
     }
 }
 
-.hero-h>p {
-    padding: 1.3125em 0 1.875em;
+.home-s h1 {
+    font-weight: 300;
 }
 
 
-/* 950px */
+/* 750px */
 
-@media (min-width: 59.375em) {
-    .hero-h>p {
-        font-size: 1.125rem;
+@media (min-width: 46.875em) {
+    .c-g--hero {
+        grid-template-columns: 45.6822% auto;
     }
-    .hero-h>button {
-        font-size: 0.875em;
-    }
+}
+
+.hero-h>span {
+    display: inline-block;
+    font-size: 0.75em;
+    padding-bottom: 1rem;
+}
+
+.hero-h>p {
+    padding-top: 1.25rem;
+}
+
+.hero-h>button {
+    margin-top: 1.875rem;
 }
 
 .hero-h>button::before {
     content: "GET STARTED";
+}
+
+
+/* 750px */
+
+@media (min-width: 46.875em) {
+    .hero-h>p {
+        font-size: 1.125rem;
+    }
+    .hero-h>button {
+        padding: 1.0625rem 2rem;
+    }
 }
 
 
@@ -1379,9 +1415,6 @@ p {
 
 /* styles for comment card */
 
-
-/* use css animation */
-
 .comment-card {
     max-width: 37.5em;
     margin: 0 auto;
@@ -1593,14 +1626,13 @@ p {
 }
 
 .subscribe-h>p {
-    /* 37 72 */
     padding: 1.1875em 0 2.5em;
 }
 
 
-/* 1024px */
+/* 750px */
 
-@media (min-width: 64em) {
+@media (min-width: 46.875em) {
     .subscribe-h>p {
         padding: 2.3125em 0 4.5em;
         max-width: 23.6875em;
@@ -1622,7 +1654,7 @@ p {
 
 /* 750px */
 
-@media (min-width: 48.875em) {
+@media (min-width: 46.875em) {
     .c-f-email-wrapper {
         display: flex;
         justify-content: initial;
@@ -1644,7 +1676,7 @@ p {
 
 /* 750px */
 
-@media (min-width: 48.875em) {
+@media (min-width: 46.875em) {
     .prpl-input {
         width: auto;
         flex-grow: 1;
@@ -1663,9 +1695,8 @@ p {
 
 /* 750px */
 
-@media (min-width: 48.875em) {
+@media (min-width: 46.875em) {
     .subm-email-btn {
-        padding: 1.0625rem 2.625rem;
         margin-top: 0;
     }
 }

@@ -1,0 +1,159 @@
+/* specific styles for blog page */
+
+
+/* hero block */
+
+.hero-s {
+    padding-top: 10em;
+}
+
+.c-g--blog {
+    padding: 0 2%;
+}
+
+
+/* 750px */
+
+@media (min-width: 46.875em) {
+    .c-g--blog {
+        grid-template-columns: 36.0770% auto;
+    }
+}
+
+
+/* 1190px */
+
+@media (min-width: 74.375em) {
+    .c-g--blog {
+        padding: 0;
+        max-width: 71.375em;
+        margin: 0 auto;
+    }
+}
+
+
+/* blog cards block */
+
+.blog-cards-s {
+    padding: 3.875em 2% 9.125em;
+}
+
+
+/* 1221px */
+
+@media (min-width: 76.3125em) {
+    .blog-cards-s {
+        padding: 3.875em 0 9.125em;
+        max-width: 73.125em;
+        margin: 0 auto;
+    }
+}
+
+.blog-cards-s>*+* {
+    padding-top: 6.1875em;
+}
+
+.blog-cards-s article+article {
+    padding-top: 3.75em;
+}
+
+.blog-card-wrapper>img {
+    border-top-left-radius: 1.25em;
+    border-top-right-radius: 1.25em;
+}
+
+
+/* last part of card */
+
+.card-content-wrapper {
+    border-top: 0;
+    padding: 2em 2% 1.5em;
+    border-bottom-left-radius: 1.25em;
+    border-bottom-right-radius: 1.25em;
+}
+
+@media (min-width: 46.875em) {
+    .card-content-wrapper {
+        padding: 3.75em 0 2.5em;
+    }
+}
+
+.card-content-wrapper h2 {
+    font-size: 1.125rem;
+    -webkit-line-clamp: 1;
+}
+
+
+/* 400px */
+
+@media (min-width: 25em) {
+    .card-content-wrapper h2 {
+        font-size: calc(1.125rem + (14 * (100vw - 400px) / 624));
+    }
+}
+
+
+/* 1024px */
+
+@media (min-width: 64em) {
+    .card-content-wrapper h2 {
+        font-size: 2rem;
+    }
+}
+
+.card-content-wrapper span {
+    font-size: 0.625rem;
+}
+
+.card-content-wrapper p {
+    padding-top: 1.125rem;
+    font-size: 0.875rem;
+    -webkit-line-clamp: 2;
+}
+
+.card-content-wrapper button {
+    margin-top: 1.125rem;
+}
+
+
+/* 750px */
+
+@media (min-width: 46.875em) {
+    .card-content-wrapper p {
+        font-size: 1rem;
+    }
+}
+
+.max-width-content {
+    max-width: 58.125em;
+    margin: 0 auto;
+}
+
+
+/* buttons */
+
+.switch-actions>li+li {
+    padding: 1em 0;
+    padding-left: 0.625em;
+}
+
+.switch-actions button {
+    font-size: 1rem;
+    width: 3.75em;
+    height: 3.75em;
+    border-radius: 6.25em;
+    text-align: center;
+    border: solid 1px #E0E0E0;
+}
+
+.switch-actions .text-btn {
+    width: auto;
+    padding: 0 2em;
+}
+
+.switch-actions [data-is-choosed="true"] {
+    border: 0;
+    background-image: var(--gradient-for-page);
+    color: white;
+}
+

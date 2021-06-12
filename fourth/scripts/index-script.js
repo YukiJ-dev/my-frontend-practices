@@ -272,10 +272,7 @@ document.addEventListener("DOMContentLoaded", () => {
             let avatars = customersSvg.querySelectorAll("path");
 
             // fill map with info for each customer
-            let avatarDatas = new Map();
-            for (let i = 0; i < avatars.length; i++) {
-                avatarDatas.set(avatars[i], datasArray[i]);
-            }
+            let avatarDatas = new Map(datasArray.map((item, i) => [avatars[i], item]));
 
             // dialog window for customer comment
             let dialogWindow = createPopupDialog();

@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", event => {
 
                                 if (toggleBtn.classList.toggle("opend-submenu")) {
                                     let x = toggleBtn.getBoundingClientRect().right - mainSallesWrapper.getBoundingClientRect().x;
-                                    let y = mainSallesWrapper.offsetHeight + window.pageYOffset;
+                                    let y = mainSallesWrapper.offsetHeight;
 
                                     subMenuWrapper.style.cssText = `left: ${x - xInfelicity}px; top: ${y}px;`;
                                 } else {

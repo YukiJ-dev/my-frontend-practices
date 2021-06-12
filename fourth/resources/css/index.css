@@ -150,6 +150,12 @@ p {
     vertical-align: initial;
 }
 
+.text-overflow {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 
 /* Adding gradient to page */
 
@@ -258,7 +264,6 @@ p {
     display: grid;
     justify-items: center;
     align-items: center;
-    justify-content: space-between;
     row-gap: 2em;
 }
 
@@ -268,6 +273,7 @@ p {
 @media (min-width: 46.875em) {
     .c-g-row-between {
         gap: 0 2em;
+        justify-content: space-between;
     }
 }
 
@@ -479,6 +485,10 @@ p {
     flex-basis: 15em;
 }
 
+/* for selected link */
+.c-f--main-menu a[data-is-selected = "true"] {
+    border: solid red 1px;
+}
 
 /* 1024px */
 
@@ -679,7 +689,7 @@ p {
 
 .hero-s {
     padding: 8.875em 0 7em;
-    background: url("../images/back-wave-for-hero.png") bottom / 100% 7em no-repeat, linear-gradient(#FD749B 2.31%, #281AC8 66.14%)
+    background: url("../images/back-wave-for-hero.png") bottom / 100% 7em no-repeat, linear-gradient(#FD749B 2.31%, #281AC8 66.14%);
 }
 
 
@@ -703,6 +713,10 @@ p {
     .c-g--hero {
         grid-template-columns: 45.6822% auto;
     }
+}
+
+.hero-h {
+    color: var(--white-color);
 }
 
 .hero-h>span {
@@ -1195,6 +1209,7 @@ p {
 
 @media (min-width: 46.875em) {
     .c-g--blog-cards {
+        gap: 0;
         max-width: 67.8125em;
         margin: 0 auto;
     }
@@ -1261,13 +1276,6 @@ p {
         z-index: 50;
         border: solid 1px transparent;
     }
-}
-
-.blog-card>p,
-.blog-card>h3 {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
 }
 
 .blog-card>h3 {
@@ -1959,3 +1967,58 @@ p {
 .gray-shape:hover {
     background: url("../images/plus.svg") center / 1.5em no-repeat, #D8D8D8;
 }
+
+/* commnte block styles */
+
+.comment-s > * + * {
+    padding-top: 3.75em;
+  }
+  
+  .comment-h > h2 {
+    font-size: 1.5rem;
+  }
+  
+  .comment-h > p {
+    padding-top: 1.5625rem;
+  }
+  
+  .comment-form {
+    color: #2f2f2f;
+  }
+  
+  .comment-form * + * {
+    margin-top: 2em;
+  }
+  
+  /* 630px */
+  
+  @media (min-width: 39.375em) {
+    .c-f--fields-wrapper { 
+      display: flex;
+    }
+    .c-f--fields-wrapper>:first-child {
+      margin-right: 2.875em;
+    }
+    .c-f--fields-wrapper>*+* {
+      margin-top: 0;
+    }
+  }
+  
+  
+  .comment-form > textarea {
+    font: inherit;
+    max-width: 100%;
+  }
+  
+  .comment-form > button {
+    margin-top: 4.1875rem;
+  }
+  
+  /* 750px */
+  
+  @media (min-width: 46.875em) {
+    .comment-form > button {
+      padding: 1.0625em 3.125em;
+    }
+  }
+  

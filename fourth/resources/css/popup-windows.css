@@ -1,0 +1,426 @@
+/* styles for popup */
+
+
+/* add this dynamicly with js */
+
+
+/* addition style with js */
+
+body.modal-active {
+    overflow: hidden;
+}
+
+
+/* static styles for windows */
+
+.modal-window-wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white-color);
+    z-index: 1200;
+    overflow: auto;
+    text-align: center;
+    overflow-y: scroll;
+}
+
+
+/* 570px */
+
+
+/* changes for auth windows */
+
+@media (min-width: 35.625em) {
+    .auth-wrapper {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    .auth-wrapper::before {
+        content: " ";
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+
+/* 750px */
+
+
+/* changes for sales windows */
+
+@media (min-width: 46.875em) {
+    .sales-wrapper {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    .sales-wrapper::before {
+        content: " ";
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+
+/* default modal windows style */
+
+.modal-window {
+    position: relative;
+    display: table;
+    height: inherit;
+    width: inherit;
+    background-color: var(--white-color);
+    padding: 0 2%;
+    z-index: 1250;
+    text-align: center;
+}
+
+.modal-window .content-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+/* styles for closing buttons */
+
+.close-btn::before {
+    content: " ";
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.close-win {
+    position: absolute;
+    display: none;
+    top: 1em;
+    right: 1.5em;
+}
+
+.close-win::before {
+    content: " ";
+    height: 1.6em;
+    width: 1.6em;
+    background: url("../images/close-btn.svg") no-repeat center / cover;
+}
+
+.close-mobile-win {
+    position: fixed;
+    bottom: 1em;
+    right: 0;
+    z-index: 1300;
+}
+
+.close-mobile-win::before {
+    content: " ";
+    height: 3em;
+    width: 3em;
+    background: url("../images/close-arrow.svg") no-repeat center / cover;
+}
+
+
+/* for auth windows */
+
+
+/* 570px */
+
+@media (min-width: 35.675em) {
+    .auth-window {
+        display: inline-block;
+        vertical-align: middle;
+        width: 98.2456%;
+        height: auto;
+        padding: 3.25em 2%;
+        border-radius: 1.875em;
+        max-width: 40.25em;
+    }
+    .auth-window .content-wrapper {
+        display: block;
+    }
+    .auth-window .close-win {
+        display: inline;
+    }
+    .auth-wrapper .close-mobile-win {
+        display: none;
+    }
+}
+
+
+/* 750px */
+
+
+/* for sales windows */
+
+@media (min-width: 46.875em) {
+    .sales-window {
+        display: inline-block;
+        vertical-align: middle;
+        width: 98.2456%;
+        height: auto;
+        padding: 3.25em 2%;
+        border-radius: 1.875em;
+        max-width: 55.5em;
+    }
+    .sales-window .content-wrapper {
+        display: block;
+    }
+    .sales-window .close-win {
+        display: inline;
+    }
+    .sales-wrapper .close-mobile-win {
+        display: none;
+    }
+}
+
+
+/* window background for some modal windows */
+
+.window-background {
+    background-position: center top;
+    background-size: 30.25em 13.5em;
+    background-repeat: no-repeat;
+}
+
+.window-background[data-background-color="orange"] {
+    background-image: url("../images/orange-circle.png");
+}
+
+.window-background[data-background-color="blue"] {
+    background-image: url("../images/blue-circle.png");
+}
+
+.window-background[data-background-color="purple"] {
+    background-image: url("../images/purple-circle.png");
+}
+
+.modal-header h2 {
+    font-size: 1.5rem;
+}
+
+.modal-header p {
+    padding: 1.25em 0 3.25em;
+}
+
+
+/* auth and registration form */
+
+.auth-form {
+    padding-bottom: 2.375em;
+}
+
+.modal-form {
+    position: relative;
+    font-size: 0.875em;
+}
+
+
+/* 570px */
+
+@media (min-width: 35.625em) {
+    .modal-form {
+        max-width: 21.6875rem;
+        margin: 0 auto;
+    }
+}
+
+
+/* input style for all windows */
+
+.form-input {
+    border-radius: 0.3125rem;
+    display: block;
+    border: solid rgba(209, 209, 209, 1) 1px;
+    padding: 1.25rem;
+    width: 100%;
+    text-align: initial;
+}
+
+.form-input::placeholder {
+    color: inherit;
+}
+
+.modal-form>*+* {
+    margin-top: 1.875rem;
+}
+
+.auth-form a {
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    font-size: 0.75rem;
+    margin-top: 1.0625em;
+}
+
+.modal-form>button {
+    margin-top: 2.625em;
+}
+
+
+/* 570px */
+
+@media (min-width: 35.625em) {
+    .modal-form>button {
+        width: 9.8126em;
+    }
+}
+
+.auth-form+span {
+    font-size: 0.9375em;
+}
+
+.auth-form+span a {
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.0625rem;
+}
+
+
+/* 1024px */
+
+@media (min-width: 64em) {
+    .auth-form+span {
+        font-size: 0.75em;
+    }
+    .auth-form+span a {
+        font-size: inherit;
+    }
+}
+
+
+/* styles for sales window */
+
+.c-g--sales-cards {
+    justify-content: initial;
+    padding-bottom: 2.75em;
+}
+
+.c-g--sales-cards img {
+    cursor: pointer;
+}
+
+
+/* 750px */
+
+@media (min-width: 46.875em) {
+    .c-g--sales-cards {
+        grid-template-columns: auto auto;
+        justify-items: initial;
+        max-width: 40.375em;
+        margin: 0 auto;
+    }
+    .c-g--sales-cards>:last-child {
+        justify-self: end;
+    }
+}
+
+
+/* styles for selle windows */
+
+.sales-window img+p {
+    padding: 2.5em 0 1.4375em;
+}
+
+.sales-window hr,
+.sales-window hr+p {
+    margin: 0 auto;
+}
+
+.sales-window hr {
+    width: 66.6666%;
+}
+
+.sales-window hr+p {
+    font-size: 0.75em;
+    max-width: 21.5rem;
+    padding: 1.9375rem 0 2.8125rem;
+}
+
+.modal-form .result-input {
+    font-size: 1.125rem;
+    max-width: 10.8125rem;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: inherit;
+    border-radius: 10px;
+    border: solid transparent 2px;
+    background: repeating-linear-gradient(0deg, transparent, transparent 10px, #fff 10px, #fff 15px) border-box, repeating-linear-gradient(90deg, transparent, transparent 10px, #fff 10px, #fff 15px) border-box, repeating-linear-gradient(180deg, transparent, transparent 10px, #fff 10px, #fff 15px) border-box, repeating-linear-gradient(270deg, transparent, transparent 10px, #fff 10px, #fff 15px) border-box, linear-gradient(white, white) padding-box, var(--gradient-for-page) border-box;
+    background-position: 0 0, 0 0, 100% 0, 0 100%, 0 0, 0 0;
+    background-size: 2px 100%, 100% 2px, 2px 100%, 100% 2px, 100% 100%, 100% 100%;
+    background-repeat: no-repeat;
+}
+
+
+/* styles for sell gift cards */
+
+.c-f-flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.4375em;
+    justify-content: center;
+}
+
+.c-f-flex-wrap img {
+    cursor: pointer;
+}
+
+
+/* 788px */
+
+@media (min-width: 49.25em) {
+    .c-f-flex-wrap {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        row-gap: 2.25em;
+    }
+}
+
+
+/* styles for select element */
+
+.modal-form .select-btn {
+    margin-top: 0;
+    display: flex;
+}
+
+.select-btn::after {
+    content: " ";
+    display: block;
+    height: 0.5rem;
+    width: 0.75rem;
+    background: url("../images/small-down-arrow.svg") no-repeat;
+    background-size: cover;
+}
+
+.select-btn.shown::after {
+    transform: rotate(180deg);
+}
+
+.select-items-wrapper {
+    position: absolute;
+    visibility: hidden;
+    margin-top: 0.5em;
+    border-radius: 0.3125rem;
+    border: solid rgba(209, 209, 209, 1) 1px;
+    width: 100%;
+    z-index: 10;
+    background-color: var(--white-color);
+}
+
+.select-items-wrapper.shown {
+    visibility: visible;
+}
+
+.select-items-wrapper .form-input {
+    border: 0;
+}
+
+.select-items-wrapper>*+* {
+    border-top: solid rgba(209, 209, 209, 1) 1px;
+}
+
+.option:hover {
+    background-color: rgba(39, 145, 216, 0.5);
+}
+
+.option[data-is-selected="true"] {
+    background-color: rgba(39, 145, 216, 0.7);
+}

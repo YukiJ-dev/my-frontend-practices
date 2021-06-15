@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- same styles -->
+    <link rel="stylesheet" href="resources/css/index.css">
+    <!-- specific styles for the about us page -->
+    <link rel="stylesheet" href="resources/css/about-us.css">
+    <link rel="stylesheet" href="resources/css/popup-windows.css">
+
+    <title>CoinBase - About us</title>
+</head>
+
+<body>
+    <!-- all modal windows for page -->
+
+    <!-- login modal window -->
+    <div id="login-popup" class="modal-window-wrapper auth-wrapper" hidden>
+        <div class="modal-window auth-window">
+            <div class="content-wrapper">
+                <header class="modal-header">
+                    <h2 class="prpl-text-gradient">Welcome back!</h2>
+                    <p>Kindly fill in your login details to proceed</p>
+                </header>
+
+                <form class="modal-form auth-form">
+                    <input class="form-input" type="text" placeholder="Email">
+                    <input class="form-input" type="text" placeholder="Password">
+
+                    <a href="#">i forgot my password?</a>
+
+                    <button class="prpl-btn width-btn" type="submit">LOGIN</button>
+                </form>
+
+                <span>Don't have an account yet? <a aria-label="Sing Up Window" data-shown-popup="registration-popup">Sing Up</a></span>
+            </div>
+
+
+            <button class="close-btn close-win" aria-label="Colose window" data-action="closeWindow"></button>
+        </div>
+
+        <button class="close-btn close-mobile-win" aria-label="Colose window"></button>
+    </div>
+
+    <!-- registration modal window -->
+    <div id="registration-popup" class="modal-window-wrapper auth-wrapper" hidden>
+        <div class="modal-window auth-window">
+            <div class="content-wrapper">
+                <header class="modal-header">
+                    <h2 class="prpl-text-gradient">Sing up</h2>
+                    <p>There’s no charge upon registration</p>
+                </header>
+
+                <form class="modal-form auth-form">
+                    <input class="form-input" type="text" placeholder="Full Name">
+                    <input class="form-input" type="text" placeholder="Email">
+                    <input class="form-input" type="text" placeholder="Password">
+                    <input class="form-input" type="text" placeholder="Confirm Password">
+
+                    <button class="prpl-btn width-btn" type="submit">SIGNUP</button>
+                </form>
+
+                <span>Already a member? <a aria-label="Login window" data-shown-popup="login-popup">Login</a></span>
+            </div>
+
+            <button class="close-btn close-win" aria-label="Colose window" data-action="closeWindow"></button>
+        </div>
+
+        <button class="close-btn close-mobile-win" aria-label="Colose window"></button>
+    </div>
+
+    <!-- sales modal windows -->
+
+    <!-- sales window -->
+    <div id="bitcoin-sales" class="modal-window-wrapper sales-wrapper" hidden>
+        <div class="modal-window sales-window">
+            <div class="content-wrapper">
+                <header class="modal-header">
+                    <h2 class="prpl-text-gradient">Sell bitcoin</h2>
+                    <p>Choose your preffered product to continue</p>
+                </header>
+
+                <div class="c-g-row-between c-g--sales-cards">
+                    <img src="resources/images/sell-bitcoin.png" alt="Sell bitcoin" data-shown-popup="sale-bitcoin">
+                    <img src="resources/images/sell-ethereum.png" alt="Sell ethereum" data-shown-popup="sale-ethereum">
+                </div>
+            </div>
+
+            <button class="close-btn close-win" aria-label="Colose window" data-action="closeWindow"></button>
+        </div>
+
+        <button class="close-btn close-mobile-win" aria-label="Colose window"></button>
+    </div>
+
+    <!-- sell bitcoin -->
+    <div id="sale-bitcoin" class="modal-window-wrapper sales-wrapper" hidden>
+        <div class="modal-window sales-window window-background" data-background-color="orange">
+            <div class="content-wrapper">
+                <img src="resources/images/sell-bitcoin.png" alt="Sell bitcoin">
+
+                <p><span class="bold">&#8358;360.00</span> is our conversion rate for 0.1 BTC on this platform.</p>
+
+                <hr>
+
+                <p>The total value you derived here will be the amount you’ll be receiving during the total transaction process </p>
+
+                <form class="modal-form sale-form">
+                    <input class="form-input" type="text" placeholder="Bitcoin Value">
+                    <input class="form-input result-input" type="text" value="#0.00" readonly>
+
+                    <button class="prpl-btn width-btn">PROCEED</button>
+                </form>
+            </div>
+
+            <button class="close-btn close-win" aria-label="Colose window" data-action="closeWindow"></button>
+        </div>
+
+        <button class="close-btn close-mobile-win" aria-label="Colose window"></button>
+    </div>
+
+    <!-- sell ethereum -->
+    <div id="sale-ethereum" class="modal-window-wrapper sales-wrapper" hidden>
+        <div class="modal-window sales-window window-background" data-background-color="blue">
+            <div class="content-wrapper">
+                <img src="resources/images/sell-ethereum.png" alt="Sell bitcoin">
+
+                <p><span class="bold">&#8358;360.00</span> is our conversion rate for 0.1 ETH on this platform.</p>
+
+                <hr>
+
+                <p>The total value you derived here will be the amount you’ll be receiving during the total transaction process </p>
+
+                <form class="modal-form sale-form">
+                    <input class="form-input" type="text" placeholder="Ethereum Value">
+                    <input class="form-input result-input" type="text" value="#0.00" readonly>
+
+                    <button class="prpl-btn width-btn">PROCEED</button>
+                </form>
+            </div>
+
+            <button class="close-btn close-win" aria-label="Colose window" data-action="closeWindow"></button>
+        </div>
+
+        <button class="close-btn close-mobile-win" aria-label="Colose window"></button>
+    </div>
+
+    <!-- sell giftcards -->
+
+    <div id="giftcard-sales" class="modal-window-wrapper sales-wrapper" hidden>
+        <div class="modal-window sales-window">
+            <div class="content-wrapper">
+                <header class="modal-header">
+                    <h2 class="prpl-text-gradient">Got Gift Cards For Sale?</h2>
+                    <p>Choose your preferred card type to continue the exchange process</p>
+                </header>
+
+                <div class="c-f-flex-wrap">
+                    <img src="resources/images/amazon-gift.png" alt="Amazon gift card" data-shown-popup="sale-amazon-card">
+
+                    <img src="resources/images/itunes-gift.png" alt="Itunes gift card" data-shown-popup="sale-app-store-iTunes-card">
+
+                    <img src="resources/images/steam-gift.png" alt="Steam gift card" data-shown-popup="sale-steam-card">
+
+                    <img src="resources/images/google-play-gift.png" alt="Google play gift card" data-shown-popup="sale-google-play-card">
+
+                    <img src="resources/images/other-gifts.png" alt="Other gift cards" data-shown-popup="sale-other-cards">
+                </div>
+            </div>
+
+            <button class="close-btn close-win" aria-label="Colose window" data-action="closeWindow"></button>
+        </div>
+
+        <button class="close-btn close-mobile-win" aria-label="Colose window"></button>
+    </div>
+
+    <!-- sell Amazon card -->
+    <div id="sale-amazon-card" class="modal-window-wrapper sales-wrapper" hidden>
+        <div class="modal-window sales-window window-background" data-background-color="orange">
+            <div class="content-wrapper">
+                <img src="resources/images/big-amazon-gift.png" alt="Amazon card">
+
+                <p><span class="bold">&#8358;360.00</span> is our conversion rate for every amazon card on this platform.</p>
+
+                <hr>
+
+                <p>The total value you derived here will be the amount you’ll be receiving during the total transaction process </p>
+
+                <form class="modal-form sale-form">
+                    <div class="select-wrapper">
+                        <button class="c-f-row-between form-input select-btn" aria-label="Select element" data-show-list>Card Type</button>
+
+                        <ul class="select-items-wrapper">
+                            <li><button class="form-input option" data-is-selected="false">Free gift</button></li>
+                            <li><button class="form-input option" data-is-selected="false">Electronic gift</button></li>
+                            <li><button class="form-input option" data-is-selected="false">Other gift</button></li>
+                        </ul>
+                    </div>
+
+                    <div class="select-wrapper">
+                        <button class="c-f-row-between form-input select-btn" aria-label="Select element" data-show-list>Card Currency</button>
+
+                        <ul class="select-items-wrapper">
+                            <li><button class="form-input option" data-is-selected="false">Dollar $</button></li>
+                            <li><button class="form-input option" data-is-selected="false">Euro &#8364;</button></li>
+                            <li><button class="form-input option" data-is-selected="false">Nigerian naira &#8358;</button></li>
+                        </ul>
+                    </div>
+
+                    <input type="text" class="form-input" placeholder="Amount">
+
+                    <input class="form-input result-input" type="text" value="#0.00" readonly>
+
+                    <button class="prpl-btn width-btn">PROCEED</button>
+                </form>
+            </div>
+
+
+            <button class="close-btn close-win" aria-label="Colose window" data-action="closeWindow"></button>
+        </div>
+
+        <button class="close-btn close-mobile-win" aria-label="Colose window"></button>
+    </div>
+
+    <!-- sell App store & iTunes card -->
+    <div id="sale-app-store-iTunes-card" class="modal-window-wrapper sales-wrapper" hidden>
+        <div class="modal-window sales-window window-background" data-background-color="blue">
+            <div class="content-wrapper">
+                <img src="resources/images/big-iTunes-gift.png" alt="AppStore & iTunes cards">
+
+                <p><span class="bold">&#8358;360.00</span> is our conversion rate for every AppStore & iTunes card on this platform.</p>
+
+                <hr>
+
+                <p>The total value you derived here will be the amount you’ll be receiving during the total transaction process </p>
+
+                <form class="modal-form sale-form">
+                    <div class="select-wrapper">
+                        <button class="c-f-row-between form-input select-btn" aria-label="Select element" data-show-list>Card Type</button>
+
+                        <ul class="select-items-wrapper">
+                            <li><button class="form-input option" data-is-selected="false">Free gift</button></li>
+                            <li><button class="form-input option" data-is-selected="false">Electronic gift</button></li>
+                            <li><button class="form-input option" data-is-selected="false">Other gift</button></li>
+                        </ul>
+                    </div>
+
+                    <div class="select-wrapper">
+                        <button class="c-f-row-between form-input select-btn" aria-label="Select element" data-show-list>Card Currency</button>
+
+                        <ul class="select-items-wrapper">
+                            <li><button class="form-input option" data-is-selected="false">Dollar $</button></li>
+                            <li><button class="form-input option" data-is-selected="false">Euro &#8364;</button></li>
+                            <li><button class="form-input option" data-is-selected="false">Nigerian naira &#8358;</button></li>
+                        </ul>
+                    </div>
+
+                    <input type="text" class="form-input" placeholder="Amount">
+
+                    <input class="form-input result-input" type="text" value="#0.00" readonly>
+
+                    <button class="prpl-btn width-btn">PROCEED</button>
+                </form>
+            </div>
+
+
+            <button class="close-btn close-win" aria-label="Colose window" data-action="closeWindow"></button>
+        </div>
+
+        <button class="close-btn close-mobile-win" aria-label="Colose window"></button>
+    </div>
+
+    <!-- sell Steam card -->
+    <div id="sale-steam-card" class="modal-window-wrapper sales-wrapper" hidden>
+        <div class="modal-window sales-window window-background" data-background-color="purple">
+            <div class="content-wrapper">
+                <img src="resources/images/big-steam-gift.png" alt="Steam card">
+
+                <p><span class="bold">&#8358;360.00</span> is our conversion rate for every steam card on this platform.</p>
+
+                <hr>
+
+                <p>The total value you derived here will be the amount you’ll be receiving during the total transaction process </p>
+
+                <form class="modal-form sale-form">
+                    <div class="select-wrapper">
+                        <button class="c-f-row-between form-input select-btn" aria-label="Select element" data-show-list>Card Type</button>
+
+                        <ul class="select-items-wrapper">
+                            <li><button class="form-input option" data-is-selected="false">Free gift</button></li>
+                            <li><button class="form-input option" data-is-selected="false">Electronic gift</button></li>
+                            <li><button class="form-input option" data-is-selected="false">Other gift</button></li>
+                        </ul>
+                    </div>
+
+                    <div class="select-wrapper">
+                        <button class="c-f-row-between form-input select-btn" aria-label="Select element" data-show-list>Card Currency</button>
+
+                        <ul class="select-items-wrapper">
+                            <li><button class="form-input option" data-is-selected="false">Dollar $</button></li>
+                            <li><button class="form-input option" data-is-selected="false">Euro &#8364;</button></li>
+                            <li><button class="form-input option" data-is-selected="false">Nigerian naira &#8358;</button></li>
+                        </ul>
+                    </div>
+
+                    <input type="text" class="form-input" placeholder="Amount">
+
+                    <input class="form-input result-input" type="text" value="#0.00" readonly>
+
+                    <button class="prpl-btn width-btn">PROCEED</button>
+                </form>
+            </div>
+
+
+            <button class="close-btn close-win" aria-label="Colose window" data-action="closeWindow"></button>
+        </div>
+
+        <button class="close-btn close-mobile-win" aria-label="Colose window"></button>
+    </div>
+
+    <!-- sell Google Play card -->
+    <div id="sale-google-play-card" class="modal-window-wrapper sales-wrapper" hidden>
+        <div class="modal-window sales-window window-background" data-background-color="blue">
+            <div class="content-wrapper">
+                <img src="resources/images/big-google-play-gift.png" alt="Google Play card">
+
+                <p><span class="bold">&#8358;360.00</span> is our conversion rate for every google play card on this platform.</p>
+
+                <hr>
+
+                <p>The total value you derived here will be the amount you’ll be receiving during the total transaction process </p>
+
+                <form class="modal-form sale-form">
+                    <div class="select-wrapper">
+                        <button class="c-f-row-between form-input select-btn" aria-label="Select element" data-show-list>Card Type</button>
+
+                        <ul class="select-items-wrapper">
+                            <li><button class="form-input option" data-is-selected="false">Free gift</button></li>
+                            <li><button class="form-input option" data-is-selected="false">Electronic gift</button></li>
+                            <li><button class="form-input option" data-is-selected="false">Other gift</button></li>
+                        </ul>
+                    </div>
+
+                    <div class="select-wrapper">
+                        <button class="c-f-row-between form-input select-btn" aria-label="Select element" data-show-list>Card Currency</button>
+
+                        <ul class="select-items-wrapper">
+                            <li><button class="form-input option" data-is-selected="false">Dollar $</button></li>
+                            <li><button class="form-input option" data-is-selected="false">Euro &#8364;</button></li>
+                            <li><button class="form-input option" data-is-selected="false">Nigerian naira &#8358;</button></li>
+                        </ul>
+                    </div>
+
+                    <input type="text" class="form-input" placeholder="Amount">
+
+                    <input class="form-input result-input" type="text" value="#0.00" readonly>
+
+                    <button class="prpl-btn width-btn">PROCEED</button>
+                </form>
+            </div>
+
+
+            <button class="close-btn close-win" aria-label="Colose window" data-action="closeWindow"></button>
+        </div>
+
+        <button class="close-btn close-mobile-win" aria-label="Colose window"></button>
+    </div>
+
+    <!-- sell Other cards -->
+    <div id="sale-other-cards" class="modal-window-wrapper sales-wrapper" hidden>
+        <div class="modal-window sales-window window-background" data-background-color="purple">
+            <div class="content-wrapper">
+                <img src="resources/images/big-other-gifts.png" alt="Other cards">
+
+                <p><span class="bold">&#8358;360.00</span> is our conversion rate for every other cards on this platform.</p>
+
+                <hr>
+
+                <p>The total value you derived here will be the amount you’ll be receiving during the total transaction process </p>
+
+                <form class="modal-form sale-form">
+                    <div class="select-wrapper">
+                        <button class="c-f-row-between form-input select-btn" aria-label="Select element" data-show-list>Card Type</button>
+
+                        <ul class="select-items-wrapper">
+                            <li><button class="form-input option" data-is-selected="false">Free gift</button></li>
+                            <li><button class="form-input option" data-is-selected="false">Electronic gift</button></li>
+                            <li><button class="form-input option" data-is-selected="false">Other gift</button></li>
+                        </ul>
+                    </div>
+
+                    <div class="select-wrapper">
+                        <button class="c-f-row-between form-input select-btn" aria-label="Select element" data-show-list>Card Currency</button>
+
+                        <ul class="select-items-wrapper">
+                            <li><button class="form-input option" data-is-selected="false">Dollar $</button></li>
+                            <li><button class="form-input option" data-is-selected="false">Euro &#8364;</button></li>
+                            <li><button class="form-input option" data-is-selected="false">Nigerian naira &#8358;</button></li>
+                        </ul>
+                    </div>
+
+                    <input type="text" class="form-input" placeholder="Amount">
+
+                    <input class="form-input result-input" type="text" value="#0.00" readonly>
+
+                    <button class="prpl-btn width-btn">PROCEED</button>
+                </form>
+            </div>
+
+
+            <button class="close-btn close-win" aria-label="Colose window" data-action="closeWindow"></button>
+        </div>
+
+        <button class="close-btn close-mobile-win" aria-label="Colose window"></button>
+    </div>
+
+    <!-- header from main page  -->
+    <header aria-label="Main Header">
+        <nav id="main-n" class="main-nav" aria-label="Main Navigation">
+            <div class="c-f-row-between c-f-column c-f--main-nav">
+                <div class="c-f-row-between">
+                    <a href="index.html" aria-label="CoinBase">
+                        <svg class="logo" aria-label="CoinBase" width="145" height="33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="a" maskUnits="userSpaceOnUse" x="46.57" y="11.59" width="98" height="18"
+                                fill="#000">
+                                <path fill="#fff" d="M46.57 11.59h98v18h-98z" />
+                                <path
+                                    d="M47.57 21.1c0-1.41.31-2.67.95-3.78.64-1.13 1.5-2.01 2.6-2.65a7.28 7.28 0 013.67-.95c1.58 0 2.96.38 4.14 1.14a6.51 6.51 0 012.57 3.22h-2.26a4.5 4.5 0 00-1.75-2 4.99 4.99 0 00-2.7-.7 5.3 5.3 0 00-2.72.7 4.9 4.9 0 00-1.89 2 6.3 6.3 0 00-.68 3.01c0 1.15.23 2.15.68 3.02a4.94 4.94 0 001.9 1.98c.8.47 1.7.7 2.71.7a4.5 4.5 0 004.44-2.68h2.27a6.52 6.52 0 01-2.57 3.2 7.58 7.58 0 01-4.14 1.11 6.96 6.96 0 01-6.27-3.55 7.48 7.48 0 01-.95-3.78zM69.28 28.48a5.91 5.91 0 01-2.9-.72 5.27 5.27 0 01-2.04-2.04 6.4 6.4 0 01-.73-3.1c0-1.15.25-2.17.75-3.05.5-.9 1.2-1.58 2.07-2.05a5.95 5.95 0 012.93-.72c1.08 0 2.06.24 2.93.72a5.09 5.09 0 012.06 2.03 6 6 0 01.76 3.07 6 6 0 01-.78 3.1 5.33 5.33 0 01-2.1 2.04c-.89.48-1.87.72-2.95.72zm0-1.65c.68 0 1.31-.16 1.9-.47.6-.32 1.08-.8 1.44-1.43.38-.63.56-1.4.56-2.3 0-.92-.18-1.69-.54-2.32a3.46 3.46 0 00-1.4-1.4 3.9 3.9 0 00-1.9-.48c-.7 0-1.33.16-1.91.48-.57.3-1.02.77-1.37 1.4-.35.63-.52 1.4-.52 2.31 0 .92.17 1.7.5 2.33a3.5 3.5 0 003.24 1.88zM78.58 15.15c-.36 0-.67-.12-.92-.37a1.23 1.23 0 01-.37-.91c0-.36.12-.66.37-.9.25-.26.56-.38.92-.38.34 0 .63.12.87.37.25.25.37.55.37.9 0 .37-.12.67-.37.92-.24.25-.53.37-.87.37zm.9 1.84v11.3H77.6V17h1.89zM88.25 16.78c1.39 0 2.51.42 3.37 1.26.86.82 1.29 2.02 1.29 3.6v6.66h-1.87v-6.4c0-1.13-.29-1.99-.85-2.58-.57-.6-1.35-.9-2.33-.9-1 0-1.8.3-2.39.92-.58.62-.87 1.52-.87 2.7v6.26h-1.89V16.99h1.89v1.6c.37-.57.88-1.02 1.52-1.34a4.82 4.82 0 012.13-.47zM103.24 20.89a3 3 0 011.44.64c.44.34.78.77 1.03 1.28a3.63 3.63 0 01-.17 3.61 3.9 3.9 0 01-1.63 1.38c-.71.33-1.55.5-2.52.5H96V13.9h5.2c.98 0 1.82.17 2.5.5.7.31 1.22.75 1.57 1.3.34.55.52 1.17.52 1.85 0 .86-.24 1.57-.71 2.13-.46.55-1.07.95-1.83 1.2zm-5.36-.77h3.18c.89 0 1.57-.2 2.06-.62.48-.4.72-.98.72-1.7 0-.74-.24-1.3-.72-1.72-.49-.41-1.19-.62-2.1-.62h-3.14v4.66zm3.35 6.63c.94 0 1.67-.22 2.2-.66.52-.44.79-1.05.79-1.84 0-.8-.28-1.42-.83-1.88-.56-.46-1.3-.7-2.22-.7h-3.29v5.08h3.35zM108.02 22.6c0-1.15.24-2.17.71-3.03a5.1 5.1 0 014.7-2.77c1 0 1.86.21 2.59.64.73.43 1.28.96 1.64 1.61V17h1.91v11.3h-1.9v-2.1a4.5 4.5 0 01-1.7 1.65c-.72.43-1.58.64-2.57.64a5.18 5.18 0 01-4.67-2.82c-.47-.9-.7-1.92-.7-3.06zm9.64.02c0-.85-.17-1.6-.52-2.23a3.57 3.57 0 00-1.41-1.44 3.72 3.72 0 00-1.93-.52c-.7 0-1.35.17-1.93.5a3.6 3.6 0 00-1.4 1.44 4.58 4.58 0 00-.51 2.23c0 .87.17 1.63.52 2.27.34.64.8 1.12 1.39 1.47.58.33 1.22.5 1.93.5a3.7 3.7 0 003.34-1.96c.35-.65.52-1.4.52-2.26zM126.8 28.48c-.88 0-1.66-.14-2.35-.43-.7-.3-1.24-.71-1.64-1.24a3.34 3.34 0 01-.67-1.83h1.95c.06.56.32 1.02.8 1.38a3.1 3.1 0 001.88.54c.72 0 1.3-.16 1.7-.48.42-.32.63-.72.63-1.2 0-.5-.22-.86-.66-1.1a8.94 8.94 0 00-2.06-.71c-.85-.22-1.54-.44-2.08-.66a3.95 3.95 0 01-1.37-1.02 2.7 2.7 0 01-.56-1.77c0-.58.17-1.1.52-1.6.35-.47.84-.85 1.47-1.13a5.23 5.23 0 012.19-.43c1.26 0 2.27.32 3.05.95.77.63 1.19 1.5 1.24 2.6h-1.89a1.93 1.93 0 00-.72-1.42 2.64 2.64 0 00-1.75-.54c-.68 0-1.22.14-1.62.43-.4.3-.6.67-.6 1.14 0 .37.12.68.35.93.25.23.56.42.92.58.37.13.88.3 1.53.47.82.22 1.48.44 2 .66.51.2.95.52 1.3.95.38.43.57.98.59 1.67 0 .62-.17 1.18-.52 1.68s-.84.88-1.48 1.17a5.3 5.3 0 01-2.16.41zM144 22.2c0 .37-.02.75-.06 1.14h-9.1a3.7 3.7 0 001.14 2.63c.7.62 1.56.93 2.56.93.81 0 1.5-.2 2.03-.56.56-.39.94-.9 1.17-1.53h2.03a4.91 4.91 0 01-1.83 2.66 5.58 5.58 0 01-3.4 1.01 5.84 5.84 0 01-2.91-.72 5.17 5.17 0 01-2-2.04 6.4 6.4 0 01-.72-3.1c0-1.17.24-2.2.7-3.07a4.9 4.9 0 011.98-2.03 5.93 5.93 0 012.95-.72c1.08 0 2.03.23 2.86.7a4.79 4.79 0 011.91 1.94c.46.81.69 1.74.69 2.77zm-1.95-.38a3.4 3.4 0 00-.48-1.84 3 3 0 00-1.3-1.18 3.92 3.92 0 00-1.82-.41c-.95 0-1.77.3-2.45.9a3.7 3.7 0 00-1.14 2.53h7.19z" />
+                            </mask>
+                            <path
+                                d="M47.57 21.1c0-1.41.31-2.67.95-3.78.64-1.13 1.5-2.01 2.6-2.65a7.28 7.28 0 013.67-.95c1.58 0 2.96.38 4.14 1.14a6.51 6.51 0 012.57 3.22h-2.26a4.5 4.5 0 00-1.75-2 4.99 4.99 0 00-2.7-.7 5.3 5.3 0 00-2.72.7 4.9 4.9 0 00-1.89 2 6.3 6.3 0 00-.68 3.01c0 1.15.23 2.15.68 3.02a4.94 4.94 0 001.9 1.98c.8.47 1.7.7 2.71.7a4.5 4.5 0 004.44-2.68h2.27a6.52 6.52 0 01-2.57 3.2 7.58 7.58 0 01-4.14 1.11 6.96 6.96 0 01-6.27-3.55 7.48 7.48 0 01-.95-3.78zM69.28 28.48a5.91 5.91 0 01-2.9-.72 5.27 5.27 0 01-2.04-2.04 6.4 6.4 0 01-.73-3.1c0-1.15.25-2.17.75-3.05.5-.9 1.2-1.58 2.07-2.05a5.95 5.95 0 012.93-.72c1.08 0 2.06.24 2.93.72a5.09 5.09 0 012.06 2.03 6 6 0 01.76 3.07 6 6 0 01-.78 3.1 5.33 5.33 0 01-2.1 2.04c-.89.48-1.87.72-2.95.72zm0-1.65c.68 0 1.31-.16 1.9-.47.6-.32 1.08-.8 1.44-1.43.38-.63.56-1.4.56-2.3 0-.92-.18-1.69-.54-2.32a3.46 3.46 0 00-1.4-1.4 3.9 3.9 0 00-1.9-.48c-.7 0-1.33.16-1.91.48-.57.3-1.02.77-1.37 1.4-.35.63-.52 1.4-.52 2.31 0 .92.17 1.7.5 2.33a3.5 3.5 0 003.24 1.88zM78.58 15.15c-.36 0-.67-.12-.92-.37a1.23 1.23 0 01-.37-.91c0-.36.12-.66.37-.9.25-.26.56-.38.92-.38.34 0 .63.12.87.37.25.25.37.55.37.9 0 .37-.12.67-.37.92-.24.25-.53.37-.87.37zm.9 1.84v11.3H77.6V17h1.89zM88.25 16.78c1.39 0 2.51.42 3.37 1.26.86.82 1.29 2.02 1.29 3.6v6.66h-1.87v-6.4c0-1.13-.29-1.99-.85-2.58-.57-.6-1.35-.9-2.33-.9-1 0-1.8.3-2.39.92-.58.62-.87 1.52-.87 2.7v6.26h-1.89V16.99h1.89v1.6c.37-.57.88-1.02 1.52-1.34a4.82 4.82 0 012.13-.47zM103.24 20.89a3 3 0 011.44.64c.44.34.78.77 1.03 1.28a3.63 3.63 0 01-.17 3.61 3.9 3.9 0 01-1.63 1.38c-.71.33-1.55.5-2.52.5H96V13.9h5.2c.98 0 1.82.17 2.5.5.7.31 1.22.75 1.57 1.3.34.55.52 1.17.52 1.85 0 .86-.24 1.57-.71 2.13-.46.55-1.07.95-1.83 1.2zm-5.36-.77h3.18c.89 0 1.57-.2 2.06-.62.48-.4.72-.98.72-1.7 0-.74-.24-1.3-.72-1.72-.49-.41-1.19-.62-2.1-.62h-3.14v4.66zm3.35 6.63c.94 0 1.67-.22 2.2-.66.52-.44.79-1.05.79-1.84 0-.8-.28-1.42-.83-1.88-.56-.46-1.3-.7-2.22-.7h-3.29v5.08h3.35zM108.02 22.6c0-1.15.24-2.17.71-3.03a5.1 5.1 0 014.7-2.77c1 0 1.86.21 2.59.64.73.43 1.28.96 1.64 1.61V17h1.91v11.3h-1.9v-2.1a4.5 4.5 0 01-1.7 1.65c-.72.43-1.58.64-2.57.64a5.18 5.18 0 01-4.67-2.82c-.47-.9-.7-1.92-.7-3.06zm9.64.02c0-.85-.17-1.6-.52-2.23a3.57 3.57 0 00-1.41-1.44 3.72 3.72 0 00-1.93-.52c-.7 0-1.35.17-1.93.5a3.6 3.6 0 00-1.4 1.44 4.58 4.58 0 00-.51 2.23c0 .87.17 1.63.52 2.27.34.64.8 1.12 1.39 1.47.58.33 1.22.5 1.93.5a3.7 3.7 0 003.34-1.96c.35-.65.52-1.4.52-2.26zM126.8 28.48c-.88 0-1.66-.14-2.35-.43-.7-.3-1.24-.71-1.64-1.24a3.34 3.34 0 01-.67-1.83h1.95c.06.56.32 1.02.8 1.38a3.1 3.1 0 001.88.54c.72 0 1.3-.16 1.7-.48.42-.32.63-.72.63-1.2 0-.5-.22-.86-.66-1.1a8.94 8.94 0 00-2.06-.71c-.85-.22-1.54-.44-2.08-.66a3.95 3.95 0 01-1.37-1.02 2.7 2.7 0 01-.56-1.77c0-.58.17-1.1.52-1.6.35-.47.84-.85 1.47-1.13a5.23 5.23 0 012.19-.43c1.26 0 2.27.32 3.05.95.77.63 1.19 1.5 1.24 2.6h-1.89a1.93 1.93 0 00-.72-1.42 2.64 2.64 0 00-1.75-.54c-.68 0-1.22.14-1.62.43-.4.3-.6.67-.6 1.14 0 .37.12.68.35.93.25.23.56.42.92.58.37.13.88.3 1.53.47.82.22 1.48.44 2 .66.51.2.95.52 1.3.95.38.43.57.98.59 1.67 0 .62-.17 1.18-.52 1.68s-.84.88-1.48 1.17a5.3 5.3 0 01-2.16.41zM144 22.2c0 .37-.02.75-.06 1.14h-9.1a3.7 3.7 0 001.14 2.63c.7.62 1.56.93 2.56.93.81 0 1.5-.2 2.03-.56.56-.39.94-.9 1.17-1.53h2.03a4.91 4.91 0 01-1.83 2.66 5.58 5.58 0 01-3.4 1.01 5.84 5.84 0 01-2.91-.72 5.17 5.17 0 01-2-2.04 6.4 6.4 0 01-.72-3.1c0-1.17.24-2.2.7-3.07a4.9 4.9 0 011.98-2.03 5.93 5.93 0 012.95-.72c1.08 0 2.03.23 2.86.7a4.79 4.79 0 011.91 1.94c.46.81.69 1.74.69 2.77zm-1.95-.38a3.4 3.4 0 00-.48-1.84 3 3 0 00-1.3-1.18 3.92 3.92 0 00-1.82-.41c-.95 0-1.77.3-2.45.9a3.7 3.7 0 00-1.14 2.53h7.19z"
+                                fill="#5C5C5C" />
+                            <path 
+                                d="M47.57 21.1c0-1.41.31-2.67.95-3.78.64-1.13 1.5-2.01 2.6-2.65a7.28 7.28 0 013.67-.95c1.58 0 2.96.38 4.14 1.14a6.51 6.51 0 012.57 3.22h-2.26a4.5 4.5 0 00-1.75-2 4.99 4.99 0 00-2.7-.7 5.3 5.3 0 00-2.72.7 4.9 4.9 0 00-1.89 2 6.3 6.3 0 00-.68 3.01c0 1.15.23 2.15.68 3.02a4.94 4.94 0 001.9 1.98c.8.47 1.7.7 2.71.7a4.5 4.5 0 004.44-2.68h2.27a6.52 6.52 0 01-2.57 3.2 7.58 7.58 0 01-4.14 1.11 6.96 6.96 0 01-6.27-3.55 7.48 7.48 0 01-.95-3.78zM69.28 28.48a5.91 5.91 0 01-2.9-.72 5.27 5.27 0 01-2.04-2.04 6.4 6.4 0 01-.73-3.1c0-1.15.25-2.17.75-3.05.5-.9 1.2-1.58 2.07-2.05a5.95 5.95 0 012.93-.72c1.08 0 2.06.24 2.93.72a5.09 5.09 0 012.06 2.03 6 6 0 01.76 3.07 6 6 0 01-.78 3.1 5.33 5.33 0 01-2.1 2.04c-.89.48-1.87.72-2.95.72zm0-1.65c.68 0 1.31-.16 1.9-.47.6-.32 1.08-.8 1.44-1.43.38-.63.56-1.4.56-2.3 0-.92-.18-1.69-.54-2.32a3.46 3.46 0 00-1.4-1.4 3.9 3.9 0 00-1.9-.48c-.7 0-1.33.16-1.91.48-.57.3-1.02.77-1.37 1.4-.35.63-.52 1.4-.52 2.31 0 .92.17 1.7.5 2.33a3.5 3.5 0 003.24 1.88zM78.58 15.15c-.36 0-.67-.12-.92-.37a1.23 1.23 0 01-.37-.91c0-.36.12-.66.37-.9.25-.26.56-.38.92-.38.34 0 .63.12.87.37.25.25.37.55.37.9 0 .37-.12.67-.37.92-.24.25-.53.37-.87.37zm.9 1.84v11.3H77.6V17h1.89zM88.25 16.78c1.39 0 2.51.42 3.37 1.26.86.82 1.29 2.02 1.29 3.6v6.66h-1.87v-6.4c0-1.13-.29-1.99-.85-2.58-.57-.6-1.35-.9-2.33-.9-1 0-1.8.3-2.39.92-.58.62-.87 1.52-.87 2.7v6.26h-1.89V16.99h1.89v1.6c.37-.57.88-1.02 1.52-1.34a4.82 4.82 0 012.13-.47zM103.24 20.89a3 3 0 011.44.64c.44.34.78.77 1.03 1.28a3.63 3.63 0 01-.17 3.61 3.9 3.9 0 01-1.63 1.38c-.71.33-1.55.5-2.52.5H96V13.9h5.2c.98 0 1.82.17 2.5.5.7.31 1.22.75 1.57 1.3.34.55.52 1.17.52 1.85 0 .86-.24 1.57-.71 2.13-.46.55-1.07.95-1.83 1.2zm-5.36-.77h3.18c.89 0 1.57-.2 2.06-.62.48-.4.72-.98.72-1.7 0-.74-.24-1.3-.72-1.72-.49-.41-1.19-.62-2.1-.62h-3.14v4.66zm3.35 6.63c.94 0 1.67-.22 2.2-.66.52-.44.79-1.05.79-1.84 0-.8-.28-1.42-.83-1.88-.56-.46-1.3-.7-2.22-.7h-3.29v5.08h3.35zM108.02 22.6c0-1.15.24-2.17.71-3.03a5.1 5.1 0 014.7-2.77c1 0 1.86.21 2.59.64.73.43 1.28.96 1.64 1.61V17h1.91v11.3h-1.9v-2.1a4.5 4.5 0 01-1.7 1.65c-.72.43-1.58.64-2.57.64a5.18 5.18 0 01-4.67-2.82c-.47-.9-.7-1.92-.7-3.06zm9.64.02c0-.85-.17-1.6-.52-2.23a3.57 3.57 0 00-1.41-1.44 3.72 3.72 0 00-1.93-.52c-.7 0-1.35.17-1.93.5a3.6 3.6 0 00-1.4 1.44 4.58 4.58 0 00-.51 2.23c0 .87.17 1.63.52 2.27.34.64.8 1.12 1.39 1.47.58.33 1.22.5 1.93.5a3.7 3.7 0 003.34-1.96c.35-.65.52-1.4.52-2.26zM126.8 28.48c-.88 0-1.66-.14-2.35-.43-.7-.3-1.24-.71-1.64-1.24a3.34 3.34 0 01-.67-1.83h1.95c.06.56.32 1.02.8 1.38a3.1 3.1 0 001.88.54c.72 0 1.3-.16 1.7-.48.42-.32.63-.72.63-1.2 0-.5-.22-.86-.66-1.1a8.94 8.94 0 00-2.06-.71c-.85-.22-1.54-.44-2.08-.66a3.95 3.95 0 01-1.37-1.02 2.7 2.7 0 01-.56-1.77c0-.58.17-1.1.52-1.6.35-.47.84-.85 1.47-1.13a5.23 5.23 0 012.19-.43c1.26 0 2.27.32 3.05.95.77.63 1.19 1.5 1.24 2.6h-1.89a1.93 1.93 0 00-.72-1.42 2.64 2.64 0 00-1.75-.54c-.68 0-1.22.14-1.62.43-.4.3-.6.67-.6 1.14 0 .37.12.68.35.93.25.23.56.42.92.58.37.13.88.3 1.53.47.82.22 1.48.44 2 .66.51.2.95.52 1.3.95.38.43.57.98.59 1.67 0 .62-.17 1.18-.52 1.68s-.84.88-1.48 1.17a5.3 5.3 0 01-2.16.41zM144 22.2c0 .37-.02.75-.06 1.14h-9.1a3.7 3.7 0 001.14 2.63c.7.62 1.56.93 2.56.93.81 0 1.5-.2 2.03-.56.56-.39.94-.9 1.17-1.53h2.03a4.91 4.91 0 01-1.83 2.66 5.58 5.58 0 01-3.4 1.01 5.84 5.84 0 01-2.91-.72 5.17 5.17 0 01-2-2.04 6.4 6.4 0 01-.72-3.1c0-1.17.24-2.2.7-3.07a4.9 4.9 0 011.98-2.03 5.93 5.93 0 012.95-.72c1.08 0 2.03.23 2.86.7a4.79 4.79 0 011.91 1.94c.46.81.69 1.74.69 2.77zm-1.95-.38a3.4 3.4 0 00-.48-1.84 3 3 0 00-1.3-1.18 3.92 3.92 0 00-1.82-.41c-.95 0-1.77.3-2.45.9a3.7 3.7 0 00-1.14 2.53h7.19z"
+                                stroke="#5C5C5C" mask="url(#a)" />
+                            <path 
+                                d="M26.25 30.6h9.27c2 0 3.57-1.8 3.57-3.91 0-2.1-1.57-3.92-3.57-3.92h-2.14C36.24 16.3 34.81 2 21.98 2 13.4 2 9.12 7.26 9.12 17.95H7.71C4.57 17.95 2 20.82 2 24.28s2.57 6.32 5.7 6.32h18.55z"
+                                stroke="url(#paint0_linear)" stroke-width="3" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M21.85 15.94l-2.23.74-1.08-3.24 2.19-.74c.45-.14.92-.11 1.33.09h0a1.67 1.67 0 01.77 2.29h0c-.2.4-.55.7-.98.86zm-5.12-1.9l.32-.1 2.84 8.47-.33.11a.78.78 0 00-.5.99c.14.41.6.62 1 .49l1.91-.65.1.32c.15.41.6.62 1 .48.4-.13.63-.56.49-.98l-.1-.31.13-.04.1.3c.14.42.59.63.99.5.4-.14.63-.57.5-.99l-.11-.32a3.53 3.53 0 00-.73-6.78 3.27 3.27 0 00-3.03-4.48l-.16-.47h0a.78.78 0 00-1-.49.78.78 0 00-.49.99l.1.3-.12.05-.1-.31s0 0 0 0a.78.78 0 00-1-.49.78.78 0 00-.49.98l.1.32-.28.1h0l-.47.15-1.16.39a.78.78 0 00-.5.98c.14.42.59.62.99.5zm8.81 5.87h0c-.24.48-.66.84-1.18 1l-3 1-1.25-3.76 2.2-.73.04-.02.75-.25a2.04 2.04 0 011.55.1h0a1.95 1.95 0 01.9 2.66z"
+                                fill="url(#paint1_linear)" stroke="url(#paint2_linear)" />
+                            <defs>
+                                <linearGradient id="paint0_linear" x1="22.4" y1="-2.51" x2="23.65" y2="48.19"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FD749B" />
+                                    <stop offset="1" stop-color="#281AC8" />
+                                </linearGradient>
+                                <linearGradient id="paint1_linear" x1="19.52" y1="8.63" x2="28.06" y2="30.51"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FD749B" />
+                                    <stop offset="1" stop-color="#281AC8" />
+                                </linearGradient>
+                                <linearGradient id="paint2_linear" x1="19.52" y1="8.63" x2="28.06" y2="30.51"
+                                    gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FD749B" />
+                                    <stop offset="1" stop-color="#281AC8" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+
+                        <svg class="white-logo mobile-hidden" aria-label="CoinBase" width="145" height="33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="a" maskUnits="userSpaceOnUse" x="46.57" y="11.59" width="98" height="18"
+                                fill="#000">
+                                <path fill="#fff" d="M46.57 11.59h98v18h-98z" />
+                                <path
+                                    d="M47.57 21.1c0-1.41.31-2.67.95-3.78.64-1.13 1.5-2.01 2.6-2.65a7.28 7.28 0 013.67-.95c1.58 0 2.96.38 4.14 1.14a6.51 6.51 0 012.57 3.22h-2.26a4.5 4.5 0 00-1.75-2 4.99 4.99 0 00-2.7-.7 5.3 5.3 0 00-2.72.7 4.9 4.9 0 00-1.89 2 6.3 6.3 0 00-.68 3.01c0 1.15.23 2.15.68 3.02a4.94 4.94 0 001.9 1.98c.8.47 1.7.7 2.71.7a4.5 4.5 0 004.44-2.68h2.27a6.52 6.52 0 01-2.57 3.2 7.58 7.58 0 01-4.14 1.11 6.96 6.96 0 01-6.27-3.55 7.48 7.48 0 01-.95-3.78zM69.28 28.48a5.91 5.91 0 01-2.9-.72 5.27 5.27 0 01-2.04-2.04 6.4 6.4 0 01-.73-3.1c0-1.15.25-2.17.75-3.05.5-.9 1.2-1.58 2.07-2.05a5.95 5.95 0 012.93-.72c1.08 0 2.06.24 2.93.72a5.09 5.09 0 012.06 2.03 6 6 0 01.76 3.07 6 6 0 01-.78 3.1 5.33 5.33 0 01-2.1 2.04c-.89.48-1.87.72-2.95.72zm0-1.65c.68 0 1.31-.16 1.9-.47.6-.32 1.08-.8 1.44-1.43.38-.63.56-1.4.56-2.3 0-.92-.18-1.69-.54-2.32a3.46 3.46 0 00-1.4-1.4 3.9 3.9 0 00-1.9-.48c-.7 0-1.33.16-1.91.48-.57.3-1.02.77-1.37 1.4-.35.63-.52 1.4-.52 2.31 0 .92.17 1.7.5 2.33a3.5 3.5 0 003.24 1.88zM78.58 15.15c-.36 0-.67-.12-.92-.37a1.23 1.23 0 01-.37-.91c0-.36.12-.66.37-.9.25-.26.56-.38.92-.38.34 0 .63.12.87.37.25.25.37.55.37.9 0 .37-.12.67-.37.92-.24.25-.53.37-.87.37zm.9 1.84v11.3H77.6V17h1.89zM88.25 16.78c1.39 0 2.51.42 3.37 1.26.86.82 1.29 2.02 1.29 3.6v6.66h-1.87v-6.4c0-1.13-.29-1.99-.85-2.58-.57-.6-1.35-.9-2.33-.9-1 0-1.8.3-2.39.92-.58.62-.87 1.52-.87 2.7v6.26h-1.89V16.99h1.89v1.6c.37-.57.88-1.02 1.52-1.34a4.82 4.82 0 012.13-.47zM103.24 20.89a3 3 0 011.44.64c.44.34.78.77 1.03 1.28a3.63 3.63 0 01-.17 3.61 3.9 3.9 0 01-1.63 1.38c-.71.33-1.55.5-2.52.5H96V13.9h5.2c.98 0 1.82.17 2.5.5.7.31 1.22.75 1.57 1.3.34.55.52 1.17.52 1.85 0 .86-.24 1.57-.71 2.13-.46.55-1.07.95-1.83 1.2zm-5.36-.77h3.18c.89 0 1.57-.2 2.06-.62.48-.4.72-.98.72-1.7 0-.74-.24-1.3-.72-1.72-.49-.41-1.19-.62-2.1-.62h-3.14v4.66zm3.35 6.63c.94 0 1.67-.22 2.2-.66.52-.44.79-1.05.79-1.84 0-.8-.28-1.42-.83-1.88-.56-.46-1.3-.7-2.22-.7h-3.29v5.08h3.35zM108.02 22.6c0-1.15.24-2.17.71-3.03a5.1 5.1 0 014.7-2.77c1 0 1.86.21 2.59.64.73.43 1.28.96 1.64 1.61V17h1.91v11.3h-1.9v-2.1a4.5 4.5 0 01-1.7 1.65c-.72.43-1.58.64-2.57.64a5.18 5.18 0 01-4.67-2.82c-.47-.9-.7-1.92-.7-3.06zm9.64.02c0-.85-.17-1.6-.52-2.23a3.57 3.57 0 00-1.41-1.44 3.72 3.72 0 00-1.93-.52c-.7 0-1.35.17-1.93.5a3.6 3.6 0 00-1.4 1.44 4.58 4.58 0 00-.51 2.23c0 .87.17 1.63.52 2.27.34.64.8 1.12 1.39 1.47.58.33 1.22.5 1.93.5a3.7 3.7 0 003.34-1.96c.35-.65.52-1.4.52-2.26zM126.8 28.48c-.88 0-1.66-.14-2.35-.43-.7-.3-1.24-.71-1.64-1.24a3.34 3.34 0 01-.67-1.83h1.95c.06.56.32 1.02.8 1.38a3.1 3.1 0 001.88.54c.72 0 1.3-.16 1.7-.48.42-.32.63-.72.63-1.2 0-.5-.22-.86-.66-1.1a8.94 8.94 0 00-2.06-.71c-.85-.22-1.54-.44-2.08-.66a3.95 3.95 0 01-1.37-1.02 2.7 2.7 0 01-.56-1.77c0-.58.17-1.1.52-1.6.35-.47.84-.85 1.47-1.13a5.23 5.23 0 012.19-.43c1.26 0 2.27.32 3.05.95.77.63 1.19 1.5 1.24 2.6h-1.89a1.93 1.93 0 00-.72-1.42 2.64 2.64 0 00-1.75-.54c-.68 0-1.22.14-1.62.43-.4.3-.6.67-.6 1.14 0 .37.12.68.35.93.25.23.56.42.92.58.37.13.88.3 1.53.47.82.22 1.48.44 2 .66.51.2.95.52 1.3.95.38.43.57.98.59 1.67 0 .62-.17 1.18-.52 1.68s-.84.88-1.48 1.17a5.3 5.3 0 01-2.16.41zM144 22.2c0 .37-.02.75-.06 1.14h-9.1a3.7 3.7 0 001.14 2.63c.7.62 1.56.93 2.56.93.81 0 1.5-.2 2.03-.56.56-.39.94-.9 1.17-1.53h2.03a4.91 4.91 0 01-1.83 2.66 5.58 5.58 0 01-3.4 1.01 5.84 5.84 0 01-2.91-.72 5.17 5.17 0 01-2-2.04 6.4 6.4 0 01-.72-3.1c0-1.17.24-2.2.7-3.07a4.9 4.9 0 011.98-2.03 5.93 5.93 0 012.95-.72c1.08 0 2.03.23 2.86.7a4.79 4.79 0 011.91 1.94c.46.81.69 1.74.69 2.77zm-1.95-.38a3.4 3.4 0 00-.48-1.84 3 3 0 00-1.3-1.18 3.92 3.92 0 00-1.82-.41c-.95 0-1.77.3-2.45.9a3.7 3.7 0 00-1.14 2.53h7.19z" />
+                            </mask>
+                            <path
+                                d="M47.57 21.1c0-1.41.31-2.67.95-3.78.64-1.13 1.5-2.01 2.6-2.65a7.28 7.28 0 013.67-.95c1.58 0 2.96.38 4.14 1.14a6.51 6.51 0 012.57 3.22h-2.26a4.5 4.5 0 00-1.75-2 4.99 4.99 0 00-2.7-.7 5.3 5.3 0 00-2.72.7 4.9 4.9 0 00-1.89 2 6.3 6.3 0 00-.68 3.01c0 1.15.23 2.15.68 3.02a4.94 4.94 0 001.9 1.98c.8.47 1.7.7 2.71.7a4.5 4.5 0 004.44-2.68h2.27a6.52 6.52 0 01-2.57 3.2 7.58 7.58 0 01-4.14 1.11 6.96 6.96 0 01-6.27-3.55 7.48 7.48 0 01-.95-3.78zM69.28 28.48a5.91 5.91 0 01-2.9-.72 5.27 5.27 0 01-2.04-2.04 6.4 6.4 0 01-.73-3.1c0-1.15.25-2.17.75-3.05.5-.9 1.2-1.58 2.07-2.05a5.95 5.95 0 012.93-.72c1.08 0 2.06.24 2.93.72a5.09 5.09 0 012.06 2.03 6 6 0 01.76 3.07 6 6 0 01-.78 3.1 5.33 5.33 0 01-2.1 2.04c-.89.48-1.87.72-2.95.72zm0-1.65c.68 0 1.31-.16 1.9-.47.6-.32 1.08-.8 1.44-1.43.38-.63.56-1.4.56-2.3 0-.92-.18-1.69-.54-2.32a3.46 3.46 0 00-1.4-1.4 3.9 3.9 0 00-1.9-.48c-.7 0-1.33.16-1.91.48-.57.3-1.02.77-1.37 1.4-.35.63-.52 1.4-.52 2.31 0 .92.17 1.7.5 2.33a3.5 3.5 0 003.24 1.88zM78.58 15.15c-.36 0-.67-.12-.92-.37a1.23 1.23 0 01-.37-.91c0-.36.12-.66.37-.9.25-.26.56-.38.92-.38.34 0 .63.12.87.37.25.25.37.55.37.9 0 .37-.12.67-.37.92-.24.25-.53.37-.87.37zm.9 1.84v11.3H77.6V17h1.89zM88.25 16.78c1.39 0 2.51.42 3.37 1.26.86.82 1.29 2.02 1.29 3.6v6.66h-1.87v-6.4c0-1.13-.29-1.99-.85-2.58-.57-.6-1.35-.9-2.33-.9-1 0-1.8.3-2.39.92-.58.62-.87 1.52-.87 2.7v6.26h-1.89V16.99h1.89v1.6c.37-.57.88-1.02 1.52-1.34a4.82 4.82 0 012.13-.47zM103.24 20.89a3 3 0 011.44.64c.44.34.78.77 1.03 1.28a3.63 3.63 0 01-.17 3.61 3.9 3.9 0 01-1.63 1.38c-.71.33-1.55.5-2.52.5H96V13.9h5.2c.98 0 1.82.17 2.5.5.7.31 1.22.75 1.57 1.3.34.55.52 1.17.52 1.85 0 .86-.24 1.57-.71 2.13-.46.55-1.07.95-1.83 1.2zm-5.36-.77h3.18c.89 0 1.57-.2 2.06-.62.48-.4.72-.98.72-1.7 0-.74-.24-1.3-.72-1.72-.49-.41-1.19-.62-2.1-.62h-3.14v4.66zm3.35 6.63c.94 0 1.67-.22 2.2-.66.52-.44.79-1.05.79-1.84 0-.8-.28-1.42-.83-1.88-.56-.46-1.3-.7-2.22-.7h-3.29v5.08h3.35zM108.02 22.6c0-1.15.24-2.17.71-3.03a5.1 5.1 0 014.7-2.77c1 0 1.86.21 2.59.64.73.43 1.28.96 1.64 1.61V17h1.91v11.3h-1.9v-2.1a4.5 4.5 0 01-1.7 1.65c-.72.43-1.58.64-2.57.64a5.18 5.18 0 01-4.67-2.82c-.47-.9-.7-1.92-.7-3.06zm9.64.02c0-.85-.17-1.6-.52-2.23a3.57 3.57 0 00-1.41-1.44 3.72 3.72 0 00-1.93-.52c-.7 0-1.35.17-1.93.5a3.6 3.6 0 00-1.4 1.44 4.58 4.58 0 00-.51 2.23c0 .87.17 1.63.52 2.27.34.64.8 1.12 1.39 1.47.58.33 1.22.5 1.93.5a3.7 3.7 0 003.34-1.96c.35-.65.52-1.4.52-2.26zM126.8 28.48c-.88 0-1.66-.14-2.35-.43-.7-.3-1.24-.71-1.64-1.24a3.34 3.34 0 01-.67-1.83h1.95c.06.56.32 1.02.8 1.38a3.1 3.1 0 001.88.54c.72 0 1.3-.16 1.7-.48.42-.32.63-.72.63-1.2 0-.5-.22-.86-.66-1.1a8.94 8.94 0 00-2.06-.71c-.85-.22-1.54-.44-2.08-.66a3.95 3.95 0 01-1.37-1.02 2.7 2.7 0 01-.56-1.77c0-.58.17-1.1.52-1.6.35-.47.84-.85 1.47-1.13a5.23 5.23 0 012.19-.43c1.26 0 2.27.32 3.05.95.77.63 1.19 1.5 1.24 2.6h-1.89a1.93 1.93 0 00-.72-1.42 2.64 2.64 0 00-1.75-.54c-.68 0-1.22.14-1.62.43-.4.3-.6.67-.6 1.14 0 .37.12.68.35.93.25.23.56.42.92.58.37.13.88.3 1.53.47.82.22 1.48.44 2 .66.51.2.95.52 1.3.95.38.43.57.98.59 1.67 0 .62-.17 1.18-.52 1.68s-.84.88-1.48 1.17a5.3 5.3 0 01-2.16.41zM144 22.2c0 .37-.02.75-.06 1.14h-9.1a3.7 3.7 0 001.14 2.63c.7.62 1.56.93 2.56.93.81 0 1.5-.2 2.03-.56.56-.39.94-.9 1.17-1.53h2.03a4.91 4.91 0 01-1.83 2.66 5.58 5.58 0 01-3.4 1.01 5.84 5.84 0 01-2.91-.72 5.17 5.17 0 01-2-2.04 6.4 6.4 0 01-.72-3.1c0-1.17.24-2.2.7-3.07a4.9 4.9 0 011.98-2.03 5.93 5.93 0 012.95-.72c1.08 0 2.03.23 2.86.7a4.79 4.79 0 011.91 1.94c.46.81.69 1.74.69 2.77zm-1.95-.38a3.4 3.4 0 00-.48-1.84 3 3 0 00-1.3-1.18 3.92 3.92 0 00-1.82-.41c-.95 0-1.77.3-2.45.9a3.7 3.7 0 00-1.14 2.53h7.19z"
+                                fill="#fff" />
+                            <path
+                                d="M47.57 21.1c0-1.41.31-2.67.95-3.78.64-1.13 1.5-2.01 2.6-2.65a7.28 7.28 0 013.67-.95c1.58 0 2.96.38 4.14 1.14a6.51 6.51 0 012.57 3.22h-2.26a4.5 4.5 0 00-1.75-2 4.99 4.99 0 00-2.7-.7 5.3 5.3 0 00-2.72.7 4.9 4.9 0 00-1.89 2 6.3 6.3 0 00-.68 3.01c0 1.15.23 2.15.68 3.02a4.94 4.94 0 001.9 1.98c.8.47 1.7.7 2.71.7a4.5 4.5 0 004.44-2.68h2.27a6.52 6.52 0 01-2.57 3.2 7.58 7.58 0 01-4.14 1.11 6.96 6.96 0 01-6.27-3.55 7.48 7.48 0 01-.95-3.78zM69.28 28.48a5.91 5.91 0 01-2.9-.72 5.27 5.27 0 01-2.04-2.04 6.4 6.4 0 01-.73-3.1c0-1.15.25-2.17.75-3.05.5-.9 1.2-1.58 2.07-2.05a5.95 5.95 0 012.93-.72c1.08 0 2.06.24 2.93.72a5.09 5.09 0 012.06 2.03 6 6 0 01.76 3.07 6 6 0 01-.78 3.1 5.33 5.33 0 01-2.1 2.04c-.89.48-1.87.72-2.95.72zm0-1.65c.68 0 1.31-.16 1.9-.47.6-.32 1.08-.8 1.44-1.43.38-.63.56-1.4.56-2.3 0-.92-.18-1.69-.54-2.32a3.46 3.46 0 00-1.4-1.4 3.9 3.9 0 00-1.9-.48c-.7 0-1.33.16-1.91.48-.57.3-1.02.77-1.37 1.4-.35.63-.52 1.4-.52 2.31 0 .92.17 1.7.5 2.33a3.5 3.5 0 003.24 1.88zM78.58 15.15c-.36 0-.67-.12-.92-.37a1.23 1.23 0 01-.37-.91c0-.36.12-.66.37-.9.25-.26.56-.38.92-.38.34 0 .63.12.87.37.25.25.37.55.37.9 0 .37-.12.67-.37.92-.24.25-.53.37-.87.37zm.9 1.84v11.3H77.6V17h1.89zM88.25 16.78c1.39 0 2.51.42 3.37 1.26.86.82 1.29 2.02 1.29 3.6v6.66h-1.87v-6.4c0-1.13-.29-1.99-.85-2.58-.57-.6-1.35-.9-2.33-.9-1 0-1.8.3-2.39.92-.58.62-.87 1.52-.87 2.7v6.26h-1.89V16.99h1.89v1.6c.37-.57.88-1.02 1.52-1.34a4.82 4.82 0 012.13-.47zM103.24 20.89a3 3 0 011.44.64c.44.34.78.77 1.03 1.28a3.63 3.63 0 01-.17 3.61 3.9 3.9 0 01-1.63 1.38c-.71.33-1.55.5-2.52.5H96V13.9h5.2c.98 0 1.82.17 2.5.5.7.31 1.22.75 1.57 1.3.34.55.52 1.17.52 1.85 0 .86-.24 1.57-.71 2.13-.46.55-1.07.95-1.83 1.2zm-5.36-.77h3.18c.89 0 1.57-.2 2.06-.62.48-.4.72-.98.72-1.7 0-.74-.24-1.3-.72-1.72-.49-.41-1.19-.62-2.1-.62h-3.14v4.66zm3.35 6.63c.94 0 1.67-.22 2.2-.66.52-.44.79-1.05.79-1.84 0-.8-.28-1.42-.83-1.88-.56-.46-1.3-.7-2.22-.7h-3.29v5.08h3.35zM108.02 22.6c0-1.15.24-2.17.71-3.03a5.1 5.1 0 014.7-2.77c1 0 1.86.21 2.59.64.73.43 1.28.96 1.64 1.61V17h1.91v11.3h-1.9v-2.1a4.5 4.5 0 01-1.7 1.65c-.72.43-1.58.64-2.57.64a5.18 5.18 0 01-4.67-2.82c-.47-.9-.7-1.92-.7-3.06zm9.64.02c0-.85-.17-1.6-.52-2.23a3.57 3.57 0 00-1.41-1.44 3.72 3.72 0 00-1.93-.52c-.7 0-1.35.17-1.93.5a3.6 3.6 0 00-1.4 1.44 4.58 4.58 0 00-.51 2.23c0 .87.17 1.63.52 2.27.34.64.8 1.12 1.39 1.47.58.33 1.22.5 1.93.5a3.7 3.7 0 003.34-1.96c.35-.65.52-1.4.52-2.26zM126.8 28.48c-.88 0-1.66-.14-2.35-.43-.7-.3-1.24-.71-1.64-1.24a3.34 3.34 0 01-.67-1.83h1.95c.06.56.32 1.02.8 1.38a3.1 3.1 0 001.88.54c.72 0 1.3-.16 1.7-.48.42-.32.63-.72.63-1.2 0-.5-.22-.86-.66-1.1a8.94 8.94 0 00-2.06-.71c-.85-.22-1.54-.44-2.08-.66a3.95 3.95 0 01-1.37-1.02 2.7 2.7 0 01-.56-1.77c0-.58.17-1.1.52-1.6.35-.47.84-.85 1.47-1.13a5.23 5.23 0 012.19-.43c1.26 0 2.27.32 3.05.95.77.63 1.19 1.5 1.24 2.6h-1.89a1.93 1.93 0 00-.72-1.42 2.64 2.64 0 00-1.75-.54c-.68 0-1.22.14-1.62.43-.4.3-.6.67-.6 1.14 0 .37.12.68.35.93.25.23.56.42.92.58.37.13.88.3 1.53.47.82.22 1.48.44 2 .66.51.2.95.52 1.3.95.38.43.57.98.59 1.67 0 .62-.17 1.18-.52 1.68s-.84.88-1.48 1.17a5.3 5.3 0 01-2.16.41zM144 22.2c0 .37-.02.75-.06 1.14h-9.1a3.7 3.7 0 001.14 2.63c.7.62 1.56.93 2.56.93.81 0 1.5-.2 2.03-.56.56-.39.94-.9 1.17-1.53h2.03a4.91 4.91 0 01-1.83 2.66 5.58 5.58 0 01-3.4 1.01 5.84 5.84 0 01-2.91-.72 5.17 5.17 0 01-2-2.04 6.4 6.4 0 01-.72-3.1c0-1.17.24-2.2.7-3.07a4.9 4.9 0 011.98-2.03 5.93 5.93 0 012.95-.72c1.08 0 2.03.23 2.86.7a4.79 4.79 0 011.91 1.94c.46.81.69 1.74.69 2.77zm-1.95-.38a3.4 3.4 0 00-.48-1.84 3 3 0 00-1.3-1.18 3.92 3.92 0 00-1.82-.41c-.95 0-1.77.3-2.45.9a3.7 3.7 0 00-1.14 2.53h7.19z"
+                                stroke="#fff" mask="url(#a)" />
+                            <path
+                                d="M26.25 30.6h9.27c2 0 3.57-1.8 3.57-3.91 0-2.1-1.57-3.92-3.57-3.92h-2.14C36.24 16.3 34.81 2 21.98 2 13.4 2 9.12 7.26 9.12 17.95H7.71C4.57 17.95 2 20.82 2 24.28s2.57 6.32 5.7 6.32h18.55z"
+                                stroke="#fff" stroke-width="3" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path 
+                                d="M21.85 15.94l-2.23.74-1.08-3.24 2.19-.74c.45-.14.92-.11 1.33.09h0a1.67 1.67 0 01.77 2.29h0c-.2.4-.55.7-.98.86zm-5.12-1.9l.32-.1 2.84 8.47-.33.11a.78.78 0 00-.5.99c.14.41.6.62 1 .49l1.91-.65.1.32c.15.41.6.62 1 .48.4-.13.63-.56.49-.98l-.1-.31.13-.04.1.3c.14.42.59.63.99.5.4-.14.63-.57.5-.99l-.11-.32a3.53 3.53 0 00-.73-6.78 3.27 3.27 0 00-3.03-4.48l-.16-.47h0a.78.78 0 00-1-.49.78.78 0 00-.49.99l.1.3-.12.05-.1-.31s0 0 0 0a.78.78 0 00-1-.49.78.78 0 00-.49.98l.1.32-.28.1h0l-.47.15-1.16.39a.78.78 0 00-.5.98c.14.42.59.62.99.5zm8.81 5.87h0c-.24.48-.66.84-1.18 1l-3 1-1.25-3.76 2.2-.73.04-.02.75-.25a2.04 2.04 0 011.55.1h0a1.95 1.95 0 01.9 2.66z"
+                                fill="#fff" stroke="#fff" />
+                        </svg>
+                    </a>
+
+                    <button id="menu-btn" class="menu-toggle" aria-label="Menu">
+                        <!-- Mobile menu icon -->
+                        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                            <path d="M24 6H0V2h24v4zm0 4H0v4h24v-4zm0 8H0v4h24v-4z"/>
+                        </svg>                          
+                        <!-- Close mobile menu icon -->
+                        <svg class="close-icon mobile-hidden" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                            <path d="M24 20.19l-8.31-8.21 8.2-8.28-3.7-3.7-8.21 8.32L3.67.12 0 3.77l8.32 8.24-8.2 8.31L3.77 24l8.24-8.32 8.28 8.2z" fill="#fff"/>
+                        </svg>                          
+                    </button>
+                </div>
+
+                <div id="inner-nav" class="c-f-row-between c-f-column c-f--inner-nav">
+                    <ul id="main-menu" class="c-f-row-between c-f-column c-f--main-menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about-us.html">About Us</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact-us.html">Contact us</a></li>
+                    </ul>
+
+                    <!-- Markup for desctop -->
+                    <div id="sales-wrapper" class="c-f-row-between actions-wrapper">
+                        <button id="submenu-btn" aria-label="Sub Menu" class="icon-element submenu-btn" data-action="showsalles">Sell Bitcoin/ Giftcard</button>
+
+                        <div class="sales-submenu-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" width="24" height="20" viewBox="0 0 24 24">
+                                    <path d="M12 5.887l8.468 14.113h-16.936l8.468-14.113zm0-3.887l-12 20h24l-12-20z" fill="#E0E0E0"/>
+                            </svg>
+
+                            <ul class="sales-submenu">
+                                <li><button data-shown-popup="bitcoin-sales">Sell Bitcoin</button></li>
+                                <li><button data-shown-popup="giftcard-sales">Sell Giftcard</button></li>
+                            </ul>
+                        </div>
+
+                        <button class="prpl-btn login-btn" data-action="showlogin">LOGIN</button>
+                    </div>
+
+                    <!-- Other configuration of markup for mobile -->
+                    <div id="sell-actions-c" class="mobile-btn-wrapper">
+                        <button class="white-btn width-btn" aria-label="Sell Bitcoin" data-shown-popup="bitcoin-sales"></button>
+                        <button class="transp-btn width-btn" data-shown-popup="giftcard-sales">Sell Giftcard</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- different part of content for about us -->
+
+    <main>
+        <!-- about us hero block -->
+        <section class="hero-s about-us-s">
+            <div class="o-content-container">
+                <div class="c-g-row-between c-g--about-hero">
+                    <header class="white-color hero-h about-hero-h">
+                        <span class="upper">home/about us</span>
+
+                        <h1>Great service, Professional support</h1>
+
+                        <p>CoinBase is a platform for trading your bitcoin and giftcard at the best rate, why not give us a trial.</p>
+                    </header>
+
+                    <img src="resources/images-about-us/hero-illustration.png" alt="Hero illustration">
+                </div>
+            </div>
+        </section>
+
+        <!-- about CoinBase block -->
+        <section class="about-s centred-container o-content-container">
+            <section class="comment-s">
+                <p class="bottom-line center-line prpl-text-gradient bold">“Morbi sagittis ultricies ex, a tempus lorem suscipit non. Donec semper leo ut lobortis condimentum. Orci varius natoque penatibus et magnis”</p>
+
+                <span>Ramon Ridwan • CEO CoinBase</span>
+            </section>
+
+            <section class="about-card prpl-border-gradient">
+                <div class="about-content-wrapper">
+                    <img src="resources/images-about-us/about-us.png" alt="About us illustration">
+
+                    <h2 class="bottom-line center-line prpl-text-gradient">About CoinBase</h2>
+
+                    <p>CoinBase is an online site and a p2admin platform that allows users to buy, sell and/ or exchange digital and fiat assets safely. Owned and managed by CoinBase Business Services established and Incoperated in Nigeria.</p>
+
+                    <ul aria-hidden="true" class="inline-list about-list">
+                        <li><img src="resources/images-about-us/briliant.svg" alt=""></li>
+                        <li><img src="resources/images-about-us/medal.svg" alt=""></li>
+                        <li><img src="resources/images-about-us/customer-review.svg" alt=""></li>
+                        <li><img src="resources/images-about-us/support.svg" alt=""></li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+
+        <!-- our history block -->
+        <section class="history-s centred-container">
+            <h2 class="bottom-line center-line prpl-text-gradient">Our history</h2>
+
+            <div class="c-history-wrapper">
+                <div class="c-history">
+                    <div class="c-f--article">
+                        <article>
+                            <h3>May 2010</h3>
+
+                            <p>Ut enim mi, mattis at sollicitudin rhoncus, rhoncus eget sem. Curabitur aliquam tellus eu nisl suscipit, at vestibulum ex rutrum. Nulla facilisi. Cras ullamcorper pellentesque orci, nec vestibulum nibh.uspendisse</p>
+                        </article>
+                    </div>
+
+                    <div class="c-f--article">
+                        <article>
+                            <h3>May 2017</h3>
+
+                            <p>Ut enim mi, mattis at sollicitudin rhoncus, rhoncus eget sem. Curabitur aliquam tellus eu nisl suscipit, at vestibulum ex rutrum. Nulla facilisi. Cras ullamcorper pellentesque orci, nec vestibulum nibh.uspendisse</p>
+                        </article>
+                    </div>
+
+                    <div class="c-f--article">
+                        <article>
+                            <h3>May 2019</h3>
+
+                            <p>Ut enim mi, mattis at sollicitudin rhoncus, rhoncus eget sem. Curabitur aliquam tellus eu nisl suscipit, at vestibulum ex rutrum. Nulla facilisi. Cras ullamcorper pellentesque orci, nec vestibulum nibh.uspendisse</p>
+                        </article>
+                    </div>
+                </div>
+
+                <span class="block-sp upper bold">To be continue…</span>
+            </div>
+        </section>
+
+        <!-- our team block-->
+        <section class="our-team-s">
+            <header class="team-h centred-container">
+                <h2 class="bottom-line center-line prpl-text-gradient">Meet the team</h2>
+
+                <p>Meet the team that makes the process of this system fast and painless as possible to provide you with good result </p>
+            </header>
+
+            <div class="c-g--team-member-cards">
+                <div class="member-card">
+                    <div class="memeber-info">
+                        <span class="block-sp bold">Secretary</span>
+                        <span>Inna Dobrovich</span>
+                    </div>
+                </div>
+
+                <div class="member-card">
+                    <div class="memeber-info">
+                        <span class="block-sp bold">Frontend Developer</span>
+                        <span>Ivan Bogomolov</span>
+                    </div>
+                </div>
+
+                <div class="member-card">
+                    <div class="memeber-info">
+                        <span class="block-sp bold">CEO</span>
+                        <span>Amanda Roth</span>
+                    </div>
+                </div>
+
+                <div class="member-card">
+                    <div class="memeber-info">
+                        <span class="block-sp bold">Backend Developer</span>
+                        <span>Illia Innarov</span>
+                    </div>
+                </div>
+
+                <div class="member-card">
+                    <div class="memeber-info">
+                        <span class="block-sp bold">Security guard</span>
+                        <span>Dima Rond</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- subscribe block -->
+        <section class="subscribe-s sub-about-s">
+            <div class="centred-container">
+                <header class="subscribe-h">
+                    <h2 class="bottom-line center-line prpl-text-gradient">Subscribe our newsletter</h2>
+                    <p>Subscribe to our newsletter for daily/weekly update of our products and services.</p>
+                </header>
+
+                <div class="c-f-row-between c-f-email-wrapper">
+                    <input class="prpl-input prpl-border-gradient" type="text" placeholder="EMAIL">
+
+                    <button class="prpl-btn width-btn subm-email-btn discover-btn" type="submit">DISCOVER</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer block -->
+    <footer class="footer-block">
+        <div class="c-g--footer">
+            <header class="footer-header">
+                <a href="#">
+                    <svg width="145" height="33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <mask id="a" maskUnits="userSpaceOnUse" x="46.57" y="11.59" width="98" height="18" fill="#000">
+                          <path fill="#fff" d="M46.57 11.59h98v18h-98z"/>
+                          <path d="M47.57 21.1c0-1.41.31-2.67.95-3.78.64-1.13 1.5-2.01 2.6-2.65a7.28 7.28 0 013.67-.95c1.58 0 2.96.38 4.14 1.14a6.51 6.51 0 012.57 3.22h-2.26a4.5 4.5 0 00-1.75-2 4.99 4.99 0 00-2.7-.7 5.3 5.3 0 00-2.72.7 4.9 4.9 0 00-1.89 2 6.3 6.3 0 00-.68 3.01c0 1.15.23 2.15.68 3.02a4.94 4.94 0 001.9 1.98c.8.47 1.7.7 2.71.7a4.5 4.5 0 004.44-2.68h2.27a6.52 6.52 0 01-2.57 3.2 7.58 7.58 0 01-4.14 1.11 6.96 6.96 0 01-6.27-3.55 7.48 7.48 0 01-.95-3.78zM69.28 28.48a5.91 5.91 0 01-2.9-.72 5.27 5.27 0 01-2.04-2.04 6.4 6.4 0 01-.73-3.1c0-1.15.25-2.17.75-3.05.5-.9 1.2-1.58 2.07-2.05a5.95 5.95 0 012.93-.72c1.08 0 2.06.24 2.93.72a5.09 5.09 0 012.06 2.03 6 6 0 01.76 3.07 6 6 0 01-.78 3.1 5.33 5.33 0 01-2.1 2.04c-.89.48-1.87.72-2.95.72zm0-1.65c.68 0 1.31-.16 1.9-.47.6-.32 1.08-.8 1.44-1.43.38-.63.56-1.4.56-2.3 0-.92-.18-1.69-.54-2.32a3.46 3.46 0 00-1.4-1.4 3.9 3.9 0 00-1.9-.48c-.7 0-1.33.16-1.91.48-.57.3-1.02.77-1.37 1.4-.35.63-.52 1.4-.52 2.31 0 .92.17 1.7.5 2.33a3.5 3.5 0 003.24 1.88zM78.58 15.15c-.36 0-.67-.12-.92-.37a1.23 1.23 0 01-.37-.91c0-.36.12-.66.37-.9.25-.26.56-.38.92-.38.34 0 .63.12.87.37.25.25.37.55.37.9 0 .37-.12.67-.37.92-.24.25-.53.37-.87.37zm.9 1.84v11.3H77.6V17h1.89zM88.25 16.78c1.39 0 2.51.42 3.37 1.26.86.82 1.29 2.02 1.29 3.6v6.66h-1.87v-6.4c0-1.13-.29-1.99-.85-2.58-.57-.6-1.35-.9-2.33-.9-1 0-1.8.3-2.39.92-.58.62-.87 1.52-.87 2.7v6.26h-1.89V16.99h1.89v1.6c.37-.57.88-1.02 1.52-1.34a4.82 4.82 0 012.13-.47zM103.24 20.89a3 3 0 011.44.64c.44.34.78.77 1.03 1.28a3.63 3.63 0 01-.17 3.61 3.9 3.9 0 01-1.63 1.38c-.71.33-1.55.5-2.52.5H96V13.9h5.2c.98 0 1.82.17 2.5.5.7.31 1.22.75 1.57 1.3.34.55.52 1.17.52 1.85 0 .86-.24 1.57-.71 2.13-.46.55-1.07.95-1.83 1.2zm-5.36-.77h3.18c.89 0 1.57-.2 2.06-.62.48-.4.72-.98.72-1.7 0-.74-.24-1.3-.72-1.72-.49-.41-1.19-.62-2.1-.62h-3.14v4.66zm3.35 6.63c.94 0 1.67-.22 2.2-.66.52-.44.79-1.05.79-1.84 0-.8-.28-1.42-.83-1.88-.56-.46-1.3-.7-2.22-.7h-3.29v5.08h3.35zM108.02 22.6c0-1.15.24-2.17.71-3.03a5.1 5.1 0 014.7-2.77c1 0 1.86.21 2.59.64.73.43 1.28.96 1.64 1.61V17h1.91v11.3h-1.9v-2.1a4.5 4.5 0 01-1.7 1.65c-.72.43-1.58.64-2.57.64a5.18 5.18 0 01-4.67-2.82c-.47-.9-.7-1.92-.7-3.06zm9.64.02c0-.85-.17-1.6-.52-2.23a3.57 3.57 0 00-1.41-1.44 3.72 3.72 0 00-1.93-.52c-.7 0-1.35.17-1.93.5a3.6 3.6 0 00-1.4 1.44 4.58 4.58 0 00-.51 2.23c0 .87.17 1.63.52 2.27.34.64.8 1.12 1.39 1.47.58.33 1.22.5 1.93.5a3.7 3.7 0 003.34-1.96c.35-.65.52-1.4.52-2.26zM126.8 28.48c-.88 0-1.66-.14-2.35-.43-.7-.3-1.24-.71-1.64-1.24a3.34 3.34 0 01-.67-1.83h1.95c.06.56.32 1.02.8 1.38a3.1 3.1 0 001.88.54c.72 0 1.3-.16 1.7-.48.42-.32.63-.72.63-1.2 0-.5-.22-.86-.66-1.1a8.94 8.94 0 00-2.06-.71c-.85-.22-1.54-.44-2.08-.66a3.95 3.95 0 01-1.37-1.02 2.7 2.7 0 01-.56-1.77c0-.58.17-1.1.52-1.6.35-.47.84-.85 1.47-1.13a5.23 5.23 0 012.19-.43c1.26 0 2.27.32 3.05.95.77.63 1.19 1.5 1.24 2.6h-1.89a1.93 1.93 0 00-.72-1.42 2.64 2.64 0 00-1.75-.54c-.68 0-1.22.14-1.62.43-.4.3-.6.67-.6 1.14 0 .37.12.68.35.93.25.23.56.42.92.58.37.13.88.3 1.53.47.82.22 1.48.44 2 .66.51.2.95.52 1.3.95.38.43.57.98.59 1.67 0 .62-.17 1.18-.52 1.68s-.84.88-1.48 1.17a5.3 5.3 0 01-2.16.41zM144 22.2c0 .37-.02.75-.06 1.14h-9.1a3.7 3.7 0 001.14 2.63c.7.62 1.56.93 2.56.93.81 0 1.5-.2 2.03-.56.56-.39.94-.9 1.17-1.53h2.03a4.91 4.91 0 01-1.83 2.66 5.58 5.58 0 01-3.4 1.01 5.84 5.84 0 01-2.91-.72 5.17 5.17 0 01-2-2.04 6.4 6.4 0 01-.72-3.1c0-1.17.24-2.2.7-3.07a4.9 4.9 0 011.98-2.03 5.93 5.93 0 012.95-.72c1.08 0 2.03.23 2.86.7a4.79 4.79 0 011.91 1.94c.46.81.69 1.74.69 2.77zm-1.95-.38a3.4 3.4 0 00-.48-1.84 3 3 0 00-1.3-1.18 3.92 3.92 0 00-1.82-.41c-.95 0-1.77.3-2.45.9a3.7 3.7 0 00-1.14 2.53h7.19z"/>
+                        </mask>
+                        <path d="M47.57 21.1c0-1.41.31-2.67.95-3.78.64-1.13 1.5-2.01 2.6-2.65a7.28 7.28 0 013.67-.95c1.58 0 2.96.38 4.14 1.14a6.51 6.51 0 012.57 3.22h-2.26a4.5 4.5 0 00-1.75-2 4.99 4.99 0 00-2.7-.7 5.3 5.3 0 00-2.72.7 4.9 4.9 0 00-1.89 2 6.3 6.3 0 00-.68 3.01c0 1.15.23 2.15.68 3.02a4.94 4.94 0 001.9 1.98c.8.47 1.7.7 2.71.7a4.5 4.5 0 004.44-2.68h2.27a6.52 6.52 0 01-2.57 3.2 7.58 7.58 0 01-4.14 1.11 6.96 6.96 0 01-6.27-3.55 7.48 7.48 0 01-.95-3.78zM69.28 28.48a5.91 5.91 0 01-2.9-.72 5.27 5.27 0 01-2.04-2.04 6.4 6.4 0 01-.73-3.1c0-1.15.25-2.17.75-3.05.5-.9 1.2-1.58 2.07-2.05a5.95 5.95 0 012.93-.72c1.08 0 2.06.24 2.93.72a5.09 5.09 0 012.06 2.03 6 6 0 01.76 3.07 6 6 0 01-.78 3.1 5.33 5.33 0 01-2.1 2.04c-.89.48-1.87.72-2.95.72zm0-1.65c.68 0 1.31-.16 1.9-.47.6-.32 1.08-.8 1.44-1.43.38-.63.56-1.4.56-2.3 0-.92-.18-1.69-.54-2.32a3.46 3.46 0 00-1.4-1.4 3.9 3.9 0 00-1.9-.48c-.7 0-1.33.16-1.91.48-.57.3-1.02.77-1.37 1.4-.35.63-.52 1.4-.52 2.31 0 .92.17 1.7.5 2.33a3.5 3.5 0 003.24 1.88zM78.58 15.15c-.36 0-.67-.12-.92-.37a1.23 1.23 0 01-.37-.91c0-.36.12-.66.37-.9.25-.26.56-.38.92-.38.34 0 .63.12.87.37.25.25.37.55.37.9 0 .37-.12.67-.37.92-.24.25-.53.37-.87.37zm.9 1.84v11.3H77.6V17h1.89zM88.25 16.78c1.39 0 2.51.42 3.37 1.26.86.82 1.29 2.02 1.29 3.6v6.66h-1.87v-6.4c0-1.13-.29-1.99-.85-2.58-.57-.6-1.35-.9-2.33-.9-1 0-1.8.3-2.39.92-.58.62-.87 1.52-.87 2.7v6.26h-1.89V16.99h1.89v1.6c.37-.57.88-1.02 1.52-1.34a4.82 4.82 0 012.13-.47zM103.24 20.89a3 3 0 011.44.64c.44.34.78.77 1.03 1.28a3.63 3.63 0 01-.17 3.61 3.9 3.9 0 01-1.63 1.38c-.71.33-1.55.5-2.52.5H96V13.9h5.2c.98 0 1.82.17 2.5.5.7.31 1.22.75 1.57 1.3.34.55.52 1.17.52 1.85 0 .86-.24 1.57-.71 2.13-.46.55-1.07.95-1.83 1.2zm-5.36-.77h3.18c.89 0 1.57-.2 2.06-.62.48-.4.72-.98.72-1.7 0-.74-.24-1.3-.72-1.72-.49-.41-1.19-.62-2.1-.62h-3.14v4.66zm3.35 6.63c.94 0 1.67-.22 2.2-.66.52-.44.79-1.05.79-1.84 0-.8-.28-1.42-.83-1.88-.56-.46-1.3-.7-2.22-.7h-3.29v5.08h3.35zM108.02 22.6c0-1.15.24-2.17.71-3.03a5.1 5.1 0 014.7-2.77c1 0 1.86.21 2.59.64.73.43 1.28.96 1.64 1.61V17h1.91v11.3h-1.9v-2.1a4.5 4.5 0 01-1.7 1.65c-.72.43-1.58.64-2.57.64a5.18 5.18 0 01-4.67-2.82c-.47-.9-.7-1.92-.7-3.06zm9.64.02c0-.85-.17-1.6-.52-2.23a3.57 3.57 0 00-1.41-1.44 3.72 3.72 0 00-1.93-.52c-.7 0-1.35.17-1.93.5a3.6 3.6 0 00-1.4 1.44 4.58 4.58 0 00-.51 2.23c0 .87.17 1.63.52 2.27.34.64.8 1.12 1.39 1.47.58.33 1.22.5 1.93.5a3.7 3.7 0 003.34-1.96c.35-.65.52-1.4.52-2.26zM126.8 28.48c-.88 0-1.66-.14-2.35-.43-.7-.3-1.24-.71-1.64-1.24a3.34 3.34 0 01-.67-1.83h1.95c.06.56.32 1.02.8 1.38a3.1 3.1 0 001.88.54c.72 0 1.3-.16 1.7-.48.42-.32.63-.72.63-1.2 0-.5-.22-.86-.66-1.1a8.94 8.94 0 00-2.06-.71c-.85-.22-1.54-.44-2.08-.66a3.95 3.95 0 01-1.37-1.02 2.7 2.7 0 01-.56-1.77c0-.58.17-1.1.52-1.6.35-.47.84-.85 1.47-1.13a5.23 5.23 0 012.19-.43c1.26 0 2.27.32 3.05.95.77.63 1.19 1.5 1.24 2.6h-1.89a1.93 1.93 0 00-.72-1.42 2.64 2.64 0 00-1.75-.54c-.68 0-1.22.14-1.62.43-.4.3-.6.67-.6 1.14 0 .37.12.68.35.93.25.23.56.42.92.58.37.13.88.3 1.53.47.82.22 1.48.44 2 .66.51.2.95.52 1.3.95.38.43.57.98.59 1.67 0 .62-.17 1.18-.52 1.68s-.84.88-1.48 1.17a5.3 5.3 0 01-2.16.41zM144 22.2c0 .37-.02.75-.06 1.14h-9.1a3.7 3.7 0 001.14 2.63c.7.62 1.56.93 2.56.93.81 0 1.5-.2 2.03-.56.56-.39.94-.9 1.17-1.53h2.03a4.91 4.91 0 01-1.83 2.66 5.58 5.58 0 01-3.4 1.01 5.84 5.84 0 01-2.91-.72 5.17 5.17 0 01-2-2.04 6.4 6.4 0 01-.72-3.1c0-1.17.24-2.2.7-3.07a4.9 4.9 0 011.98-2.03 5.93 5.93 0 012.95-.72c1.08 0 2.03.23 2.86.7a4.79 4.79 0 011.91 1.94c.46.81.69 1.74.69 2.77zm-1.95-.38a3.4 3.4 0 00-.48-1.84 3 3 0 00-1.3-1.18 3.92 3.92 0 00-1.82-.41c-.95 0-1.77.3-2.45.9a3.7 3.7 0 00-1.14 2.53h7.19z" fill="#fff"/>
+                        <path d="M47.57 21.1c0-1.41.31-2.67.95-3.78.64-1.13 1.5-2.01 2.6-2.65a7.28 7.28 0 013.67-.95c1.58 0 2.96.38 4.14 1.14a6.51 6.51 0 012.57 3.22h-2.26a4.5 4.5 0 00-1.75-2 4.99 4.99 0 00-2.7-.7 5.3 5.3 0 00-2.72.7 4.9 4.9 0 00-1.89 2 6.3 6.3 0 00-.68 3.01c0 1.15.23 2.15.68 3.02a4.94 4.94 0 001.9 1.98c.8.47 1.7.7 2.71.7a4.5 4.5 0 004.44-2.68h2.27a6.52 6.52 0 01-2.57 3.2 7.58 7.58 0 01-4.14 1.11 6.96 6.96 0 01-6.27-3.55 7.48 7.48 0 01-.95-3.78zM69.28 28.48a5.91 5.91 0 01-2.9-.72 5.27 5.27 0 01-2.04-2.04 6.4 6.4 0 01-.73-3.1c0-1.15.25-2.17.75-3.05.5-.9 1.2-1.58 2.07-2.05a5.95 5.95 0 012.93-.72c1.08 0 2.06.24 2.93.72a5.09 5.09 0 012.06 2.03 6 6 0 01.76 3.07 6 6 0 01-.78 3.1 5.33 5.33 0 01-2.1 2.04c-.89.48-1.87.72-2.95.72zm0-1.65c.68 0 1.31-.16 1.9-.47.6-.32 1.08-.8 1.44-1.43.38-.63.56-1.4.56-2.3 0-.92-.18-1.69-.54-2.32a3.46 3.46 0 00-1.4-1.4 3.9 3.9 0 00-1.9-.48c-.7 0-1.33.16-1.91.48-.57.3-1.02.77-1.37 1.4-.35.63-.52 1.4-.52 2.31 0 .92.17 1.7.5 2.33a3.5 3.5 0 003.24 1.88zM78.58 15.15c-.36 0-.67-.12-.92-.37a1.23 1.23 0 01-.37-.91c0-.36.12-.66.37-.9.25-.26.56-.38.92-.38.34 0 .63.12.87.37.25.25.37.55.37.9 0 .37-.12.67-.37.92-.24.25-.53.37-.87.37zm.9 1.84v11.3H77.6V17h1.89zM88.25 16.78c1.39 0 2.51.42 3.37 1.26.86.82 1.29 2.02 1.29 3.6v6.66h-1.87v-6.4c0-1.13-.29-1.99-.85-2.58-.57-.6-1.35-.9-2.33-.9-1 0-1.8.3-2.39.92-.58.62-.87 1.52-.87 2.7v6.26h-1.89V16.99h1.89v1.6c.37-.57.88-1.02 1.52-1.34a4.82 4.82 0 012.13-.47zM103.24 20.89a3 3 0 011.44.64c.44.34.78.77 1.03 1.28a3.63 3.63 0 01-.17 3.61 3.9 3.9 0 01-1.63 1.38c-.71.33-1.55.5-2.52.5H96V13.9h5.2c.98 0 1.82.17 2.5.5.7.31 1.22.75 1.57 1.3.34.55.52 1.17.52 1.85 0 .86-.24 1.57-.71 2.13-.46.55-1.07.95-1.83 1.2zm-5.36-.77h3.18c.89 0 1.57-.2 2.06-.62.48-.4.72-.98.72-1.7 0-.74-.24-1.3-.72-1.72-.49-.41-1.19-.62-2.1-.62h-3.14v4.66zm3.35 6.63c.94 0 1.67-.22 2.2-.66.52-.44.79-1.05.79-1.84 0-.8-.28-1.42-.83-1.88-.56-.46-1.3-.7-2.22-.7h-3.29v5.08h3.35zM108.02 22.6c0-1.15.24-2.17.71-3.03a5.1 5.1 0 014.7-2.77c1 0 1.86.21 2.59.64.73.43 1.28.96 1.64 1.61V17h1.91v11.3h-1.9v-2.1a4.5 4.5 0 01-1.7 1.65c-.72.43-1.58.64-2.57.64a5.18 5.18 0 01-4.67-2.82c-.47-.9-.7-1.92-.7-3.06zm9.64.02c0-.85-.17-1.6-.52-2.23a3.57 3.57 0 00-1.41-1.44 3.72 3.72 0 00-1.93-.52c-.7 0-1.35.17-1.93.5a3.6 3.6 0 00-1.4 1.44 4.58 4.58 0 00-.51 2.23c0 .87.17 1.63.52 2.27.34.64.8 1.12 1.39 1.47.58.33 1.22.5 1.93.5a3.7 3.7 0 003.34-1.96c.35-.65.52-1.4.52-2.26zM126.8 28.48c-.88 0-1.66-.14-2.35-.43-.7-.3-1.24-.71-1.64-1.24a3.34 3.34 0 01-.67-1.83h1.95c.06.56.32 1.02.8 1.38a3.1 3.1 0 001.88.54c.72 0 1.3-.16 1.7-.48.42-.32.63-.72.63-1.2 0-.5-.22-.86-.66-1.1a8.94 8.94 0 00-2.06-.71c-.85-.22-1.54-.44-2.08-.66a3.95 3.95 0 01-1.37-1.02 2.7 2.7 0 01-.56-1.77c0-.58.17-1.1.52-1.6.35-.47.84-.85 1.47-1.13a5.23 5.23 0 012.19-.43c1.26 0 2.27.32 3.05.95.77.63 1.19 1.5 1.24 2.6h-1.89a1.93 1.93 0 00-.72-1.42 2.64 2.64 0 00-1.75-.54c-.68 0-1.22.14-1.62.43-.4.3-.6.67-.6 1.14 0 .37.12.68.35.93.25.23.56.42.92.58.37.13.88.3 1.53.47.82.22 1.48.44 2 .66.51.2.95.52 1.3.95.38.43.57.98.59 1.67 0 .62-.17 1.18-.52 1.68s-.84.88-1.48 1.17a5.3 5.3 0 01-2.16.41zM144 22.2c0 .37-.02.75-.06 1.14h-9.1a3.7 3.7 0 001.14 2.63c.7.62 1.56.93 2.56.93.81 0 1.5-.2 2.03-.56.56-.39.94-.9 1.17-1.53h2.03a4.91 4.91 0 01-1.83 2.66 5.58 5.58 0 01-3.4 1.01 5.84 5.84 0 01-2.91-.72 5.17 5.17 0 01-2-2.04 6.4 6.4 0 01-.72-3.1c0-1.17.24-2.2.7-3.07a4.9 4.9 0 011.98-2.03 5.93 5.93 0 012.95-.72c1.08 0 2.03.23 2.86.7a4.79 4.79 0 011.91 1.94c.46.81.69 1.74.69 2.77zm-1.95-.38a3.4 3.4 0 00-.48-1.84 3 3 0 00-1.3-1.18 3.92 3.92 0 00-1.82-.41c-.95 0-1.77.3-2.45.9a3.7 3.7 0 00-1.14 2.53h7.19z" stroke="#fff" mask="url(#a)"/>
+                        <path d="M26.25 30.6h9.27c2 0 3.57-1.8 3.57-3.91 0-2.1-1.57-3.92-3.57-3.92h-2.14C36.24 16.3 34.81 2 21.98 2 13.4 2 9.12 7.26 9.12 17.95H7.71C4.57 17.95 2 20.82 2 24.28s2.57 6.32 5.7 6.32h18.55z" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21.85 15.94l-2.23.74-1.08-3.24 2.19-.74c.45-.14.92-.11 1.33.09h0a1.67 1.67 0 01.77 2.29h0c-.2.4-.55.7-.98.86zm-5.12-1.9l.32-.1 2.84 8.47-.33.11a.78.78 0 00-.5.99c.14.41.6.62 1 .49l1.91-.65.1.32c.15.41.6.62 1 .48.4-.13.63-.56.49-.98l-.1-.31.13-.04.1.3c.14.42.59.63.99.5.4-.14.63-.57.5-.99l-.11-.32a3.53 3.53 0 00-.73-6.78 3.27 3.27 0 00-3.03-4.48l-.16-.47h0a.78.78 0 00-1-.49.78.78 0 00-.49.99l.1.3-.12.05-.1-.31s0 0 0 0a.78.78 0 00-1-.49.78.78 0 00-.49.98l.1.32-.28.1h0l-.47.15-1.16.39a.78.78 0 00-.5.98c.14.42.59.62.99.5zm8.81 5.87h0c-.24.48-.66.84-1.18 1l-3 1-1.25-3.76 2.2-.73.04-.02.75-.25a2.04 2.04 0 011.55.1h0a1.95 1.95 0 01.9 2.66z" fill="#fff" stroke="#fff"/>
+                    </svg>
+                </a>
+
+                <p>Fusce ut elit aliquet, fermentum leo vel, tempus nunc. Fusce eu rhoncus augue. Fusce vel metus pharetra, fermentum</p>
+
+                <ul class="inline-list social-media-l">
+                    <li>
+                        <a href="#">
+                            <svg width="37" height="32" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 9">
+                                <path opacity=".8" fill-rule="evenodd" clip-rule="evenodd" d="M4.45 5.4V3.6h4.27c.3 2.17-.6 5.4-4.27 5.4A4.47 4.47 0 010 4.5C0 2.01 2 0 4.45 0c1.15 0 2.2.44 2.99 1.17-.61.59-.81.8-.98 1-.08.1-.16.19-.29.31a2.5 2.5 0 00-1.72-.65c-1.46 0-2.6 1.2-2.6 2.67a2.62 2.62 0 002.6 2.67c1.44 0 2.02-.63 2.4-1.78h-2.4zm8-3.26V3.7H14V4.8h-1.54v1.6h-1.1v-1.6H9.77V3.7h1.59V2.14h1.1z" fill="#fff"/>
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <svg width="23" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 13">
+                                <path opacity=".8" fill-rule="evenodd" clip-rule="evenodd" d="M12 12.28c0 .4-.3.72-.66.72H8.28V7.97h1.56L10.07 6H8.28V4.75c0-.57.15-.95.9-.95h.96V2.04a11.9 11.9 0 00-1.4-.08c-1.38 0-2.33.92-2.33 2.6V6H4.85v1.97H6.4V13H.66C.3 13 0 12.68 0 12.28V.72C0 .32.3 0 .66 0h10.68c.36 0 .66.32.66.72v11.56z" fill="#fff"/>
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <svg width="26" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 11">
+                                <path opacity=".8" fill-rule="evenodd" clip-rule="evenodd" d="M12.64.2a5.2 5.2 0 01-1.7.68A2.61 2.61 0 009 0a2.72 2.72 0 00-2.67 2.78c0 .21.03.43.07.63A7.47 7.47 0 01.9.5a2.86 2.86 0 00.83 3.7 2.59 2.59 0 01-1.2-.34v.03c0 1.35.91 2.47 2.13 2.73a2.5 2.5 0 01-1.2.04A2.68 2.68 0 003.95 8.6 5.22 5.22 0 010 9.75 7.34 7.34 0 004.09 11c4.9 0 7.59-4.23 7.59-7.9l-.01-.36c.52-.4.97-.88 1.33-1.44-.48.22-1 .37-1.53.44.55-.34.97-.89 1.17-1.54z" fill="#fff"/>
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <svg width="23" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 13">
+                                <path opacity=".8" fill-rule="evenodd" clip-rule="evenodd" d="M10.57 0H1.43C.63 0 0 .69 0 1.54v9.92C0 12.3.64 13 1.43 13h9.14c.8 0 1.43-.69 1.43-1.54V1.54C12 .7 11.36 0 10.57 0zM8.63 2.03c0-.22.16-.4.37-.4h1.12c.21 0 .38.18.38.4v1.22c0 .22-.17.4-.38.4H9c-.2 0-.37-.18-.37-.4V2.03zM6 4.03c1.28 0 2.31 1.1 2.31 2.49C8.32 7.89 7.3 9 6.02 9 4.73 9 3.7 7.89 3.7 6.5c0-1.37 1.03-2.49 2.3-2.49zm4.87 7.34c0 .23-.17.41-.38.41h-9c-.2 0-.38-.18-.38-.4v-6.1h1.5c-.19.3-.26.87-.26 1.24 0 2.17 1.64 3.94 3.65 3.94 2.02 0 3.65-1.77 3.65-3.94 0-.37-.04-.93-.28-1.24h1.5v6.1z" fill="#fff"/>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </header>
+
+            <nav aria-label="Footer Navigation">
+                <ul id="footer-nav-list" class="c-f--footer-nav-list">
+                    <li>
+                        <button class="c-f-row-between footer-nav-btn">
+                            <h4 class="white-color sub-menu-h">CoinBase Links</h4>
+
+                            <svg class="i-right-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" fill="#fff"/>
+                            </svg>
+                        </button>
+
+                        <div class="c-f-column--inner-list">
+                            <h4 class="white-color sub-menu-h" hidden>CoinBase Links</h4>
+
+                            <ul class="footer-list">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <button class="c-f-row-between footer-nav-btn">
+                            <h4 class="white-color sub-menu-h">Contact Us</h4>
+
+                            <svg class="i-right-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" fill="#fff"/>
+                            </svg>
+                        </button>
+
+                        <div class="c-f-column--inner-list">
+                            <h4 class="white-color sub-menu-h" hidden>Contact Us</h4>
+
+                            <ul class="footer-list c-f-contact-list">
+                                <li>(+234) 137 632 128</li>
+                                <li><a href="#">Coinbase@yahoo.com</a></li>
+                                <li><a href="#">Address goes here</a></li>
+                                <li><a href="#">Download Our App</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <section class="instagram-s">
+                <h4 class="white-color">CoinBase Instagram</h4>
+
+                <div class="c-grid-collage">
+                    <div class="gray-shape"></div>
+                    <div class="gray-shape"></div>
+                    <div class="gray-shape"></div>
+                    <div class="gray-shape"></div>
+                    <div class="gray-shape"></div>
+                    <div class="gray-shape"></div>
+                    <div class="gray-shape"></div>
+                    <div class="gray-shape"></div>
+                </div>
+            </section>
+        </div>
+    </footer>
+
+    <script src="scripts/about-us-script.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/popup-actions.js"></script>
+</body>
+
+</html>

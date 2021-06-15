@@ -1,0 +1,58 @@
+/* specific styles for contact us page */
+
+.hero-s {
+    padding: 11.375em 0 7em;
+}
+
+/* 1024px */
+@media (min-width: 64em) {
+    .hero-s {
+        padding: 11.375em 0 10.3125em;
+    }
+}
+
+.c-g--contact-us {
+    padding: 0 2%;
+}
+
+/* 750px */
+
+@media (min-width: 46.875em) {
+    .c-g--contact-us {
+        grid-template-columns: 39.4518% auto;
+    }
+}
+
+/* 1204px */
+
+@media (min-width: 78.4375em) {
+    .c-g--contact-us {
+        max-width: 75.25em;
+        padding: 0;
+        margin: 0 auto;
+    } 
+}
+
+/* contact section */
+
+.contact-s {
+    padding: 0 2% 5.625em;
+}
+
+/* 734px */
+
+@media(min-width: 47.6875em) {
+    .contact-s {
+        padding: 0 0 5.625em;
+        max-width: 45.75em;
+        margin: 0 auto; 
+    }
+}
+
+.contact-s p {
+    padding-bottom: 3.0625em;
+}
+
+.contact-s img {
+    padding-top: 5.625em;
+}
